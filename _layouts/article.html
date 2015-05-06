@@ -1,0 +1,16 @@
+---
+layout: content
+---
+<div class="page">
+	<header class="page-header">
+		<h1 class="page-title">{{ page.title }}</h1>
+		<p class="page-subtitle">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+	</header>
+	<article class="page-content">
+{{ content }}
+	</article>
+	<nav class="page-links">
+		{% if page.next %}<a class="page-link -next" href="{{ page.next.url }}">Next: {{ page.next.title}}</a>{% endif %}
+		{% if page.previous %}<a class="page-link -previous" href="{{ page.previous.url }}">Previous: {{ page.previous.title}}</a>{% endif %}
+	</nav>
+</div>

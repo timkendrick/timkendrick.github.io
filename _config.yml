@@ -1,0 +1,34 @@
+# Site settings
+title: Tim Kendrick
+subtitle: Interactive Developer
+email: timkendrick@gmail.com
+description: "Tim Kendrick, Interactive Developer"
+baseurl: ""
+url: "http://timkendrick.github.io"
+linkedin:
+  id: "192494997"
+  name: "Tim Kendrick"
+twitter_username:
+github_username:  timkendrick
+
+# Build settings
+destination: dist
+permalink: /articles/:year/:month/:day/:title.html
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  enable_coderay: false
+
+# Content settings
+defaults:
+  -
+    scope:
+      path: "blog"
+    values:
+      layout: article
+  -
+    scope:
+      path: "tips"
+    values:
+      layout: article

@@ -1,0 +1,41 @@
+<footer class="footer">
+	<div class="wrapper">
+		<div class="footer-col-wrapper">
+			<div class="footer-col footer-col-left">
+				<ul class="footer-contact-list">
+					{% if site.email %}
+					<li>
+						<a class="footer-contact-link -email" href="mailto:{{ site.email }}">
+							{{ site.email }}
+						</a>
+					</li>
+					{% endif %}
+					{% if site.linkedin %}
+					<li>
+						<a class="footer-contact-link -linkedin" href="https://www.linkedin.com/profile/view?id={{ site.linkedin.id }}" target="_blank">
+							{{ site.linkedin.name }}
+						</a>
+					</li>
+					{% endif %}
+					{% if site.twitter_username %}
+					<li>
+						<a class="footer-contact-link -twitter" href="https://twitter.com/{{ site.twitter_username }}" target="_blank">
+							{{ site.twitter_username }}
+						</a>
+					</li>
+					{% endif %}
+					{% if site.github_username %}
+					<li>
+						<a class="footer-contact-link -github" href="https://github.com/{{ site.github_username }}" target="_blank">
+							{{ site.github_username }}
+						</a>
+					</li>
+					{% endif %}
+				</ul>
+			</div>
+			<div class="footer-col footer-col-right">
+				<p class="text">Site built using <a href="http://jekyllrb.com/">Jekyll</a>, <a href="https://pages.github.com/">Github Pages</a>, <a href="https://www.google.com/fonts">Google Fonts</a>, <a href="https://thenounproject.com/">The Noun Project</a>, <a href="http://bohemiancoding.com/sketch/">Sketch</a> and <a href="http://www.sublimetext.com/">Sublime Text</a>.</p>
+			</div>
+		</div>
+	</div>
+</footer>

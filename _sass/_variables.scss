@@ -1,0 +1,72 @@
+$breakpoint-mobile: 600px;
+$breakpoint-tablet: 800px;
+
+$content-width: 800px;
+$spacing-unit: 30px;
+$header-height: 56px;
+
+$base-font-family: "Nunito", Helvetica, Arial, sans-serif;
+$base-font-size: 16px;
+$base-line-height: 1.5;
+
+$title-font-family: "Raleway", Helvetica, Arial, sans-serif;
+$title-font-size: 42px;
+$title-line-height: 1.2;
+$title-letter-spacing: -1px;
+
+$small-font-size: $base-font-size * 0.875;
+
+$text-color: #333;
+$link-color: #2A7AE2;
+$background-color: #FDFDFD;
+
+$grey-color: #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark: darken($grey-color, 25%);
+
+$header-font-family: "Montserrat", $base-font-family;
+$header-font-size: 16px;
+$header-font-weight: bold;
+$header-text-transform: uppercase;
+$header-letter-spacing: 1px;
+$header-text-color: #FDFDFD;
+$header-text-color-rollover: white;
+$header-background-color: #0B8E1A;
+
+$splash-title-font-family: $header-font-family;
+$splash-title-font-size: 84px;
+$splash-title-line-height: 1.5;
+$splash-title-font-weight: $header-font-weight;
+$splash-title-text-transform: $header-text-transform;
+$splash-title-letter-spacing: 4px;
+$splash-title-text-color: $header-text-color;
+$splash-title-background-color: $header-background-color;
+$splash-title-text-align: center;
+
+$splash-title-font-size-mobile: 30px;
+$splash-title-line-height-mobile: 1.5;
+$splash-title-letter-spacing-mobile: 2px;
+
+$splash-subtitle-font-family: $header-font-family;
+$splash-subtitle-font-size: 36px;
+$splash-subtitle-line-height: 1.5;
+$splash-subtitle-font-weight: 100;
+$splash-subtitle-text-transform: none;
+$splash-subtitle-letter-spacing: 0;
+$splash-subtitle-text-color: $splash-title-text-color;
+$splash-subtitle-background-color: $splash-title-background-color;
+$splash-subtitle-text-align: center;
+
+$splash-subtitle-font-size-mobile: 26px;
+$splash-subtitle-line-height-mobile: 1.25;
+$splash-subtitle-letter-spacing-mobile: 0;
+
+$action-font-family: $splash-subtitle-font-family;
+$action-font-size: 24px;
+$action-font-size-mobile: 16px;
+$action-font-weight: $splash-subtitle-font-weight;
+$action-text-transform: uppercase;
+$action-letter-spacing: $splash-subtitle-letter-spacing;
+$action-text-color: $splash-subtitle-text-color;
+$action-background-color: $splash-subtitle-background-color;
+$action-text-align: $splash-subtitle-text-align;

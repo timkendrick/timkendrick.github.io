@@ -1,0 +1,262 @@
+.header {
+	background-color: $header-background-color;
+	min-height: $header-height;
+
+	// Positioning context for the mobile navigation icon
+	position: relative;
+}
+
+.header-title {
+	font-family: $header-font-family;
+	font-size: $header-font-size;
+	font-weight: $header-font-weight;
+	text-transform: $header-text-transform;
+	letter-spacing: $header-letter-spacing;
+	line-height: $header-height;
+	margin-bottom: 0;
+	float: left;
+
+	&,
+	&:visited {
+		color: $header-text-color;
+	}
+
+	&,
+	&:hover {
+		text-decoration: none;
+		color: $header-text-color-rollover;
+	}
+}
+
+.header-nav {
+	transition: visibility 200ms 100ms linear, opacity 200ms 100ms linear;
+}
+
+body.-home {
+	.header-nav {
+		transition: visibility 200ms linear, opacity 200ms linear;
+		visibility: hidden;
+		opacity: 0;
+	}
+}
+
+.header-nav-links {
+	font-family: $header-font-family;
+	font-size: $header-font-size;
+	font-weight: $header-font-weight;
+	text-transform: $header-text-transform;
+	letter-spacing: $header-letter-spacing;
+	line-height: $header-height;
+	float: right;
+}
+
+.header-nav-menu-icon {
+	display: none;
+}
+
+.header-nav-menu-link {
+	line-height: $base-line-height;
+
+	&,
+	&:visited {
+		color: $header-text-color;
+	}
+
+	&,
+	&:hover {
+		text-decoration: none;
+		color: $header-text-color-rollover;
+	}
+
+	// Gaps between nav items, but not on the first one
+	&:not(:first-child) {
+		margin-left: 20px;
+	}
+}
+
+@include media-query($breakpoint-mobile) {
+	.header-nav-links {
+		position: absolute;
+		top: 9px;
+		right: 30px;
+		background-color: $background-color;
+		border: 1px solid $grey-color-light;
+		border-radius: 5px;
+		text-align: right;
+	}
+
+	.header-nav-menu-icon {
+		display: block;
+		float: right;
+		width: 36px;
+		height: 26px;
+		line-height: 0;
+		padding-top: 10px;
+		text-align: center;
+
+		> svg {
+			width: 18px;
+			height: 15px;
+
+			path {
+				fill: $grey-color-dark;
+			}
+		}
+	}
+
+	.header-nav-menu {
+		clear: both;
+		display: none;
+	}
+
+	.header-nav:hover .header-nav-menu {
+		display: block;
+		padding-bottom: 5px;
+	}
+
+	.header-nav-menu-link {
+		display: block;
+		padding: 5px 10px;
+
+		&,
+		&:visited,
+		&:hover {
+			color: $text-color;
+		}
+	}
+}
+
+.header-home {
+	background-color: $header-background-color;
+	overflow: hidden;
+	max-height: 545px;
+	transition: max-height 300ms ease-out;
+
+	body:not(.-home) & {
+		transition: max-height 250ms ease-out;
+		max-height: 0;
+	}
+}
+
+.header-home-title {
+	margin-bottom: 2.5 * $spacing-unit;
+}
+
+.header-home-title-heading {
+	font-size: $splash-title-font-size;
+	line-height: $splash-title-line-height;
+	font-family: $splash-title-font-family;
+	font-weight: $splash-title-font-weight;
+	text-transform: $splash-title-text-transform;
+	letter-spacing: $splash-title-letter-spacing;
+	color: $splash-title-text-color;
+	text-align: $splash-title-text-align;
+	margin-bottom: 0;
+
+	@include media-query($breakpoint-mobile) {
+		font-size: $splash-title-font-size-mobile;
+		line-height: $splash-title-line-height-mobile;
+		letter-spacing: $splash-title-letter-spacing-mobile;
+	}
+}
+
+.header-home-title-subheading {
+	font-size: $splash-subtitle-font-size;
+	line-height: $splash-subtitle-line-height;
+	font-family: $splash-subtitle-font-family;
+	font-weight: $splash-subtitle-font-weight;
+	text-transform: $splash-subtitle-text-transform;
+	letter-spacing: $splash-subtitle-letter-spacing;
+	color: $splash-subtitle-text-color;
+	text-align: $splash-subtitle-text-align;
+
+	@include media-query($breakpoint-mobile) {
+		font-size: $splash-subtitle-font-size-mobile;
+		line-height: $splash-subtitle-line-height-mobile;
+		letter-spacing: $splash-subtitle-letter-spacing-mobile;
+	}
+}
+
+.header-home-link-items {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: $spacing-unit;
+	max-width: 85%;
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.header-home-link-item {
+	position: relative;
+	max-width: calc(#{percentage(1/3)} - 2/3 * #{$spacing-unit});
+	font-size: $action-font-size;
+	font-family: $action-font-family;
+	font-weight: $action-font-weight;
+	text-transform: $action-text-transform;
+	letter-spacing: $action-letter-spacing;
+	text-align: $action-text-align;
+
+}
+
+@include media-query($breakpoint-mobile) {
+
+	.header-home-link-items {
+		max-width: 100%;
+	}
+
+	.header-home-link-item {
+		font-size: $action-font-size-mobile;
+	}
+}
+
+.header-home-link {
+	width: 150px;
+	max-width: 100%;
+	position: relative;
+	display: inline-block;
+	line-height: 1.75;
+	transition: line-height 100ms ease;
+
+	&:hover {
+		line-height: 1.7;
+	}
+
+	&,
+	&:visited,
+	&:hover {
+		color: $action-text-color;
+	}
+
+	&:before {
+		content: '';
+		position: relative;
+		display: inline-block;
+		width: 150px;
+		max-width: 100%;
+		padding-top: 100%;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: contain;
+		border-radius: 100%;
+		transform: scale(1, 1);
+		transition: transform 100ms ease;
+	}
+
+	&:hover:before {
+		transform: scale(1.075, 1.075);
+	}
+
+	&.-github:before {
+		background-image: url("icons/header/github.svg");
+	}
+
+	&.-articles:before {
+		background-image: url("icons/header/articles.svg");
+	}
+
+	&.-resume:before {
+		background-image: url("icons/header/resume.svg");
+	}
+}

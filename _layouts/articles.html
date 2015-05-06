@@ -1,0 +1,44 @@
+---
+layout: default
+---
+<div class="container -articles">
+	<div class="wrapper">
+		<div class="articles">
+			<header class="articles-header">
+				<h1 class="articles-title">Articles</h1>
+			</header>
+			<article class="articles-content">
+				<ul class="articles-list">
+					{% for post in site.posts %}
+						<li class="articles-article">
+							<a class="articles-article-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+							<span class="articles-article-subtitle">{{ post.date | date: "%b %-d, %Y" }}</span>
+							<p class="articles-article-excerpt">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
+						</li>
+					{% endfor %}
+				</ul>
+			</article>
+			<p class="articles-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+		</div>
+	</div>
+</div>
+<script>
+	(function() {
+		history.replaceState(document.body.className, null, '');
+
+		window.addEventListener('popstate', function(event) {
+			document.body.className = event.state;
+		});
+
+		document.addEventListener('click', function(event) {
+			if (!event.target.hasAttribute('data-transition')) { return; }
+			var transitionTarget = event.target.getAttribute('data-transition');
+			var href = event.target.getAttribute('href');
+			if (href) {
+				event.preventDefault();
+				history.pushState(transitionTarget, null, href);
+			}
+			document.body.className = transitionTarget;
+		});
+	})();
+</script>
