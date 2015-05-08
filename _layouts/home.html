@@ -1,0 +1,50 @@
+---
+layout: base
+---
+{% include header.html %}
+<div class="container -articles">
+	<div class="wrapper">
+		<div class="home-articles">
+			<header class="home-articles-header">
+				<h1 class="home-articles-title">Articles</h1>
+			</header>
+			<article class="home-articles-content">
+				<ul class="home-articles-list">
+					{% for post in site.posts %}
+						<li class="home-articles-article">
+							<a class="home-articles-article-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+							<p class="home-articles-article-subtitle">
+								<span class="home-articles-article-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+								<span class="home-articles-article-author">{{ post.author }}</span>
+							</p>
+							<p class="home-articles-article-excerpt">{{ post.summary }}</p>
+						</li>
+					{% endfor %}
+				</ul>
+			</article>
+			<p class="home-articles-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+		</div>
+	</div>
+</div>
+{% include footer.html %}
+<script>
+	(function() {
+		history.replaceState(document.body.className, null, '');
+
+		window.addEventListener('popstate', function(event) {
+			document.body.className = event.state;
+		});
+
+		document.addEventListener('click', function(event) {
+			if (!event.target.hasAttribute('data-transition')) { return; }
+			var transitionTarget = event.target.getAttribute('data-transition');
+			var href = event.target.getAttribute('href');
+			if (href) {
+				event.preventDefault();
+				history.pushState(transitionTarget, null, href);
+			}
+			document.body.className = transitionTarget;
+			window.scrollTo(0, 0);
+		});
+	})();
+</script>

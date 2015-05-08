@@ -18,7 +18,7 @@ body {
 	font-size: $base-font-size;
 	line-height: $base-line-height;
 	font-weight: 300;
-	color: $text-color;
+	color: $base-text-color;
 	background-color: $background-color;
 	-webkit-text-size-adjust: 100%;
 	overflow-y: scroll;
@@ -56,7 +56,10 @@ figure > img {
 }
 
 figcaption {
-	font-size: $small-font-size;
+	font-family: $subtitle-font-family;
+	font-size: $subtitle-font-size;
+	line-height: $subtitle-line-height;
+	color: $subtitle-text-color;
 }
 
 
@@ -98,7 +101,7 @@ a {
 	}
 
 	&:hover {
-		color: $text-color;
+		color: $base-text-color;
 		text-decoration: underline;
 	}
 }
@@ -109,8 +112,8 @@ a {
  * Blockquotes
  */
 blockquote {
-	color: $grey-color;
-	border-left: 4px solid $grey-color-light;
+	color: $subtitle-color;
+	border-left: 4px solid $divider-color;
 	padding-left: $spacing-unit / 2;
 	font-size: 18px;
 	letter-spacing: -1px;

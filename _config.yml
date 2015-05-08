@@ -24,11 +24,13 @@ kramdown:
 defaults:
   -
     scope:
-      path: "blog"
+      path: blog
     values:
       layout: article
+      bodyClass: -article
   -
     scope:
-      path: "tips"
+      path: tips
     values:
       layout: article
+      bodyClass: -article

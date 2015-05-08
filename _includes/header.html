@@ -1,35 +1,29 @@
 <header class="header">
 	<div class="wrapper header-nav">
-		<a class="header-title" href="{{ site.baseurl }}/" data-transition="-home">{{ site.title }}</a>
+		<a class="header-nav-title" href="{{ site.baseurl }}/" data-transition="-home">{{ site.title }}</a>
 		<nav class="header-nav-links">
-			<a href="#" class="header-nav-menu-icon">
-				<svg viewBox="0 0 18 15">
-					<path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-					<path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-					<path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-				</svg>
-			</a>
+			<a class="header-nav-menu-icon" href="#" onclick="return false"></a>
 			<div class="header-nav-menu">
-				<a class="header-nav-menu-link" href="https://github.com/timkendrick">Github</a>
-				<a class="header-nav-menu-link" href="{{ '/articles/' | prepend: site.baseurl }}">Articles</a>
-				<a class="header-nav-menu-link" href="{{ '/resume/' | prepend: site.baseurl }}">Resumé</a>
+				<a class="header-nav-menu-link -github" href="https://github.com/timkendrick" target="_blank" title="Github">Github</a>
+				<a class="header-nav-menu-link -articles" href="{{ '/articles/' | prepend: site.baseurl }}" data-transition="-articles" title="Articles">Articles</a>
+				<a class="header-nav-menu-link -resume" href="{{ '/resume/' | prepend: site.baseurl }}" target="_blank" title="Resumé">Resumé</a>
 			</div>
 		</nav>
 	</div>
-	<div class="wrapper header-home">
-		<div class="header-home-title">
-			<h1 class="header-home-title-heading">Tim Kendrick</h1>
-			<h2 class="header-home-title-subheading">Interactive Developer</h2>
+	<div class="wrapper header-splash">
+		<div class="header-splash-title">
+			<h1 class="header-splash-title-heading">Tim Kendrick</h1>
+			<h2 class="header-splash-title-subheading">Interactive Developer</h2>
 		</div>
-		<ul class="header-home-link-items">
-			<li class="header-home-link-item">
-				<a class="header-home-link -github" href="https://github.com/timkendrick" target="_blank">Github</a>
+		<ul class="header-splash-link-items">
+			<li class="header-splash-link-item">
+				<a class="header-splash-link -github" href="https://github.com/timkendrick" target="_blank">Github</a>
 			</li>
-			<li class="header-home-link-item">
-				<a class="header-home-link -articles" href="{{ '/articles/' | prepend: site.baseurl }}" data-transition="-articles">Articles</a>
+			<li class="header-splash-link-item">
+				<a class="header-splash-link -articles" href="{{ '/articles/' | prepend: site.baseurl }}" data-transition="-articles">Articles</a>
 			</li>
-			<li class="header-home-link-item">
-				<a class="header-home-link -resume" href="{{ '/resume/' | prepend: site.baseurl }}">Resumé</a>
+			<li class="header-splash-link-item">
+				<a class="header-splash-link -resume" href="{{ '/resume/' | prepend: site.baseurl }}">Resumé</a>
 			</li>
 		</ul>
 	</div>

@@ -1,28 +1,33 @@
-$breakpoint-mobile: 600px;
-$breakpoint-tablet: 800px;
+$breakpoint-mobile: 300px;
+$breakpoint-tablet: 600px;
+$breakpoint-laptop: 800px;
+$breakpoint-desktop: 1025px;
 
 $content-width: 800px;
 $spacing-unit: 30px;
 $header-height: 56px;
 
+$text-color: #333;
+$subtitle-color: #828282;
+$link-color: #2A7AE2;
+$divider-color: lighten($subtitle-color, 40%);
+$background-color: #FDFDFD;
+
 $base-font-family: "Nunito", Helvetica, Arial, sans-serif;
 $base-font-size: 16px;
 $base-line-height: 1.5;
+$base-text-color: $text-color;
+
+$subtitle-font-family: $base-font-family;
+$subtitle-font-size: $base-font-size * 0.875;
+$subtitle-line-height: $base-line-height;
+$subtitle-text-color: $subtitle-color;
 
 $title-font-family: "Raleway", Helvetica, Arial, sans-serif;
+$title-font-size-mobile: 36px;
 $title-font-size: 42px;
 $title-line-height: 1.2;
 $title-letter-spacing: -1px;
-
-$small-font-size: $base-font-size * 0.875;
-
-$text-color: #333;
-$link-color: #2A7AE2;
-$background-color: #FDFDFD;
-
-$grey-color: #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark: darken($grey-color, 25%);
 
 $header-font-family: "Montserrat", $base-font-family;
 $header-font-size: 16px;
@@ -47,6 +52,10 @@ $splash-title-font-size-mobile: 30px;
 $splash-title-line-height-mobile: 1.5;
 $splash-title-letter-spacing-mobile: 2px;
 
+$splash-title-font-size-tablet: 64px;
+$splash-title-line-height-tablet: 1.5;
+$splash-title-letter-spacing-tablet: 2px;
+
 $splash-subtitle-font-family: $header-font-family;
 $splash-subtitle-font-size: 36px;
 $splash-subtitle-line-height: 1.5;
@@ -60,6 +69,10 @@ $splash-subtitle-text-align: center;
 $splash-subtitle-font-size-mobile: 26px;
 $splash-subtitle-line-height-mobile: 1.25;
 $splash-subtitle-letter-spacing-mobile: 0;
+
+$splash-subtitle-font-size-tablet: 36px;
+$splash-subtitle-line-height-tablet: 1.5;
+$splash-subtitle-letter-spacing-tablet: 0;
 
 $action-font-family: $splash-subtitle-font-family;
 $action-font-size: 24px;

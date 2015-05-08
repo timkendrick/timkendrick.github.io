@@ -1,0 +1,23 @@
+.container.-articles {
+	body:not(.-articles) & {
+		display: none;
+	}
+}
+
+.home-articles {
+	@extend .page !optional;
+}
+.home-articles-header {
+	@extend .page-header !optional;
+}
+.home-articles-title {
+	@extend .page-title !optional;
+}
+.home-articles-content {
+	@extend .page-content !optional;
+}
+.home-articles-list {}
+.home-articles-article {}
+.home-articles-article-title {}
+.home-articles-article-subtitle {}
+.home-articles-subscribe {}

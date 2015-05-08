@@ -1,5 +1,25 @@
+@mixin clearfix() {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
 @mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+	@media screen and (max-width: $device) {
+		@content;
+	}
+}
+
+@mixin media-query-min($width) {
+	@media screen and (min-width: $width) {
+		@content;
+	}
+}
+
+@mixin media-query-max($width) {
+	@media screen and (max-width: $width) {
+		@content;
+	}
 }
