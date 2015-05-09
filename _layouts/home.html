@@ -11,12 +11,12 @@ layout: base
 			<article class="home-articles-content">
 				<ul class="home-articles-list">
 					{% for post in site.posts %}
-						<li class="home-articles-article">
+						<li class="home-articles-article{% if post.type %} -{{ post.type }}{% endif %}">
 							<a class="home-articles-article-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
 							<p class="home-articles-article-subtitle">
 								<span class="home-articles-article-date">{{ post.date | date: "%b %-d, %Y" }}</span>
 							</p>
-							<p class="home-articles-article-excerpt">{{ post.summary }}</p>
+							<p class="home-articles-article-summary">{{ post.summary }}</p>
 						</li>
 					{% endfor %}
 				</ul>

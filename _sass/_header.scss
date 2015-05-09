@@ -19,8 +19,8 @@ body:not(.-home) {
 
 .header-nav-title {
 	font-family: $header-font-family;
-	font-size: $header-font-size;
 	font-weight: $header-font-weight;
+	font-size: $header-font-size;
 	text-transform: $header-text-transform;
 	letter-spacing: $header-letter-spacing;
 	line-height: $header-height;
@@ -41,8 +41,8 @@ body:not(.-home) {
 
 .header-nav-links {
 	font-family: $header-font-family;
-	font-size: $header-font-size;
 	font-weight: $header-font-weight;
+	font-size: $header-font-size;
 	text-transform: $header-text-transform;
 	letter-spacing: $header-letter-spacing;
 }
@@ -96,12 +96,6 @@ body:not(.-home) {
 .header-splash-link-item {
 	position: relative;
 	max-width: calc(#{percentage(1/3)} - 2/3 * #{$spacing-unit});
-	font-size: $action-font-size-mobile;
-	font-family: $action-font-family;
-	font-weight: $action-font-weight;
-	text-transform: $action-text-transform;
-	letter-spacing: $action-letter-spacing;
-	text-align: $action-text-align;
 }
 
 .header-splash-link {
@@ -109,12 +103,13 @@ body:not(.-home) {
 	max-width: 100%;
 	position: relative;
 	display: inline-block;
-	line-height: 1.75;
-	transition: line-height 100ms ease;
-
-	&:hover {
-		line-height: 1.7;
-	}
+	font-family: $action-font-family;
+	font-weight: $action-font-weight;
+	font-size: $action-font-size-mobile;
+	line-height: $action-line-height-mobile;
+	letter-spacing: $action-letter-spacing-mobile;
+	text-transform: $action-text-transform;
+	text-align: $action-text-align;
 
 	&,
 	&:visited,
@@ -133,12 +128,6 @@ body:not(.-home) {
 		background-position: center center;
 		background-size: contain;
 		border-radius: 100%;
-		transform: scale(1, 1);
-		transition: transform 100ms ease;
-	}
-
-	&:hover:before {
-		transform: scale(1.075, 1.075);
 	}
 
 	&.-github:before {
@@ -275,8 +264,11 @@ body:not(.-home) {
 	.header-splash-link-items {
 		max-width: 85%;
 	}
-	.header-splash-link-item {
+
+	.header-splash-link {
 		font-size: $action-font-size;
+		line-height: $action-line-height;
+		letter-spacing: $action-letter-spacing;
 	}
 }
 
@@ -297,6 +289,23 @@ body:not(.-home) {
 @include media-query-min($breakpoint-desktop) {
 	.header-splash {
 		padding-top: 0;
+	}
+
+	.header-splash-link {
+		transition: line-height 100ms ease;
+
+		&:hover {
+			line-height: $action-line-height-rollover;
+		}
+
+		&:before {
+			transform: scale(1, 1);
+			transition: transform 100ms ease;
+		}
+
+		&:hover:before {
+			transform: scale(1.075, 1.075);
+		}
 	}
 
 	body.-home {

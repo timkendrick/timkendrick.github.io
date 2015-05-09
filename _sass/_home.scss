@@ -18,19 +18,43 @@
 	@extend .page-content;
 }
 
-.home-articles-list {}
+.home-articles-list {
+	list-style-type: none;
+	margin: auto;
+}
 
-.home-articles-article {}
+.home-articles-article {
+	margin-bottom: $spacing-unit;
+}
 
-.home-articles-article-title {}
+.home-articles-article-title {
+	font-family: $title-font-family;
+	font-weight: $title-font-weight;
+	line-height: $title-line-height;
+}
 
 .home-articles-article-subtitle {
 	font-family: $subtitle-font-family;
+	font-weight: $subtitle-font-weight;
 	font-size: $subtitle-font-size;
 	line-height: $subtitle-line-height;
 	color: $subtitle-text-color;
+	margin-bottom: 5px;
+
+	.home-articles-article.-tip & {
+		&:before {
+			content: "Tip";
+			@include badge;
+		}
+
+		&:hover:before {
+			text-decoration: none;
+		}
+	}
 }
 
 .home-articles-article-date {}
+
+.home-articles-article-summary {}
 
 .home-articles-subscribe {}

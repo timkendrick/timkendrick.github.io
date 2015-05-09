@@ -6,6 +6,7 @@
 
 .page-title {
 	font-family: $title-font-family;
+	font-weight: $title-font-weight;
 	font-size: $title-font-size-mobile;
 	line-height: $title-line-height;
 	letter-spacing: $title-letter-spacing;
@@ -13,6 +14,7 @@
 
 .page-subtitle {
 	font-family: $subtitle-font-family;
+	font-weight: $subtitle-font-weight;
 	font-size: $subtitle-font-size;
 	line-height: $subtitle-line-height;
 	color: $subtitle-text-color;

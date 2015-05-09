@@ -15,9 +15,9 @@ dl, dd, ol, ul, figure {
  */
 body {
 	font-family: $base-font-family;
+	font-weight: $base-font-weight;
 	font-size: $base-font-size;
 	line-height: $base-line-height;
-	font-weight: 300;
 	color: $base-text-color;
 	background-color: $background-color;
 	-webkit-text-size-adjust: 100%;
@@ -57,6 +57,7 @@ figure > img {
 
 figcaption {
 	font-family: $subtitle-font-family;
+	font-weight: $subtitle-font-weight;
 	font-size: $subtitle-font-size;
 	line-height: $subtitle-line-height;
 	color: $subtitle-text-color;

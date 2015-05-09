@@ -6,6 +6,20 @@
 	}
 }
 
+@mixin badge() {
+	font-family: $badge-font-family;
+	font-weight: $badge-font-weight;
+	font-size: $badge-font-size;
+	line-height: $badge-line-height;
+	letter-spacing: $badge-letter-spacing;
+	text-transform: $badge-text-transform;
+	color: $badge-text-color;
+	background-color: $badge-background-color;
+	border-radius: 3px;
+	padding: 0 4px 0 5px;
+	margin-right: 3px;
+}
+
 @mixin media-query($device) {
 	@media screen and (max-width: $device) {
 		@content;
