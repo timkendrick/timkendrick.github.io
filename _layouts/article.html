@@ -1,17 +1,18 @@
 ---
 layout: content
 ---
-<div class="page">
-	<header class="page-header">
-		<h1 class="page-title">{{ page.title }}</h1>
-		<p class="page-subtitle">
-			<span class="page-subtitle-date">{{ page.date | date: "%b %-d, %Y" }}</span>{% if page.author %}<span class="page-subtitle-author">{{ page.author }}</span>{% endif %}</p>
+<div class="article">
+	<header class="article-header">
+		<h1 class="article-title">{{ page.title }}</h1>
+		<p class="article-subtitle">
+			{% if page.author %}<span class="article-subtitle-author">{{ page.author }}</span>{% endif %}
+			<span class="article-subtitle-date">{{ page.date | date: "%b %-d, %Y" }}</span></p>
 	</header>
-	<article class="page-content">
+	<article class="article-content">
 {{ content }}
 	</article>
-	<nav class="page-links">
-		{% if page.next %}<a class="page-link -next" href="{{ page.next.url }}">Next: {{ page.next.title}}</a>{% endif %}
-		{% if page.previous %}<a class="page-link -previous" href="{{ page.previous.url }}">Previous: {{ page.previous.title}}</a>{% endif %}
+	<nav class="article-links">
+		{% if page.next %}<a class="article-link -next" href="{{ page.next.url }}">Next: {{ page.next.title}}</a>{% endif %}
+		{% if page.previous %}<a class="article-link -previous" href="{{ page.previous.url }}">Previous: {{ page.previous.title}}</a>{% endif %}
 	</nav>
 </div>

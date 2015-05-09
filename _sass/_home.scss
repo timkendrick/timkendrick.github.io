@@ -7,17 +7,32 @@
 .home-articles {
 	@extend .page !optional;
 }
+
 .home-articles-header {
 	@extend .page-header !optional;
 }
+
 .home-articles-title {
 	@extend .page-title !optional;
 }
+
 .home-articles-content {
 	@extend .page-content !optional;
 }
+
 .home-articles-list {}
+
 .home-articles-article {}
+
 .home-articles-article-title {}
-.home-articles-article-subtitle {}
+
+.home-articles-article-subtitle {
+	font-family: $subtitle-font-family;
+	font-size: $subtitle-font-size;
+	line-height: $subtitle-line-height;
+	color: $subtitle-text-color;
+}
+
+.home-articles-article-date {}
+
 .home-articles-subscribe {}

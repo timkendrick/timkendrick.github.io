@@ -1,0 +1,51 @@
+.article {}
+
+.article-header {
+	@extend .page-header;
+}
+
+.article-title {
+	@extend .page-title;
+}
+
+.article-subtitle {
+	@extend .page-subtitle;
+}
+
+.article-subtitle-author {
+	&:before {
+		content: "by "
+	}
+}
+
+.article-subtitle-date {
+	&:before {
+		content: "on ";
+	}
+}
+
+.article-content {
+	@extend .page-content;
+}
+
+.article-links {}
+
+.article-link {}
+
+@include media-query-min($breakpoint-tablet) {
+
+	.article-links {
+		@include clearfix;
+	}
+
+	.article-link {
+		max-width: 45%;
+		&.-next {
+			float: right;
+			text-align: right;
+		}
+		&.-previous {
+			float: left;
+		}
+	}
+}

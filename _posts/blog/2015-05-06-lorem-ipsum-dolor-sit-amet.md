@@ -2,7 +2,6 @@
 title: Lorem ipsum dolor sit amet
 summary: Lorem ipsum dolor sit amet, consectetur adipisicing elit
 author: Tim Kendrick
-class: -article
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. At voluptate, odio provident? Perspiciatis dolor suscipit sunt sed expedita, alias molestias hic consectetur exercitationem? Consectetur corrupti ipsum placeat alias facilis.

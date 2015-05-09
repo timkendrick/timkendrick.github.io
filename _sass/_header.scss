@@ -245,16 +245,7 @@ body:not(.-home) {
 		&.-articles {
 			background-image: url("icons/header/articles.svg");
 
-			body.-articles & {
-				opacity: 1;
-				pointer-events: none;
-				cursor: default;
-
-				&:hover {
-					opacity: 1;
-				}
-			}
-
+			body.-articles &,
 			body.-article & {
 				opacity: 1;
 
@@ -324,7 +315,7 @@ body:not(.-home) {
 
 		.header-splash {
 			display: block;
-			transition: max-height 250ms ease-out;
+			transition: max-height 200ms ease-out;
 			max-height: 0;
 		}
 	}

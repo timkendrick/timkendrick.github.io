@@ -24,13 +24,9 @@ kramdown:
 defaults:
   -
     scope:
-      path: blog
+      path: ""
+      type: posts
     values:
       layout: article
-      bodyClass: -article
-  -
-    scope:
-      path: tips
-    values:
-      layout: article
-      bodyClass: -article
+      class: -article
+      bodyClass: article

@@ -18,15 +18,6 @@
 	color: $subtitle-text-color;
 }
 
-.page-subtitle-date {
-}
-
-.page-subtitle-author {
-	&:before {
-		content: " • ";
-	}
-}
-
 .page-content {
 	margin-bottom: $spacing-unit;
 
@@ -42,9 +33,6 @@
 		font-size: 18px;
 	}
 }
-
-.page-links {}
-.page-link {}
 
 @include media-query-min($breakpoint-tablet) {
 	.page-title {
@@ -62,21 +50,6 @@
 
 		h3 {
 			font-size: 20px;
-		}
-	}
-
-	.page-links {
-		@include clearfix;
-	}
-
-	.page-link {
-		max-width: 45%;
-		&.-next {
-			float: right;
-			text-align: right;
-		}
-		&.-previous {
-			float: left;
 		}
 	}
 }
