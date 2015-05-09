@@ -4,20 +4,18 @@
 	}
 }
 
-.home-articles {
-	@extend .page !optional;
-}
+.home-articles {}
 
 .home-articles-header {
-	@extend .page-header !optional;
+	@extend .page-header;
 }
 
 .home-articles-title {
-	@extend .page-title !optional;
+	@extend .page-title;
 }
 
 .home-articles-content {
-	@extend .page-content !optional;
+	@extend .page-content;
 }
 
 .home-articles-list {}
