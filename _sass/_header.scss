@@ -79,7 +79,7 @@ body:not(.-home) {
 }
 
 .header-splash-title {
-	margin-bottom: 2.5 * $spacing-unit;
+	margin-bottom: 1.5 * $spacing-unit;
 }
 
 .header-splash-link-items {
@@ -247,6 +247,10 @@ body:not(.-home) {
 		&.-resume {
 			background-image: url("icons/header/resume.svg");
 		}
+	}
+
+	.header-splash-title {
+		margin-bottom: 2.5 * $spacing-unit;
 	}
 
 	.header-splash-title-heading {
