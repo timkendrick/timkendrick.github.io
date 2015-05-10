@@ -12,7 +12,6 @@ twitter_username:
 github_username:  timkendrick
 
 # Build settings
-destination: dist
 permalink: /articles/:year/:month/:day/:title.html
 markdown: kramdown
 
