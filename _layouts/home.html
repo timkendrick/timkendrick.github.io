@@ -31,6 +31,7 @@ layout: base
 		history.replaceState(document.body.className, null, '');
 
 		window.addEventListener('popstate', function(event) {
+			if (!event.state) { return; }
 			document.body.className = event.state;
 		});
 
