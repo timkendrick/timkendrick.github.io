@@ -57,7 +57,7 @@ Development of JS/CSS Framework (used across all interactive experiences on burb
 
 ## Academic History
 - **October 2005 - June 2008**: Trinity College, University of Cambridge – BA in Philosophy, 2:2
-- **September 2003 - May 2005**: Sevenoaks School – International Baccalaureate Diploma, 45 points out of 45 (Philosophy, English, Spanish, Chemistry, Mathematics, Electronics)
+- **September 2003 - May 2005**: Sevenoaks School – International Baccalaureate Diploma, 45 points out of 45 (Philosophy, English, Spanish, Chemistry, Mathematics, Electronics)
 
 
 ## Hobbies/Interests
