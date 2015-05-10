@@ -87,9 +87,10 @@ body:not(.-home) {
 	margin-right: auto;
 	margin-bottom: $spacing-unit;
 	list-style: none;
+	display: -webkit-flex;
+	-webkit-justify-content: space-between;
+	-webkit-flex-direction: row;
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
 	text-align: center;
 }
 
