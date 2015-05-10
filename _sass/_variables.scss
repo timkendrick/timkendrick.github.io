@@ -11,8 +11,9 @@ $text-color: #333;
 $subtitle-color: #828282;
 $link-color: #2A7AE2;
 $divider-color: lighten($subtitle-color, 40%);
-$background-color: #FDFDFD;
 $header-background-color: #0B8E1A;
+$content-background-color: white;
+$footer-background-color: #FEFEFE;
 
 $base-font-family: "Nunito", Helvetica, Arial, sans-serif;
 $base-font-weight: 300;
@@ -40,7 +41,7 @@ $header-font-weight: 700;
 $header-font-size: 16px;
 $header-letter-spacing: 1px;
 $header-text-transform: uppercase;
-$header-text-color: #FDFDFD;
+$header-text-color: white;
 $header-text-color-rollover: white;
 
 $splash-title-font-family: $header-font-family;
