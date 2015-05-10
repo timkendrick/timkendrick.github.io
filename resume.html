@@ -1,0 +1,8 @@
+---
+layout: resume
+class: -resume
+permalink: /resume/
+---
+
+{% capture resume %}{% include resume.md %}{% endcapture %}
+{{ resume | markdownify }}
