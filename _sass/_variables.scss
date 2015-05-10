@@ -28,13 +28,15 @@ $subtitle-text-color: $subtitle-color;
 
 $title-font-family: "Raleway", Helvetica, Arial, sans-serif;
 $title-font-weight: 300;
-$title-font-size-mobile: 36px;
 $title-font-size: 42px;
 $title-line-height: 1.2;
 $title-letter-spacing: -1px;
+$title-font-size-mobile: 36px;
+$title-line-height-mobile: 1.2;
+$title-letter-spacing-mobile: -1px;
 
 $header-font-family: "Montserrat", $base-font-family;
-$header-font-weight: bold;
+$header-font-weight: 700;
 $header-font-size: 16px;
 $header-letter-spacing: 1px;
 $header-text-transform: uppercase;
@@ -58,7 +60,7 @@ $splash-title-background-color: $header-background-color;
 $splash-title-text-align: center;
 
 $splash-subtitle-font-family: $header-font-family;
-$splash-subtitle-font-weight: 100;
+$splash-subtitle-font-weight: 300;
 $splash-subtitle-font-size: 36px;
 $splash-subtitle-line-height: 1.5;
 $splash-subtitle-letter-spacing: 0;
@@ -87,11 +89,18 @@ $action-text-color: $splash-subtitle-text-color;
 $action-background-color: $splash-subtitle-background-color;
 $action-text-align: $splash-subtitle-text-align;
 
+$list-item-font-family: $title-font-family;
+$list-item-font-weight: 400;
+$list-item-font-size: $base-font-size;
+$list-item-line-height: $base-line-height;
+$list-item-letter-spacing: 0;
+
 $badge-font-family: "Montserrat", $base-font-family;
-$badge-font-weight: bold;
+$badge-font-weight: 700;
 $badge-font-size: 14px;
 $badge-line-height: 1.5;
 $badge-letter-spacing: 1px;
 $badge-text-transform: uppercase;
 $badge-text-color: white;
 $badge-background-color: #828282;
+

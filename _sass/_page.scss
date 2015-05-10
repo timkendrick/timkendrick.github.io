@@ -8,8 +8,9 @@
 	font-family: $title-font-family;
 	font-weight: $title-font-weight;
 	font-size: $title-font-size-mobile;
-	line-height: $title-line-height;
-	letter-spacing: $title-letter-spacing;
+	line-height: $title-line-height-mobile;
+	letter-spacing: $title-letter-spacing-mobile;
+	margin-bottom: 5px;
 }
 
 .page-subtitle {
@@ -39,6 +40,8 @@
 @include media-query-min($breakpoint-tablet) {
 	.page-title {
 		font-size: $title-font-size;
+		line-height: $title-line-height;
+		letter-spacing: $title-letter-spacing;
 	}
 
 	.page-content {
