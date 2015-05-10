@@ -11,6 +11,9 @@ linkedin:
 twitter_username:
 github_username:  timkendrick
 
+# File settings
+exclude: ["node_modules", "package.json", "README.md"]
+
 # Build settings
 permalink: /articles/:year/:month/:day/:title.html
 markdown: kramdown
