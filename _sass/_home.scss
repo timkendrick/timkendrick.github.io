@@ -8,6 +8,8 @@
 
 .home-articles-header {
 	@extend .page-header;
+	padding-bottom: 0.3em;
+	border-bottom: 1px solid #eee;
 }
 
 .home-articles-title {
@@ -27,12 +29,7 @@
 	margin-bottom: $spacing-unit;
 }
 
-.home-articles-article-title {
-	font-family: $list-item-font-family;
-	font-weight: $list-item-font-weight;
-	line-height: $list-item-line-height;
-	font-size: $list-item-font-size;
-}
+.home-articles-article-title {}
 
 .home-articles-article-subtitle {
 	font-family: $subtitle-font-family;
