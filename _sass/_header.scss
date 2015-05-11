@@ -257,6 +257,17 @@ body:not(.-home) {
 	}
 }
 
+@include media-query-max($breakpoint-tablet - 1px) {
+	.header-nav-link {
+		&:hover:active {
+			&:before,
+			&:after {
+				visibility: hidden;
+			}
+		}
+	}
+}
+
 @include media-query-min($breakpoint-tablet) {
 
 	.header-splash-title {
