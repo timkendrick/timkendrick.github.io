@@ -49,7 +49,7 @@ layout: base
 		window.addEventListener('popstate', function(event) {
 			if (!event.state) { return; }
 			document.body.className = event.state || '';
-			if (event.state && document.querySelectorAll('container.' + event.state).length === 0) {
+			if (event.state.bodyClass && (event.state.bodyClass !== '-home') && (document.querySelectorAll('.container.' + event.state.bodyClass).length === 0)) {
 				location.reload();
 				return;
 			}
