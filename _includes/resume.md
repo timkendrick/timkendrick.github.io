@@ -16,13 +16,13 @@ Bright, enthusiastic hard‑worker with over eight years’ industry experience 
 
 - **JavaScript**: React, AngularJS, ES6, RxJS/Highland.js, Backbone.js, Underscore.js, NW.js/Electron, Browserify/Webpack/Require.js, Jasmine/Mocha/Chai, Gulp/Grunt, JSDoc/ngdoc, jQuery
 - **CSS**: Stylus, SASS, BEM
-- **Back‑end**: Node.js, Express, Koa, MongoDB, Docker, Heroku
+- **Back‑end**: Node.js, Express, Koa, MongoDB, Docker, Heroku, Shell Scripting
 
 
 ## Work History
 
 - **September 2013 - April 2015**: [Fathom](http://fathomlondon.com/), Lead Developer
-- **February 2013 - August 2013**: [R/GA London](http://rga.com/offices/london), Senior Open Standards Developer (freelance)
+- **February 2013 - August 2013**: [R/GA London](http://rga.com/offices/london), Senior Front‑End Developer (freelance)
 - **August 2011 - January 2013**: [Burberry](http://uk.burberry.com/), Senior Front‑End Developer (freelance)
 - **February 2010 - July 2011**: [Mohu](http://studiomohu.com/), Lead Developer
 - **Summer 2006 - February 2010**: [Ralph](http://ralphandco.com/), ActionScript Developer
@@ -42,7 +42,7 @@ Bright, enthusiastic hard‑worker with over eight years’ industry experience 
 
 #### Fathom (September 2013 - April 2015)
 
-Lead front‑end developer for a highly interactive real‑time trading platform application, developed from scratch beginning September 2013 and successfully launched in August 2014 (still under active development). Ongoing roles included architecture planning, development of in‑house components used across prototypes and live apps, performance tuning/profiling, internal build tools, technical leadership, timing estimations, teaching and supervising other developers, hiring new developers.
+Lead front‑end developer for a highly interactive real‑time trading platform application, developed from scratch beginning September 2013 and successfully launched in August 2014 (still under active development). Ongoing roles included architecture planning, development of in‑house component library used across prototypes and live apps, performance tuning/profiling, internal build tools, technical leadership, timing estimations, teaching and supervising other developers, hiring new developers.
 
 
 #### R/GA (February 2013 - August 2013)
