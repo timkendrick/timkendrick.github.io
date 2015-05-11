@@ -44,11 +44,15 @@ layout: base
 {% include footer.html %}
 <script>
 	(function() {
-		history.replaceState(document.body.className, null, '');
+		history.replaceState({
+			bodyClass: document.body.className,
+			title: document.title
+		}, document.title, '');
 
 		window.addEventListener('popstate', function(event) {
 			if (!event.state) { return; }
-			document.body.className = event.state || '';
+			if (event.state.title) { document.title = event.state.title; }
+			document.body.className = event.state.bodyClass || '';
 			if (event.state.bodyClass && (event.state.bodyClass !== '-home') && (document.querySelectorAll('.container.' + event.state.bodyClass).length === 0)) {
 				location.reload();
 				return;
@@ -58,15 +62,20 @@ layout: base
 		document.addEventListener('click', function(event) {
 			if (!event.target.hasAttribute('data-transition')) { return; }
 			var transitionTarget = event.target.getAttribute('data-transition');
+			var transitionTitle = event.target.getAttribute('data-transition-title') || null;
+			if (transitionTitle) { document.title = transitionTitle; }
+			window.scrollTo(0, 0);
+			document.body.className = transitionTarget;
 			var href = event.target.href;
 			if (href) {
 				event.preventDefault();
 				if (href !== document.location.href) {
-					history.pushState(transitionTarget, null, href);
+					history.pushState({
+						bodyClass: transitionTarget,
+						title: transitionTitle
+					}, transitionTitle, href);
 				}
 			}
-			document.body.className = transitionTarget;
-			window.scrollTo(0, 0);
 		});
 	})();
 </script>
