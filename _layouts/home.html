@@ -68,6 +68,7 @@ layout: base
 			if (!event.target.hasAttribute('data-transition')) { return; }
 			var transitionTarget = event.target.getAttribute('data-transition');
 			var transitionTitle = event.target.getAttribute('data-transition-title') || null;
+			var trackingId = event.target.getAttribute('data-tracking');
 			if (transitionTitle) { document.title = transitionTitle; }
 			window.scrollTo(0, 0);
 			document.body.className = transitionTarget;
@@ -79,6 +80,9 @@ layout: base
 						bodyClass: transitionTarget,
 						title: transitionTitle
 					}, transitionTitle, href);
+					if (trackingId && (typeof ga !== 'undefined')) {
+						ga('send', 'pageview', trackingId);
+					}
 				}
 			}
 		});
