@@ -131,11 +131,11 @@ body:not(.-home) {
 	}
 
 	&.-github {
-		background-image: url("icons/header/github.svg");
+		@extend %image-header-github;
 	}
 
 	&.-articles {
-		background-image: url("icons/header/articles.svg");
+		@extend %image-header-articles;
 
 		body.-articles &,
 		body.-article & {
@@ -148,7 +148,7 @@ body:not(.-home) {
 	}
 
 	&.-resume {
-		background-image: url("icons/header/resume.svg");
+		@extend %image-header-resume;
 
 		body.-resume & {
 			opacity: 1;
@@ -245,15 +245,15 @@ body:not(.-home) {
 	}
 
 	&.-github:before {
-		background-image: url("icons/header/github.svg");
+		@extend %image-header-github;
 	}
 
 	&.-articles:before {
-		background-image: url("icons/header/articles.svg");
+		@extend %image-header-articles;
 	}
 
 	&.-resume:before {
-		background-image: url("icons/header/resume.svg");
+		@extend %image-header-resume;
 	}
 }
 

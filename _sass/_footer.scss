@@ -14,19 +14,19 @@
 	background-repeat: no-repeat;
 
 	&.-email {
-		background-image: url('icons/footer/email.svg');
+		@extend %image-footer-email;
 	}
 
 	&.-linkedin {
-		background-image: url('icons/footer/linkedin.svg');
+		@extend %image-footer-linkedin;
 	}
 
 	&.-twitter {
-		background-image: url('icons/footer/twitter.svg');
+		@extend %image-footer-twitter;
 	}
 
 	&.-github {
-		background-image: url('icons/footer/github.svg');
+		@extend %image-footer-github;
 	}
 }
 
