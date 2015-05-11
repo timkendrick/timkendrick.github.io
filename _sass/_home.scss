@@ -93,6 +93,39 @@ body:not(.-resume) {
 	border-bottom: 1px solid #eee;
 }
 
+.home-resume-download {
+	display: inline-block;
+	float: right;
+	margin-top: 5px;
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-color: #111;
+	border-radius: 6px;
+	text-align: right;
+	line-height: 16px;
+	padding: 8px 12px;
+	vertical-align: top;
+
+	&:hover {
+		background-color: lighten(#111, 10%);
+	}
+
+	&:before {
+		content: attr(data-type);
+		display: inline-block;
+		vertical-align: middle;
+		color: white;
+		font-size: 14px;
+		line-height: 14px;
+
+	}
+}
+
+.home-resume-download-icon {
+	vertical-align: top;
+	margin-left: 5px;
+}
+
 .home-resume-title {
 	@extend .page-title;
 }
@@ -121,5 +154,27 @@ body:not(.-resume) {
 			font-weight: 500;
 		}
 	}
+
+	.home-resume-download {
+		margin-top: 8px;
+
+		&:before {
+			content: attr(title);
+		}
+	}
 }
 
+@include media-query-min($breakpoint-desktop) {
+	.home-resume-download-icon {
+		#arrow {
+			transform: translateY(0);
+			transition: transform 100ms ease;
+		}
+
+		.home-resume-download:hover & {
+			#arrow {
+				transform: translateY(2px);
+			}
+		}
+	}
+}
