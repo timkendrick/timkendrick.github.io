@@ -25,6 +25,22 @@ layout: base
 		</div>
 	</div>
 </div>
+<div class="container -resume">
+	<div class="wrapper">
+		<header class="home-resume-header">
+			<h1 class="home-resume-title">Resumé</h1>
+		</header>
+		<article class="home-resume-content markdown-body">
+		{% capture resume %}{% include resume.md %}{% endcapture %}
+{{ resume | markdownify }}
+		</article>
+	</div>
+</div>
+<div class="container{% if page.class %} class="{{ page.class }}"{% endif %}">
+	<div class="wrapper">
+{{ content }}
+	</div>
+</div>
 {% include footer.html %}
 <script>
 	(function() {

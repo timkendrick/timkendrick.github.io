@@ -1,5 +1,35 @@
-.container.-articles {
-	body:not(.-articles) & {
+body.-home {
+	.container:not(.-home) {
+		display: none;
+	}
+}
+
+body:not(.-home) {
+	.container.-home {
+		display: none;
+	}
+}
+
+body.-articles {
+	.container:not(.-articles) {
+		display: none;
+	}
+}
+
+body:not(.-articles) {
+	.container.-articles {
+		display: none;
+	}
+}
+
+body.-resume {
+	.container:not(.-resume) {
+		display: none;
+	}
+}
+
+body:not(.-resume) {
+	.container.-resume {
 		display: none;
 	}
 }
@@ -56,3 +86,40 @@
 .home-articles-article-summary {}
 
 .home-articles-subscribe {}
+
+.home-resume-header {
+	@extend .page-header;
+	padding-bottom: 0.3em;
+	border-bottom: 1px solid #eee;
+}
+
+.home-resume-title {
+	@extend .page-title;
+}
+
+.home-resume-content {
+	min-width: 200px;
+	max-width: 770px;
+	font-weight: normal;
+	background-color: white;
+	margin-bottom: $spacing-unit;
+
+	ul, ol {
+		margin-left: auto;
+	}
+}
+
+@include media-query-min($breakpoint-tablet) {
+	.home-resume-content {
+		padding: 55px 50px 50px;
+		margin: 0 -10px;
+		border: 1px solid #d4d4d4;
+		box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+
+
+		h1, h2, h3, h4, h5, h6 {
+			font-weight: 500;
+		}
+	}
+}
+
