@@ -1,9 +1,22 @@
-.markdown-body {
-	font-weight: normal;
+.resume-header {
+	@extend .page-header;
+	padding-bottom: 0.3em;
+	border-bottom: 1px solid #eee;
+}
+
+.resume-title {
+	@extend .page-title;
+}
+
+.resume-content {
+	padding: 55px 50px 50px;
+  	margin: 0 -10px;
 	min-width: 200px;
 	max-width: 770px;
-	margin: 0 auto;
-	padding: 20px;
+	font-weight: normal;
+	background-color: white;
+	border: 1px solid #d4d4d4;
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
 
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 500;
