@@ -67,33 +67,49 @@
 	}
 }
 
-@keyframes fade-in {
-	from { opacity: 0; transform: translate(0, 4px) } to { opacity: 1; transform: translate(0, 0) }
-}
-
-@-webkit-keyframes fade-in {
-	from { opacity: 0; transform: translate(0, 4px) } to { opacity: 1; transform: translate(0, 0) }
-}
-
 @include media-query-min($breakpoint-desktop) {
+	@keyframes fade-in {
+		from { opacity: 0; } to { opacity: 1; }
+	}
+
+	@-webkit-keyframes fade-in {
+		from { opacity: 0; } to { opacity: 1; }
+	}
+
+	@keyframes slide-in {
+		from { opacity: 0; transform: translate(0, 4px) } to { opacity: 1; transform: translate(0, 0) }
+	}
+
+	@-webkit-keyframes slide-in {
+		from { opacity: 0; transform: translate(0, 4px) } to { opacity: 1; transform: translate(0, 0) }
+	}
+
 	.-resume,
 	.-articles {
 		.page-title {
-			-webkit-animation: fade-in 400ms ease;
-			animation: fade-in 400ms ease;
+			-webkit-animation: slide-in 400ms ease;
+			animation: slide-in 400ms ease;
+		}
+	}
+
+	.-resume {
+		.home-resume-download {
+			opacity: 0;
+			-webkit-animation: fade-in 600ms 200ms ease forwards;
+			animation: fade-in 600ms 200ms ease forwards;
 		}
 	}
 
 	.-article {
 		.page-title {
-			-webkit-animation: fade-in 600ms ease forwards;
-			animation: fade-in 600ms ease forwards;
+			-webkit-animation: slide-in 600ms ease forwards;
+			animation: slide-in 600ms ease forwards;
 		}
 
 		.page-subtitle {
 			opacity: 0;
-			-webkit-animation: fade-in 500ms 200ms ease forwards;
-			animation: fade-in 500ms 200ms ease forwards;
+			-webkit-animation: slide-in 500ms 200ms ease forwards;
+			animation: slide-in 500ms 200ms ease forwards;
 		}
 	}
 }
