@@ -40,11 +40,128 @@ body:not(.-home) {
 }
 
 .header-nav-links {
+	float: right;
 	font-family: $header-font-family;
 	font-weight: $header-font-weight;
 	font-size: $header-font-size;
 	text-transform: $header-text-transform;
 	letter-spacing: $header-letter-spacing;
+}
+
+.header-nav-menu {
+	line-height: $header-height;
+	font-size: 0;
+}
+
+.header-nav-menu-link {
+	$tooltipWidth: 84px;
+	$tooltipArrowSize: 6px;
+	$tooltipArrowOffset: 2px;
+	$tooltipBackgroundColor: #111;
+	$tooltipTextColor: white;
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+	vertical-align: middle;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	opacity: 0.5;
+	position: relative;
+
+	&:hover {
+		opacity: 1;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		margin-left: -$tooltipArrowSize;
+		margin-top: $tooltipArrowOffset;
+		border-bottom: $tooltipArrowSize solid $tooltipBackgroundColor;
+		border-left: $tooltipArrowSize solid transparent;
+		border-right: $tooltipArrowSize solid transparent;
+	}
+
+	&:after {
+		content: attr(title);
+		font-size: 12px;
+		display: block;
+		position: absolute;
+		background-color: $tooltipBackgroundColor;
+		color: $tooltipTextColor;
+		top: 100%;
+		left: 50%;
+		margin-left: -($tooltipWidth / 2);
+		margin-top: $tooltipArrowSize + $tooltipArrowOffset;
+		width: $tooltipWidth;
+		text-align: center;
+		overflow: hidden;
+		white-space: nowrap;
+		border-radius: 6px;
+		box-shadow: 0 2px 4px rgba(black, 0.25);
+	}
+
+	&:first-child {
+		&:after {
+			margin-left: -($tooltipWidth / 2) + 16px;
+		}
+	}
+
+	&:last-child {
+		&:after {
+			margin-left: -($tooltipWidth / 2) - 16px;
+		}
+	}
+
+
+	&:before,
+	&:after {
+		visibility: hidden;
+	}
+
+	&:hover {
+		&:before,
+		&:after {
+			visibility: visible;
+		}
+	}
+
+	&:not(:first-child) {
+		margin-left: 6px;
+	}
+
+	&.-github {
+		background-image: url("icons/header/github.svg");
+	}
+
+	&.-articles {
+		background-image: url("icons/header/articles.svg");
+
+		body.-articles &,
+		body.-article & {
+			opacity: 1;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	&.-resume {
+		background-image: url("icons/header/resume.svg");
+
+		body.-resume & {
+			opacity: 1;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
 }
 
 .header-splash-title-heading {
@@ -144,119 +261,7 @@ body:not(.-home) {
 	}
 }
 
-@include media-query-max($breakpoint-tablet - 1px) {
-	.header {
-		position: relative;
-	}
-
-	.header-nav-links {
-		position: absolute;
-		top: 9px;
-		right: 30px;
-		background-color: $footer-background-color;
-		border: 1px solid $divider-color;
-		border-radius: 5px;
-		text-align: right;
-	}
-
-	.header-nav-menu-icon {
-		float: right;
-		width: 36px;
-		height: 26px;
-		line-height: 0;
-		padding-top: 10px;
-		text-align: center;
-		background-image: url("icons/header/menu.svg");
-		background-repeat: no-repeat;
-		background-position: center;
-	}
-
-	.header-nav-menu {
-		clear: both;
-		display: none;
-	}
-
-	.header-nav-links:hover .header-nav-menu {
-		display: block;
-		padding-bottom: 5px;
-	}
-
-	.header-nav-menu-link {
-		display: block;
-		line-height: $base-line-height;
-		padding: 5px 10px;
-
-		&,
-		&:visited {
-			color: $base-text-color;
-		}
-	}
-}
-
 @include media-query-min($breakpoint-tablet) {
-	.header-nav-links {
-		float: right;
-	}
-
-	.header-nav-menu-icon {
-		display: none;
-	}
-
-	.header-nav-menu {
-		line-height: $header-height;
-		font-size: 0;
-	}
-
-	.header-nav-menu-link {
-		display: inline-block;
-		width: 32px;
-		height: 32px;
-		line-height: 32px;
-		vertical-align: middle;
-		overflow: hidden;
-		text-indent: 32px;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
-		opacity: 0.5;
-
-		&:hover {
-			opacity: 0.85;
-		}
-
-		&:not(:first-child) {
-			margin-left: 6px;
-		}
-
-		&.-github {
-			background-image: url("icons/header/github.svg");
-		}
-
-		&.-articles {
-			background-image: url("icons/header/articles.svg");
-
-			body.-articles &,
-			body.-article & {
-				opacity: 1;
-
-				&:hover {
-					opacity: 1;
-				}
-			}
-		}
-
-		&.-resume {
-			background-image: url("icons/header/resume.svg");
-
-			body.-resume & {
-				opacity: 1;
-
-				&:hover {
-					opacity: 1;
-				}
-			}
-		}
-	}
 
 	.header-splash-title {
 		margin-bottom: 2.5 * $spacing-unit;
@@ -318,6 +323,22 @@ body:not(.-home) {
 
 		&:hover:before {
 			transform: scale(1.075, 1.075);
+		}
+	}
+
+	.header-nav-menu-link {
+		&:before,
+		&:after {
+			opacity: 0;
+			transition: visibility 150ms linear, opacity 150ms ease;
+		}
+
+		&:hover {
+			&:before,
+			&:after {
+				opacity: 1;
+				visibility: visible;
+			}
 		}
 	}
 
