@@ -336,6 +336,7 @@ body:not(.-home) {
 	.header-nav-link {
 		&:before,
 		&:after {
+			pointer-events: none;
 			opacity: 0;
 			transition: visibility 150ms linear, opacity 150ms ease;
 		}
