@@ -1,15 +1,13 @@
 <header class="header">
-	<div class="wrapper header-nav">
+	<nav class="wrapper header-nav">
 		<a class="header-nav-title" href="{{ site.baseurl }}/" data-transition="-home" data-transition-title="{{ site.title }} | {{ site.subtitle }}">{{ site.title }}</a>
-		<nav class="header-nav-links">
-			<div class="header-nav-menu">
-				<a class="header-nav-menu-link -github" href="https://github.com/timkendrick" target="_blank" title="Github"></a>
-				<a class="header-nav-menu-link -articles" href="{{ '/articles/' | prepend: site.baseurl }}" data-transition="-articles" data-transition-title="Articles | {{ site.title }}" title="Articles"></a>
-				<a class="header-nav-menu-link -resume" href="{{ '/resume/' | prepend: site.baseurl }}" data-transition="-resume" data-transition-title="Resumé | {{ site.title }}" title="Resumé"></a>
-			</div>
-		</nav>
-	</div>
-	<div class="wrapper header-splash">
+		<div class="header-nav-links">
+			<a class="header-nav-link -github" href="https://github.com/timkendrick" target="_blank" title="Github"></a>
+			<a class="header-nav-link -articles" href="{{ '/articles/' | prepend: site.baseurl }}" data-transition="-articles" data-transition-title="Articles | {{ site.title }}" title="Articles"></a>
+			<a class="header-nav-link -resume" href="{{ '/resume/' | prepend: site.baseurl }}" data-transition="-resume" data-transition-title="Resumé | {{ site.title }}" title="Resumé"></a>
+		</div>
+	</nav>
+	<section class="wrapper header-splash">
 		<div class="header-splash-title">
 			<h1 class="header-splash-title-heading">Tim Kendrick</h1>
 			<h2 class="header-splash-title-subheading">Interactive Developer</h2>
@@ -25,5 +23,5 @@
 				<a class="header-splash-link -resume" href="{{ '/resume/' | prepend: site.baseurl }}" data-transition="-resume" data-transition-title="Resumé | {{ site.title }}">Resumé</a>
 			</li>
 		</ul>
-	</div>
+	</section>
 </header>

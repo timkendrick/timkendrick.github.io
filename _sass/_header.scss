@@ -43,17 +43,13 @@ body:not(.-home) {
 	float: right;
 	font-family: $header-font-family;
 	font-weight: $header-font-weight;
-	font-size: $header-font-size;
 	text-transform: $header-text-transform;
 	letter-spacing: $header-letter-spacing;
-}
-
-.header-nav-menu {
 	line-height: $header-height;
 	font-size: 0;
 }
 
-.header-nav-menu-link {
+.header-nav-link {
 	$tooltipWidth: 84px;
 	$tooltipArrowSize: 6px;
 	$tooltipArrowOffset: 2px;
@@ -326,7 +322,7 @@ body:not(.-home) {
 		}
 	}
 
-	.header-nav-menu-link {
+	.header-nav-link {
 		&:before,
 		&:after {
 			opacity: 0;

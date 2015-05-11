@@ -1,18 +1,18 @@
 ---
 layout: content
 ---
-<div class="article{% if page.type %} -{{ page.type }}{% endif %}">
+<article class="article{% if page.type %} -{{ page.type }}{% endif %}">
 	<header class="article-header">
 		<h1 class="article-title">{{ page.title }}</h1>
 		<p class="article-subtitle">
 			{% if page.author %}<span class="article-subtitle-author">{{ page.author }}</span>{% endif %}
 			<span class="article-subtitle-date">{{ page.date | date: "%b %-d, %Y" }}</span></p>
 	</header>
-	<article class="article-content">
+	<section class="article-content">
 {{ content }}
-	</article>
-	<nav class="article-links">
-		{% if page.next %}<a class="article-link -next" href="{{ page.next.url }}">Next: {{ page.next.title}}</a>{% endif %}
-		{% if page.previous %}<a class="article-link -previous" href="{{ page.previous.url }}">Previous: {{ page.previous.title}}</a>{% endif %}
-	</nav>
-</div>
+	</section>
+</article>
+<nav class="article-links">
+	{% if page.next %}<a class="article-link -next" href="{{ page.next.url }}">Next: {{ page.next.title}}</a>{% endif %}
+	{% if page.previous %}<a class="article-link -previous" href="{{ page.previous.url }}">Previous: {{ page.previous.title}}</a>{% endif %}
+</nav>
