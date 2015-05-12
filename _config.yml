@@ -32,3 +32,6 @@ defaults:
       layout: article
       class: -article
       bodyClass: article
+
+# Preview settings
+host: 0.0.0.0
