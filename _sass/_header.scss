@@ -184,7 +184,7 @@ body:not(.-home) {
 }
 
 .header-splash {
-	padding-top: $header-height;
+	padding-top: $spacing-unit * 1.5;
 	background-color: $header-background-color;
 	overflow: hidden;
 	max-height: 545px;
@@ -269,6 +269,10 @@ body:not(.-home) {
 }
 
 @include media-query-min($breakpoint-tablet) {
+
+	.header-splash {
+		padding-top: $header-height;
+	}
 
 	.header-splash-title {
 		margin-bottom: 2.5 * $spacing-unit;
