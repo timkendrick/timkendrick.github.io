@@ -134,17 +134,8 @@ body:not(.-home) {
 		@extend %image-header-github;
 	}
 
-	&.-articles {
-		@extend %image-header-articles;
-
-		body.-articles &,
-		body.-article & {
-			opacity: 1;
-
-			&:hover {
-				opacity: 1;
-			}
-		}
+	&.-npm {
+		@extend %image-header-npm;
 	}
 
 	&.-resume {
@@ -248,8 +239,8 @@ body:not(.-home) {
 		@extend %image-header-github;
 	}
 
-	&.-articles:before {
-		@extend %image-header-articles;
+	&.-npm:before {
+		@extend %image-header-npm;
 	}
 
 	&.-resume:before {

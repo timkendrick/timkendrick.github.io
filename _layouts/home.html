@@ -2,29 +2,6 @@
 layout: base
 ---
 {% include header.html %}
-<div class="container -articles">
-	<div class="wrapper">
-		<{% if page.class == "-articles" %}article{% else %}aside{% endif %} class="home-articles">
-			<header class="home-articles-header">
-				<h1 class="home-articles-title">Articles</h1>
-			</header>
-			<div class="home-articles-content">
-				<ul class="home-articles-list">
-					{% for post in site.posts %}
-						<li class="home-articles-article{% if post.type %} -{{ post.type }}{% endif %}">
-							<a class="home-articles-article-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-							<p class="home-articles-article-subtitle">
-								<span class="home-articles-article-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-							</p>
-							<p class="home-articles-article-summary">{{ post.summary }}</p>
-						</li>
-					{% endfor %}
-				</ul>
-			</div>
-			<p class="home-articles-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-		</{% if page.class == "-articles" %}article{% else %}aside{% endif %}>
-	</div>
-</div>
 <div class="container -resume">
 	<div class="wrapper">
 		<{% if page.class == "-resume" %}article{% else %}aside{% endif %} class="home-resume">
