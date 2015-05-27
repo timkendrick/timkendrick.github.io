@@ -31,6 +31,13 @@
 						</a>
 					</li>
 					{% endif %}
+					{% if site.npm_username %}
+					<li>
+						<a class="footer-contact-link -npm" href="https://www.npmjs.com/~{{ site.github_username }}" target="_blank">
+							{{ site.npm_username }}
+						</a>
+					</li>
+					{% endif %}
 				</ul>
 			</div>
 			<div class="footer-col -right">

@@ -9,7 +9,8 @@ linkedin:
   id: "192494997"
   name: "Tim Kendrick"
 twitter_username:
-github_username:  timkendrick
+github_username: timkendrick
+npm_username:
 
 # File settings
 exclude: ["node_modules", "package.json", "README.md"]

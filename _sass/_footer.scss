@@ -28,6 +28,10 @@
 	&.-github {
 		@extend %image-footer-github;
 	}
+
+	&.-npm {
+		@extend %image-footer-npm;
+	}
 }
 
 .footer-col-wrapper {
