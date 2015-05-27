@@ -6,6 +6,13 @@
 	}
 }
 
+@mixin vendor-prefix($name, $argument) {
+	-webkit-#{$name}: #{$argument};
+	-ms-#{$name}: #{$argument};
+	-moz-#{$name}: #{$argument};
+	#{$name}: #{$argument};
+}
+
 @mixin badge() {
 	font-family: $badge-font-family;
 	font-weight: $badge-font-weight;

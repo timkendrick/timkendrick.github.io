@@ -192,9 +192,11 @@ body:not(.-home) {
 	margin-bottom: $spacing-unit;
 	list-style: none;
 	display: -webkit-flex;
-	-webkit-justify-content: space-between;
-	-webkit-flex-direction: row;
+	display: -ms-flex;
+	display: -moz-flex;
 	display: flex;
+	@include vendor-prefix(justify-content, space-between);
+	@include vendor-prefix(direction, row);
 	text-align: center;
 }
 
