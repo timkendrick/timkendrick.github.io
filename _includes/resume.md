@@ -15,8 +15,8 @@ Bright, enthusiastic hard‑worker with over eight years’ industry experience 
 ## Frameworks / Techniques
 
 - **JavaScript**: React, AngularJS, ES6, RxJS/Highland.js, Underscore.js/lodash, Jasmine/Mocha/Chai, Browserify/Webpack/Require.js, Gulp/Grunt, NW.js/Electron, JSDoc/ngdoc, jQuery
-- **CSS**: Stylus, SASS, BEM
-- **Back‑end**: Node.js, Express, Koa, MongoDB, Docker, Heroku, Shell Scripting and CLI apps
+- **CSS**: Stylus, SASS, BEM, SUIT CSS
+- **Back‑end**: Node.js, Express, MongoDB, Docker, Heroku, Shell Scripting and CLI apps
 
 
 ## Work History
@@ -43,7 +43,7 @@ Bright, enthusiastic hard‑worker with over eight years’ industry experience 
 
 #### Fathom (September 2013 - April 2015)
 
-Lead front‑end developer for a highly interactive real‑time trading platform application (see their [promo site](http://www.tradeweb.com/landing/us_corporate_bonds/index.html) for details), developed from scratch beginning September 2013, successfully launched in August 2014, and still under active development. Ongoing roles included architecture planning, development of in‑house component library used across prototypes and live apps, performance tuning/profiling, internal build tools, technical leadership, teaching and supervising other developers, hiring new developers.
+Lead front‑end developer for a highly interactive real‑time trading platform application (see the [promo site](http://www.tradeweb.com/landing/us_corporate_bonds/index.html) for details), developed from scratch beginning September 2013, successfully launched in August 2014, and still under active development. Ongoing roles included architecture planning, development of in‑house component library used across prototypes and live apps, performance tuning/profiling, internal build tools, technical leadership, teaching and supervising other developers, hiring new developers.
 
 
 #### R/GA London (February 2013 - August 2013)
@@ -71,4 +71,4 @@ Development of all interactive experiences on burberry.com (e.g. [Burberry Eyewe
 
 ## Hobbies / Interests
 
-Theatre, restaurants, art exhibitions, reading, snowboarding, live music.
+Theatre, restaurants, art exhibitions, literature, live music.
