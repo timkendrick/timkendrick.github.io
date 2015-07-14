@@ -18,7 +18,7 @@ layout: base
 		</{% if page.class == "-resume" %}article{% else %}aside{% endif %}>
 	</div>
 </div>
-<div class="container{% if page.class %} class="{{ page.class }}"{% endif %}">
+<div class="container{% if page.class %} {{ page.class }}{% endif %}">
 	<div class="wrapper">
 {{ content }}
 	</div>
