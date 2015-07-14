@@ -138,6 +138,19 @@ body:not(.-home) {
 		@extend %image-header-npm;
 	}
 
+	&.-articles {
+		@extend %image-header-articles;
+
+		body.-articles &,
+		body.-article & {
+			opacity: 1;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
 	&.-resume {
 		@extend %image-header-resume;
 
@@ -243,6 +256,10 @@ body:not(.-home) {
 
 	&.-npm:before {
 		@extend %image-header-npm;
+	}
+
+	&.-articles:before {
+		@extend %image-header-articles;
 	}
 
 	&.-resume:before {

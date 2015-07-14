@@ -84,7 +84,8 @@
 		from { opacity: 0; transform: translate(0, 4px) } to { opacity: 1; transform: translate(0, 0) }
 	}
 
-	.-resume {
+	.-resume,
+	.-articles {
 		.page-title {
 			-webkit-animation: slide-in 400ms ease;
 			animation: slide-in 400ms ease;
@@ -96,6 +97,19 @@
 			opacity: 0;
 			-webkit-animation: fade-in 600ms 200ms ease forwards;
 			animation: fade-in 600ms 200ms ease forwards;
+		}
+	}
+
+	.-article {
+		.page-title {
+			-webkit-animation: slide-in 600ms ease forwards;
+			animation: slide-in 600ms ease forwards;
+		}
+
+		.page-subtitle {
+			opacity: 0;
+			-webkit-animation: slide-in 500ms 200ms ease forwards;
+			animation: slide-in 500ms 200ms ease forwards;
 		}
 	}
 }

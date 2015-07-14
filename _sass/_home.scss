@@ -10,6 +10,18 @@ body:not(.-home) {
 	}
 }
 
+body.-articles {
+	.container:not(.-articles) {
+		display: none;
+	}
+}
+
+body:not(.-articles) {
+	.container.-articles {
+		display: none;
+	}
+}
+
 body.-resume {
 	.container:not(.-resume) {
 		display: none;
@@ -21,6 +33,59 @@ body:not(.-resume) {
 		display: none;
 	}
 }
+
+.home-articles {}
+
+.home-articles-header {
+	@extend .page-header;
+	padding-bottom: 0.3em;
+	border-bottom: 1px solid #eee;
+}
+
+.home-articles-title {
+	@extend .page-title;
+}
+
+.home-articles-content {
+	@extend .page-content;
+}
+
+.home-articles-list {
+	list-style-type: none;
+	margin: auto;
+}
+
+.home-articles-article {
+	margin-bottom: $spacing-unit;
+}
+
+.home-articles-article-title {}
+
+.home-articles-article-subtitle {
+	font-family: $subtitle-font-family;
+	font-weight: $subtitle-font-weight;
+	font-size: $subtitle-font-size;
+	line-height: $subtitle-line-height;
+	color: $subtitle-text-color;
+	margin-bottom: 5px;
+
+	.home-articles-article.-tip & {
+		&:before {
+			content: "Tip";
+			@include badge;
+		}
+
+		&:hover:before {
+			text-decoration: none;
+		}
+	}
+}
+
+.home-articles-article-date {}
+
+.home-articles-article-summary {}
+
+.home-articles-subscribe {}
 
 .home-resume-header {
 	@extend .page-header;

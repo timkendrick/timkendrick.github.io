@@ -7,6 +7,11 @@
 		>{{ site.title }}</a>
 		<div class="header-nav-links">
 			<a class="header-nav-link -github" href="https://github.com/timkendrick" target="_blank" title="Github"></a>
+			<a class="header-nav-link -articles" href="{{ '/articles/' | prepend: site.baseurl }}" title="Articles"
+				data-transition="-articles"
+				data-transition-title="Articles | {{ site.title }}"
+				data-tracking="/articles/"
+			></a>
 			<a class="header-nav-link -npm" href="https://www.npmjs.com/~timkendrick" target="_blank" title="npm"></a>
 		</div>
 	</nav>
@@ -18,6 +23,13 @@
 		<ul class="header-splash-link-items">
 			<li class="header-splash-link-item">
 				<a class="header-splash-link -github" href="https://github.com/timkendrick" target="_blank">Github</a>
+			</li>
+			<li class="header-splash-link-item">
+				<a class="header-splash-link -articles" href="{{ '/articles/' | prepend: site.baseurl }}"
+					data-transition="-articles"
+					data-tracking="/articles/"
+					data-transition-title="Articles | {{ site.title }}"
+				>Articles</a>
 			</li>
 			<li class="header-splash-link-item">
 				<a class="header-splash-link -npm" href="https://www.npmjs.com/~timkendrick" target="_blank">npm</a>
