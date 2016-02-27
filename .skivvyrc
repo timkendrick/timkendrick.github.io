@@ -1,0 +1,30 @@
+{
+  "environment": {
+    "default": {}
+  },
+  "packages": {},
+  "tasks": {
+    "markdown-html": {
+      "targets": {
+        "default": "resume",
+        "resume": {
+          "source": "_includes/resume.md",
+          "destination": "resources/resume/resume.html",
+          "options": {
+            "markdown": {
+              "highlight": true
+            },
+            "html": {
+              "title": "Tim Kendrick: Resumé",
+              "stylesheets": [
+                "../../css/github-markdown.css",
+                "resume.css"
+              ],
+              "bodyClass": "markdown-body"
+            }
+          }
+        }
+      }
+    }
+  }
+}

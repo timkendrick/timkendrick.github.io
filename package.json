@@ -11,5 +11,10 @@
   "bugs": {
     "url": "https://github.com/timkendrick/timkendrick.github.io/issues"
   },
-  "homepage": "https://github.com/timkendrick/timkendrick.github.io"
+  "homepage": "https://github.com/timkendrick/timkendrick.github.io",
+  "devDependencies": {
+    "highlight.js": "^8.5.0",
+    "marked": "^0.3.3",
+    "skivvy": "^0.1.11"
+  }
 }
