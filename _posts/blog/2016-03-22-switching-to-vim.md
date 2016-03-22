@@ -5,9 +5,9 @@ author: Tim Kendrick
 layout: article
 ---
 
-> **Author's note:** I actually wrote this post a few months ago, when I was just getting into Vim. Now that I've become much more accustomed to using Vim, it seems a far more negative appraisal than I would give nowadays. I think this is an important thing to bear in mind: time's a healer, and most of the Vim-pushers (including myself) have probably forgotten about what a struggle it was getting over that initial hump. So without further ado, let me present *[drum-roll...]* **The World's First Completely Unbiased Vim Overview™**.
+> **Author's note:** I actually wrote this post a few months ago, when I was just getting into Vim. I've since become much more accustomed to using Vim, so this is a far more negative appraisal than I would give nowadays. I think this highlights an important point: time's a healer, and most of the Vim-pushers (including myself) have probably forgotten about what a struggle it was getting over that initial hump. So without further ado, let me present *[drum-roll...]* **The World's First Completely Unbiased Vim Overview™**.
 
-**TL;DR:** I've recently gone through the process of switching over from Sublime Text to Vim. If you want to know what I think of it, [skip to the end](#whats-it-like) (spoiler: I now use Vim for everything). If you want to know why I did it, or just fancy spending the next few minutes reading some words, then read on.
+**TL;DR:** I'm a JavaScript engineer who's recently gone through the process of switching from Sublime Text to Vim. If you want to know what I think of it, [skip to the end](#whats-it-like) (spoiler: I now use Vim for everything). If you want to know why I did it, or just fancy spending the next few minutes reading some words, then read on.
 
 
 ## The List
@@ -31,7 +31,7 @@ My optimism turned to a mixture of frustration and despair as soon as I tried to
 
 In one careless tumble I'd swapped my power-user status for the IT proficiency level of my grandmother, who a) has never used a computer in her life, and b) has been dead for several years. Flickers of ingrained muscle memory – <code><key>⇧</key>+<key>⌥</key>+<key>→</key></code>, <code><key>⌃</key>+<key>⌘</key>+<key>↓</key></code> and friends – only served as bitter-sweet reminders of what I had once taked for granted. By my own highly scientific estimations, I was around four to five times slower with only one working hand and without all my precious hotkeys.
 
-Never one to be dissuaded, I looked into the options for one-handed programming. Turns out there are none. There are keyboard layouts like [one-handed DVORAK](https://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard#One-handed_versions) and various [keyboard mirroring](http://blog.xkcd.com/2007/08/14/mirrorboard-a-one-handed-keyboard-layout-for-the-lazy/) options, but none that pander to all those punctuation keys that we programmers love so dearly, and none of them help with replacing the arrow keys for navigating aroung code.
+Never one to be dissuaded, I looked into the options for one-handed programming. Turns out there are none. There are keyboard layouts like [one-handed DVORAK](https://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard#One-handed_versions) and various [keyboard mirroring](http://blog.xkcd.com/2007/08/14/mirrorboard-a-one-handed-keyboard-layout-for-the-lazy/) options, but none that pander to all those punctuation keys that we programmers love so dearly, and none of them help with replacing the arrow keys for navigating aroung code. Moral of the story: never break your arm if you write code for a living.
 
 After pondering my fate for a while (which presumably is the fate of all those one-handed programmers, a demographic for whom I now feel great empathy) I decided it was time to take action. I knew what I had to do. It was time to learn Vim.
 
@@ -42,7 +42,7 @@ The way I saw it, if Vim can make two-handed programmers significantly more prod
 
 The trouble is, learning Vim is *hard*. Not in the sense that any one aspect of it is particularly complicated, it's just that it does everything so differently to other tools. And there's a hell of a lot of it to learn. It's got hundreds of commands, a huge set of very-much-non-standard keyboard shortcuts (which behave differently in each of the several modes), its own proprietary programming language – it's even gone to the trouble of inventing its own vocabulary (seriously, words vs `WORDS`? `yank` instead of `copy`? I don't know who this Bram Moolenaar character is, but it definitely seems like he's been taking full advantage of his country's relaxed drug laws). It's particularly frustrating if you consider yourself pretty nifty with OS X's keyboard shortcuts and all the ins and outs of its UI/windowing/text-editing behavior, seeing as it's all completely different in Vim.
 
-In short, I found learning Vim to be a bit like painstakingly deciphering the operating instructions for some elaborate piece of disused Soviet military apparatus which, once mastered, you can then use to repeatedly punch yourself in the face at a far quicker rate than you would normally be able to.
+In short, I found learning Vim to be a bit like painstakingly deciphering the operating instructions for some elaborate piece of disused Soviet military apparatus which, once mastered, you can then use to repeatedly punch yourself in the face at a far quicker rate than you would usually be able to manage.
 
 After a couple of days blundering around with Vim's thorough-but-dense `:help` command and increasing StackOverflow's ad revenue by 300%, I bit the bullet and bought a copy of [Practical Vim](https://pragprog.com/book/dnvim2/practical-vim-second-edition). That was probably the best $23 I've ever spent, seeing as without it I'd probably have a permanent thousand-yard stare to go with my broken arm.
 
@@ -53,17 +53,14 @@ Now that I'm past the initial hump, and have regained rudimentary arm movement, 
 
 Although it pains me to say it – and I hope this isn't just Stockholm Syndrome setting in, or something to do with the Kool-Aid that the readme instructs you to drink while waiting for Vim to compile – I've got to admit that Vim is a very, very good editor.
 
-Once you use Vim for a while, it becomes apparent that it's all been very cleverly thought-out. As soon as you get used to the mode-switching it becomes second nature, and those myriad keyboard shortcuts all come in handy once you've gone to the trouble of learning them. A lot of the small details which seemed at the beginning to be unnecessary complications turn out to be vital components in a highly coherent system.
+Once you use Vim for a while, it becomes apparent that it's all been very cleverly thought-out. As soon as you get used to the mode-switching it becomes second nature, and those myriad keyboard shortcuts all come in handy once you've gone to the trouble of learning them ([ShortcutFoo](https://www.shortcutfoo.com/) helped a lot). Many of the small details which seemed at the beginning to be unnecessary complications ultimately turn out to be vital components in a highly coherent system.
 
 But that's not to say that it's perfect, by any means. Here's a (hopefully relatively unbiased) round-up of how I've found the last few weeks working with Vim.
 
 ## The good
 
 - Mouse-free operation speeds things up no end
-- Super-fast editing / text manipulation shortcuts. I could now never live without:
-	- Motions
-	- Text objects
-	- Buffers
+- Super-fast editing / text manipulation shortcuts. I could now never live without motions and text objects.
 - Keyboard-controlled windowing support really helps when exploring a codebase
 - Macros are a powerful, if sometimes fragile, way to speed up repeated actions
 - Fully integrated with the Unix ecosystem, allowing you to use your OS to its best advantage
