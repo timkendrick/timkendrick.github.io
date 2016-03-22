@@ -18,7 +18,7 @@ Drag these badboys into your bookmarks bar and they should help diagnose problem
 
 ### Count the number of active scopes
 
-```javascript
+```
 javascript:console.log(angular.element(document.body).injector().invoke(function($rootScope) { return (function _getScopeStatistics(scope) { var statistics = { scopes: 1, watchExpressions: 0 }; if (scope.$$watchers) { statistics.watchExpressions += scope.$$watchers.length; } if (!scope.$$childHead) { return statistics; } var childScope = scope.$$childHead; do { var childStatistics = _getScopeStatistics(childScope); for (var property in childStatistics) { statistics[property] += childStatistics[property]; } } while ((childScope = childScope.$$nextSibling)); return statistics; })($rootScope); }));
 ```
 
@@ -26,7 +26,7 @@ javascript:console.log(angular.element(document.body).injector().invoke(function
 
 ### Time the digest cycle
 
-```javascript
+```
 javascript:angular.element(document.body).injector().invoke(function($rootScope) { console.time('Digest cycle'); $rootScope.$apply(); console.timeEnd('Digest cycle'); });
 ```
 
