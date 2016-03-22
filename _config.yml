@@ -21,7 +21,6 @@ markdown: kramdown
 
 kramdown:
   input: GFM
-  enable_coderay: false
 
 # Content settings
 defaults:
