@@ -8,18 +8,28 @@ type: tip
 
 So I was cleaning out my old bookmarks, and I came across a couple of useful bookmarklets I wrote ages ago for debugging AngularJS digest cycle performance issues.
 
-Drag these badboys into your bookmarks bar and they should help out on pages with a misbehaving AngularJS v1 app (once you've blown off all the cobwebs):
+Drag these badboys into your bookmarks bar and they should help diagnose problems with a misbehaving AngularJS v1 app (once you've blown off all the cobwebs).
 
-### Time the digest cycle (outputs to console)
+> Usage instructions:
+>
+> 1. Launch your app and run the bookmarklet script
+> 2. [`$destroy()`](https://docs.angularjs.org/api/ng/type/$rootScope.Scope#$destroy) the scope that looks more suspicious than a 2007 sub-prime mortgage broker
+> 3. Re-run the bookmarklet script to see if your hunch was correct
 
-```javascript
-javascript:angular.element(document.body).injector().invoke(function($rootScope) { console.time('Digest cycle'); $rootScope.$apply(); console.timeEnd('Digest cycle'); })
-```
-
-### Count the number of active scopes (outputs to console)
+### Count the number of active scopes
 
 ```javascript
 javascript:console.log(angular.element(document.body).injector().invoke(function($rootScope) { return (function _getScopeStatistics(scope) { var statistics = { scopes: 1, watchExpressions: 0 }; if (scope.$$watchers) { statistics.watchExpressions += scope.$$watchers.length; } if (!scope.$$childHead) { return statistics; } var childScope = scope.$$childHead; do { var childStatistics = _getScopeStatistics(childScope); for (var property in childStatistics) { statistics[property] += childStatistics[property]; } } while ((childScope = childScope.$$nextSibling)); return statistics; })($rootScope); }));
 ```
+
+> Console output: `Object {scopes: 337, watchExpressions: 1794}`
+
+### Time the digest cycle
+
+```javascript
+javascript:angular.element(document.body).injector().invoke(function($rootScope) { console.time('Digest cycle'); $rootScope.$apply(); console.timeEnd('Digest cycle'); });
+```
+
+> Console output: `Digest cycle: 10.737ms`
 
 Treat ’em well – these little guys have saved my neck countless times!

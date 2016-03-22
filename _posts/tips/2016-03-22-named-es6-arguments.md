@@ -22,8 +22,8 @@ sayHello('sailor'); // Hello, sailor!
 sayHello('Tim', { exuberant: false }); // Hello, Tim.
 ```
 
-This is perfect for uncluttering your method signatures when your function has a bunch of optional arguments and you're too lazy to keep looking up the order.
+This is perfect for uncluttering your method signatures when the function has a bunch of optional arguments and you're too lazy to keep looking up the order.
 
-**Pro tip:** make sure to include the `= {}` in the function definition if you want the options object itself to be optional.
+**Pro tip:** make sure to include the `= {}` in the function definition, otherwise you'll get undefined errors if you don't pass the options object when calling the function.
 
 This is all in the spec of course, but I'm surprised you don't see these more often. Enjoy!
