@@ -30,11 +30,22 @@ body {
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure,
+h1, h2, h3, h4, h5, h6, p,
 %vertical-rhythm {
 	margin-bottom: $spacing-unit / 2;
+}
+ul, ol, dl, figure,
+pre, blockquote {
+	margin-bottom: $spacing-unit;
+}
+
+
+
+/**
+ * Set `margin-top` to maintain vertical rhythm
+ */
+h2, h3, h4, h5, h6 {
+	margin-top: $spacing-unit;
 }
 
 
@@ -106,6 +117,10 @@ a {
 		color: $base-text-color;
 		text-decoration: underline;
 	}
+
+	.article & {
+		text-decoration: underline;
+	}
 }
 
 
@@ -118,12 +133,21 @@ blockquote {
 	border-left: 4px solid $divider-color;
 	padding-left: $spacing-unit / 2;
 	font-size: 18px;
-	letter-spacing: -1px;
 	font-style: italic;
+	-webkit-font-smoothing: antialiased;
 
 	> :last-child {
 		margin-bottom: 0;
 	}
+}
+
+code {
+	color: #444;
+	background-color: #eee;
+	border-radius: 3px;
+	padding: 0 4px 0 5px;
+	margin-right: 3px;
+	margin-left: 3px;
 }
 
 pre {
@@ -134,6 +158,7 @@ pre {
 		background: #1d1f21;
 		color: #c5c8c6;
 		padding: 0.5em;
+		margin: 0;
 		-webkit-text-size-adjust: none
 	}
 }
