@@ -6,7 +6,7 @@ layout: article
 type: tip
 ---
 
-So I was cleaning out my old bookmarks, and I came across these old bookmarklets I wrote ages ago for debugging AngularJS digest cycle performance issues.
+So I was cleaning out my old bookmarks, and I came across a couple of useful bookmarklets I wrote ages ago for debugging AngularJS digest cycle performance issues.
 
 Drag these badboys into your bookmarks bar and they should help out on pages with a misbehaving AngularJS v1 app (once you've blown off all the cobwebs):
 
