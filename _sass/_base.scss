@@ -149,6 +149,10 @@ code {
 	padding: 0 4px 0 5px;
 	margin-right: 3px;
 	margin-left: 3px;
+
+	blockquote & {
+		font-style: normal;
+	}
 }
 
 pre {
