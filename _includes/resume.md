@@ -47,7 +47,7 @@ Bright, enthusiastic hard‑worker with ten years’ industry experience, workin
 
 Singlehandedly planned, prototyped, designed, built, and shipped a fully-featured SaaS product ([filecanvas.com](https://www.filecanvas.com/)) over the course of six months, in order to better understand the process of creating a product all the way from inception to launch. Sole founder/programmer status meant roles included everything from ideas generation, to coding, to devops, to user testing, to logo design and copywriting.
 
-Technical stack: containerised microservice backend (Node.js + Express, nginx + Lua, MongoDB, Redis, Docker Compose), hosted on AWS (Elastic Beanstalk, ECS, ECR, S3), with extensive Dropbox and Google Drive API integration, vanilla JS front-end with highly interactive virtual-dom template editor, and automated one-line deploy via Bash scripts. Combined front-end/back-end codebase is currently around 35,000 lines.
+Technical stack: containerised microservice backend (Node.js + Express, nginx + Lua, MongoDB, Redis, Docker Compose), hosted on AWS (Elastic Beanstalk, ECS, ECR, S3), with extensive Dropbox and Google Drive API integration, vanilla JS front-end with highly interactive virtual-dom template editor, and automated one-line deploy via Bash scripts. Combined front-end/back-end codebase is currently around 40,000 lines.
 
 
 #### Fathom (September 2013 - April 2015)
