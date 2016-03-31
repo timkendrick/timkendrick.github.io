@@ -52,7 +52,7 @@ Technical stack: containerised microservice backend (Node.js + Express, nginx + 
 
 #### Fathom (September 2013 - April 2015)
 
-Lead front‑end developer for a highly interactive real‑time trading platform application (see the [promo site](http://www.tradeweb.com/landing/us_corporate_bonds/index.html) for details), developed from scratch beginning September 2013, successfully launched in August 2014, and still under active development. Ongoing roles included architecture planning, development of in‑house component library used across prototypes and live apps, performance tuning/profiling, internal build tools, technical leadership, teaching and supervising other developers, hiring new developers.
+Lead front‑end developer for a highly interactive real‑time trading platform application (see the [promo site](http://www.tradeweb.com/landing/us_corporate_bonds/index.html) for details) and accompanying [component suite](http://accelerator.fathomlondon.com/), developed from scratch beginning September 2013, successfully launched in August 2014, and still under active development. Ongoing roles included architecture planning, development of in‑house component library used across prototypes and live apps, performance tuning/profiling, internal build tools, technical leadership, teaching and supervising other developers, hiring new developers.
 
 
 #### Burberry (August 2011 - January 2013)
