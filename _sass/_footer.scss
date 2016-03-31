@@ -32,6 +32,10 @@
 	&.-npm {
 		@extend %image-footer-npm;
 	}
+
+	&.-resume {
+		@extend %image-footer-resume;
+	}
 }
 
 .footer-col-wrapper {
