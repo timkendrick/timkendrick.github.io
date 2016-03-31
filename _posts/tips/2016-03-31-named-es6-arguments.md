@@ -39,7 +39,7 @@ fs.createReadStream = function(path, {
 }
 
 fs.createReadStream('/path/to/file');
-fs.createReadStrean('/path/to/file', { encoding: 'utf8', autoClose: false });
+fs.createReadStream('/path/to/file', { encoding: 'utf8', autoClose: false });
 ```
 
 This is perfect for producing clean, readable function calls when there are a bunch of optional arguments and you're too <strike>lazy</strike> awesome to keep looking up the order.
