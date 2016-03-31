@@ -1,7 +1,7 @@
 # Tim Kendrick
 
 - **Web**: [timkendrick.co.uk](http://timkendrick.co.uk/)
-- **LinkedIn**: [Tim Kendrick](https://www.linkedin.com/profile/view?id=192494997)
+- **LinkedIn**: [Tim Kendrick](https://www.linkedin.com/in/timrbkendrick)
 - **Github**: [timkendrick](https://github.com/timkendrick)
 - **Email**: [timkendrick@gmail.com](mailto:timkendrick@gmail.com)
 
