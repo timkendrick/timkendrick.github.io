@@ -24,7 +24,7 @@ sayHello('sailor'); // Hello, sailor!
 sayHello('Tim', { exuberant: false }); // Hello, Tim.
 ```
 
-This scales up nicely when you need lots of optional properties:
+This scales up nicely when you need lots of optional arguments:
 
 ```javascript
 fs.createReadStream = function(path, {
