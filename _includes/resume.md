@@ -62,7 +62,7 @@ Development of all interactive experiences on burberry.com (e.g. [Burberry Eyewe
 
 ## Academic History
 - **2005 - 2008**: Trinity College, University of Cambridge (BA degree in Philosophy, 2:2)
-- **2003 - 2005**: Sevenoaks School (International Baccalaureate Diploma, 45 points out of 45)
+- **2003 - 2005**: Sevenoaks School (International Baccalaureate Diploma, 45 out of 45)
 
 
 ## Hobbies / Interests
