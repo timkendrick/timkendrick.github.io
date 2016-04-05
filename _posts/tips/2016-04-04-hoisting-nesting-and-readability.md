@@ -8,11 +8,11 @@ type: tip
 
 This post is all about a) maintaining code readability, and b) maintaining healthy relations with the people who sit next to you every day. If you value your coworkers' sanity, or just generally don't want to screw them over on a regular basis, I'd recommend making your codebase as easy to navigate as possible. Two ways I've found to help in that respect are **function hoisting** and **nested functions**. Let's find out why.
 
-> **Pro Tip:** if you're just looking for some quick tips, [skip to the end](#ok-i-give-in-please-just-stop-talking).
+> **Pro Tip:** if you're just looking for some quick tips for writing readable functions, [skip to the end](#ok-i-give-in-please-just-stop-talking).
 
 ## Function hoisting
 
-I can't get enough of function hoisting. Partly just because the word "hoisting" is so rarely used outside of a maritime/shakespearean context, but mainly because I think it can really help with code clarity.
+I can't get enough of function hoisting in JavaScript. Partly just because the word "hoisting" is so rarely used outside of a maritime/shakespearean context, but mainly because I think it can really help with code clarity.
 
 Check out the following snippet to see an example of function hoisting in action:
 
@@ -23,7 +23,7 @@ function doThingsIWannaDo() {
 	danceWithSomebody({ lovesMe: true });
 
 
-	function danceWithSomebody(specialRequests) {
+	function danceWithSomebody(partnerTraits) {
 		// ...
 	}
 
@@ -41,7 +41,7 @@ For comparison, here's a non-hoisted version of the above code:
 
 ```javascript
 function doThingsIWannaDo() {
-	function danceWithSomebody(specialRequests) {
+	function danceWithSomebody(partnerTraits) {
 		// ...
 	}
 
@@ -68,7 +68,7 @@ function doThingsIWannaDo() {
 	danceWithSomebody({ lovesMe: true });
 
 
-	function danceWithSomebody(specialRequests) {
+	function danceWithSomebody(partnerTraits) {
 		// ...
 	}
 
@@ -125,7 +125,7 @@ function doThingsIWannaDo() {
 	danceWithSomebody({ lovesMe: true });
 
 
-	function danceWithSomebody(specialRequests) {
+	function danceWithSomebody(partnerTraits) {
 		// ...
 	}
 
@@ -144,7 +144,7 @@ function doThingsIWannaDo() {
 	danceWithSomebody({ lovesMe: true });
 }
 
-function danceWithSomebody(specialRequests) {
+function danceWithSomebody(partnerTraits) {
 	// ...
 }
 
@@ -163,9 +163,9 @@ Perhaps more importantly, nested functions improve the readability of the parent
 
 ### Let's get philosophical here
 
-By splitting out the function body into these simple nested functions, you end up with something vaguely akin to an interface/implementation pairing, only within a single function: the stripped-down function body effectively becomes pseudo-code that describes what the function needs to do (i.e. the interface), while the gory details are hidden within a set of nested functions that actually do that (i.e. the implementation).
+By splitting out the function body into these simple nested functions, you end up with something vaguely akin to an interface/implementation pairing, only within a single function: the stripped-down function body effectively becomes pseudo-code that describes **what** the function needs to do (i.e. the interface), while the gory details are hidden within a set of nested functions that determine **how** it goes about doing that (i.e. the implementation). You can swap out the contents of the nested functions to your heart's content, so long as the signatures of the nested functions (i.e. the contract enforced by the interface) remain the same.
 
-These nested functions themselves contain their own child functions, and therefore exhibit this same interface-vs-implementation-like divide, so as you go down the chain all the initial complexity is gradually dissolved into a series of straightforward helper functions and the accompanying 'glue' code that describes how they fit together.
+These nested functions themselves contain their own child functions, and therefore exhibit this same interface-vs-implementation-like divide, with each nested scope acting at a lower level of abstraction as you drill further down the scope chain. This way all the initial complexity is gradually dissolved into a series of straightforward helper functions and the accompanying 'glue' code that describes how they fit together.
 
 It's probably clear from these reasons that I'm a big fan of nesting functions as an aid to code organization – I've found it to be a huge help over the years, as have Google, who recommend it [in their JS style guide](https://google.github.io/styleguide/javascriptguide.xml#Nested_functions) (worth checking out, although like any style guide I'd take it with a pinch of salt).
 
@@ -190,7 +190,7 @@ function doThingsIWannaDo() {
 	danceWithSomebody({ lovesMe: true });
 
 
-	function danceWithSomebody(specialRequests) {
+	function danceWithSomebody(partnerTraits) {
 		// ...
 	}
 
@@ -205,7 +205,7 @@ In terms of code layout, I'd argue that this is what we should be striving for. 
 I'd recommend keeping the following tips in mind when optimizing your functions for easy code-skimming:
 
 - Make sure that each function only does one thing
-- Keep function bodies concise (ideally only a few lines each)
+- Keep function bodies concise (ideally only a few lines per function)
 - Don't shy away from breaking a function into a series of small, nested functions (this helps keep the function body concise)
 - Lay out the function body as a series of simple 'dumb' steps, followed by nested functions that contain the meat of the implementation
 - When naming things, value clarity over brevity: aim for self-documenting code via well-named functions and variables
