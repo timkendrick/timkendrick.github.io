@@ -16,7 +16,7 @@ Drag these badboys into your bookmarks bar and they should help diagnose problem
 > 2. [`$destroy()`](https://docs.angularjs.org/api/ng/type/$rootScope.Scope#$destroy) the scope that looks shadier than a 2007 sub-prime mortgage broker
 > 3. Re-run the bookmarklet script to see if your hunch was correct
 
-### Count the number of active scopes
+### Bookmarklet 1: Count the number of active scopes
 
 ```
 javascript:console.log(angular.element(document.body).injector().invoke(function($rootScope) { return (function _getScopeStatistics(scope) { var statistics = { scopes: 1, watchExpressions: 0 }; if (scope.$$watchers) { statistics.watchExpressions += scope.$$watchers.length; } if (!scope.$$childHead) { return statistics; } var childScope = scope.$$childHead; do { var childStatistics = _getScopeStatistics(childScope); for (var property in childStatistics) { statistics[property] += childStatistics[property]; } } while ((childScope = childScope.$$nextSibling)); return statistics; })($rootScope); }));
@@ -24,7 +24,7 @@ javascript:console.log(angular.element(document.body).injector().invoke(function
 
 > Console output: `Object {scopes: 337, watchExpressions: 1794}`
 
-### Time the digest cycle
+### Bookmarklet 2: Time the digest cycle
 
 ```
 javascript:angular.element(document.body).injector().invoke(function($rootScope) { console.time('Digest cycle'); $rootScope.$apply(); console.timeEnd('Digest cycle'); });
