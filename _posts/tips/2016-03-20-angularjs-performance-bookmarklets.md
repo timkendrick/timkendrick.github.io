@@ -8,12 +8,12 @@ type: tip
 
 So I was cleaning out my old bookmarks, and I came across a couple of useful bookmarklets I wrote ages ago for debugging AngularJS digest cycle performance issues.
 
-Drag these badboys into your bookmarks bar and they should help diagnose problems with a misbehaving AngularJS v1 app (once you've blown off all the cobwebs).
+Drag these badboys into your bookmarks bar and they should help diagnose problems with a misbehaving AngularJS v1 app.
 
 > Usage instructions:
 >
 > 1. Launch your app and run the bookmarklet script
-> 2. [`$destroy()`](https://docs.angularjs.org/api/ng/type/$rootScope.Scope#$destroy) the scope that looks more suspicious than a 2007 sub-prime mortgage broker
+> 2. [`$destroy()`](https://docs.angularjs.org/api/ng/type/$rootScope.Scope#$destroy) the scope that looks shadier than a 2007 sub-prime mortgage broker
 > 3. Re-run the bookmarklet script to see if your hunch was correct
 
 ### Count the number of active scopes
