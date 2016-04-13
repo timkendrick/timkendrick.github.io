@@ -1,14 +1,14 @@
 # Tim Kendrick
 
 - **Web**: [timkendrick.co.uk](http://timkendrick.co.uk/)
-- **LinkedIn**: [Tim Kendrick](https://www.linkedin.com/in/timrbkendrick)
+- **LinkedIn**: [timrbkendrick](https://www.linkedin.com/in/timrbkendrick)
 - **Github**: [timkendrick](https://github.com/timkendrick)
 - **Email**: [timkendrick@gmail.com](mailto:timkendrick@gmail.com)
 
 
 ## Overview
 
-Bright, enthusiastic hard‑worker with ten years’ industry experience, working as part of a team and supervising others. Frequent open source contributor with high standards of documentation and testing. Excellent problem‑solving skills, fast learner, great eye for detail, and a very strong team member.
+Bright, enthusiastic hard‑worker with experience spanning multiple industries, working as part of a team and supervising others. Frequent open source contributor with high standards of documentation and testing. Excellent problem‑solving skills, fast learner, great eye for detail, and a very strong team member.
 
 
 ## Frameworks / Technologies
@@ -45,9 +45,9 @@ Bright, enthusiastic hard‑worker with ten years’ industry experience, workin
 
 #### Filecanvas (September 2015 - present)
 
-Singlehandedly planned, prototyped, designed, built, and shipped a fully-featured SaaS product ([filecanvas.com](https://www.filecanvas.com/)) over the course of six months, in order to better understand the process of creating a product all the way from inception to launch. Sole founder/programmer status meant roles included everything from ideas generation, to coding, to devops, to user testing, to logo design and copywriting.
+Singlehandedly planned, prototyped, designed, built, and shipped a fully-featured SaaS product ([filecanvas.com](https://www.filecanvas.com/)) over the course of six months, in order to better understand the process of creating a product all the way from ideas generation to launch. Sole founder/programmer status meant roles included everything from planning, to coding, to devops, to user testing, to logo design and copywriting.
 
-Technical stack: containerised microservice backend (Node.js + Express, nginx + Lua, MongoDB, Redis, Docker Compose), hosted on AWS (Elastic Beanstalk, ECS, ECR, S3), with extensive Dropbox and Google Drive API integration, vanilla JS front-end with highly interactive virtual-dom template editor, and automated one-line deploy via Bash scripts. Combined front-end/back-end codebase is currently around 40,000 lines.
+Technical stack: containerised service-oriented backend architecture (Node.js + Express, nginx + Lua, MongoDB, Redis, Docker Compose), hosted on AWS (Elastic Beanstalk, ECS, ECR, S3), with extensive Dropbox and Google Drive API integration, vanilla JS front-end with highly interactive virtual-dom template editor, and automated one-line build/deploy via Bash scripts. Combined front-end/back-end codebase is currently around 40,000 lines.
 
 
 #### Fathom (September 2013 - April 2015)
