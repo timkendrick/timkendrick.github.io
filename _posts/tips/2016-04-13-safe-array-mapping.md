@@ -19,7 +19,7 @@ var ids = stringIds.map(parseInt);
 console.log(ids);
 ```
 
-If you guessed `[ 6, NaN, 2, 5, 1 ]` then congratulations! Have a gold star.
+If you guessed `[ 6, NaN, 2, 5, 1 ]` then congratulations! You're a winner.
 
 
 If this revelation has left you reeling, have a think about how `parseInt()` is defined:
