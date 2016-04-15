@@ -1,6 +1,6 @@
 ---
 title: AngularJS performance bookmarklets
-summary: Remember AngularJS v1?  Here's a couple of scripts to help debug performance issues
+summary: Remember AngularJS v1?  Here's a couple scripts that can help debug performance issues
 author: Tim Kendrick
 layout: article
 type: tip
