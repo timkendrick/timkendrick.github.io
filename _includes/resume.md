@@ -1,6 +1,6 @@
 # Tim Kendrick
 
-- **Web**: [timkendrick.co.uk](http://timkendrick.co.uk/)
+- **Web**: [timkendrick.co.uk](https://timkendrick.co.uk/)
 - **LinkedIn**: [timrbkendrick](https://www.linkedin.com/in/timrbkendrick)
 - **Github**: [timkendrick](https://github.com/timkendrick)
 - **Email**: [timkendrick@gmail.com](mailto:timkendrick@gmail.com)
@@ -57,7 +57,7 @@ Lead front‑end developer for a highly interactive real‑time trading platform
 
 #### Burberry (August 2011 - January 2013)
 
-Development of all interactive experiences on burberry.com (e.g. [Burberry Eyewear](http://preview.timkendrick.co.uk/burberry-eyewear/) campaign), creation of in-house JS/CSS Framework (used across all campaign sites, live streamed fashion shows, press kits and in‑house tools), development of in-house internationalization tools, automation / build process improvements, technical research, hiring and supervising new developers.
+Development of all interactive experiences on burberry.com (e.g. [Burberry Eyewear](https://preview.timkendrick.co.uk/burberry-eyewear/) campaign), creation of in-house JS/CSS Framework (used across all campaign sites, live streamed fashion shows, press kits and in‑house tools), development of in-house internationalization tools, automation / build process improvements, technical research, hiring and supervising new developers.
 
 
 ## Academic History
