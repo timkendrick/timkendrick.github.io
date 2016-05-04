@@ -13,7 +13,7 @@ Bright, enthusiastic hard‑worker with experience spanning multiple industries,
 
 ## Frameworks / Technologies
 
-- **JavaScript**: ES6, React, Node.js, AngularJS, RxJS, Underscore.js/lodash, Mocha/Chai/Jasmine, Webpack/Browserify/Require.js, Gulp/Grunt, Electron/NW.js, JSDoc, jQuery
+- **JavaScript**: ES6, React, Redux, Node.js, AngularJS, RxJS, Underscore.js/lodash, Mocha/Chai/Jasmine, Webpack/Browserify/Require.js, Gulp/Grunt, Electron/NW.js, JSDoc, jQuery
 - **Back‑end**: Express, Docker, MongoDB, Redis, nginx, AWS, Heroku, Bash scripting
 - **CSS**: SASS, Stylus, BEM, SUIT CSS
 
