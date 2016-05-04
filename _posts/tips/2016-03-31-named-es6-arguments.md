@@ -37,7 +37,7 @@ createUser({ id: 7124634, name: 'tim', age: 28, admin: true }); // Yay!
 
 The destructuring assignment allows us to transparently access the properties of the "options" object in the function body as if they were real arguments. Pretty cool, huh?
 
-You can also combine this with normal positional arguments for situations when you have one or more required arguments followed by an "options" object for any extra parameters:
+You can also combine this with normal positional arguments for situations when you have one or more required arguments, followed by an "options" object for any extra parameters:
 
 ```javascript
 function greetUser(name, { exuberant=false }) {
