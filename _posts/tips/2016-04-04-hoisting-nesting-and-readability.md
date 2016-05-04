@@ -8,7 +8,7 @@ type: tip
 
 > **TL;DR:** Hoisted inner functions can have a significant impact on readability. Give them a go!
 
-I can't get enough of function hoisting in JavaScript. Partly just because the word "hoisting" is so rarely used outside a maritime context, but mainly because I think it's a pretty wacky feature that can really help with code clarity.
+I’m a big fan of function hoisting in JavaScript. Partly just because the word "hoisting" is so rarely used outside a maritime context, but mainly because I think it's a pretty wacky feature that can really help with code clarity.
 
 When combined with nested inner functions, I feel that this delivers a one-two sucker-punch of code readability and maintainability. Am I right to feel this way? You decide!
 
