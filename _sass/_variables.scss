@@ -57,7 +57,6 @@ $splash-title-line-height-tablet: 1.5;
 $splash-title-letter-spacing-tablet: 2px;
 $splash-title-text-transform: $header-text-transform;
 $splash-title-text-color: $header-text-color;
-$splash-title-background-color: $header-background-color;
 $splash-title-text-align: center;
 
 $splash-subtitle-font-family: $header-font-family;
@@ -73,8 +72,26 @@ $splash-subtitle-line-height-tablet: 1.5;
 $splash-subtitle-letter-spacing-tablet: 0;
 $splash-subtitle-text-transform: none;
 $splash-subtitle-text-color: $splash-title-text-color;
-$splash-subtitle-background-color: $splash-title-background-color;
 $splash-subtitle-text-align: center;
+
+$splash-intro-font-family: $base-font-family;
+$splash-intro-font-weight: 300;
+$splash-intro-font-size: 16px;
+$splash-intro-line-height: 1.5;
+$splash-intro-letter-spacing: 0;
+$splash-intro-font-size-mobile: 14px;
+$splash-intro-line-height-mobile: 1.5;
+$splash-intro-letter-spacing-mobile: 0;
+$splash-intro-font-size-tablet: 16px;
+$splash-intro-line-height-tablet: 1.5;
+$splash-intro-letter-spacing-tablet: 0;
+$splash-intro-text-transform: none;
+$splash-intro-text-color: rgba($splash-title-text-color, 0.6);
+$splash-intro-text-align: center;
+$splash-intro-link-text-color: rgba($splash-title-text-color, 0.8);
+$splash-intro-link-text-decoration: underline;
+$splash-intro-link-font-weight: 300;
+$splash-intro-link-rollover-text-color: $splash-title-text-color;
 
 $action-font-family: $splash-subtitle-font-family;
 $action-font-weight: $splash-subtitle-font-weight;
@@ -87,7 +104,6 @@ $action-line-height-mobile: 1.75;
 $action-letter-spacing-mobile: $splash-subtitle-letter-spacing-mobile;
 $action-text-transform: uppercase;
 $action-text-color: $splash-subtitle-text-color;
-$action-background-color: $splash-subtitle-background-color;
 $action-text-align: $splash-subtitle-text-align;
 
 $badge-font-family: "Montserrat", $base-font-family;
