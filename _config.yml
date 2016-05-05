@@ -13,7 +13,7 @@ github_username: timkendrick
 npm_username:
 
 # File settings
-exclude: ["node_modules", "package.json", "README.md"]
+exclude: ["node_modules", "package.json", "resources", "README.md"]
 
 # Build settings
 permalink: /articles/:year/:month/:day/:title.html
