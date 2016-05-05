@@ -1,6 +1,6 @@
 ---
 title: Safe array mapping
-summary: Remember, kids – wrap it up before you map it up
+summary: Always wrap it up before you map it up
 author: Tim Kendrick
 layout: article
 type: tip
@@ -19,10 +19,16 @@ var ids = stringIds.map(parseInt);
 console.log(ids);
 ```
 
-If you guessed `[ 6, NaN, 2, 5, 1 ]` then congratulations! You're a winner.
+If you guessed `[ 6, NaN, 2, 5, 1 ]` then you nailed it!
 
 
-If this revelation has left you reeling, have a think about how `parseInt()` is defined:
+If this revelation has left you reeling, have a think about how the `map()` method calls its callback:
+
+```javascript
+callback(currentValue, index, array)
+```
+
+...and how `parseInt()` is defined:
 
 ```javascript
 function parseInt(string[, radix]) {
@@ -30,13 +36,7 @@ function parseInt(string[, radix]) {
 }
 ```
 
-...and how the `map()` method calls its callback:
-
-```javascript
-callback(currentValue, index, array);
-```
-
-BOOM! In your rush to save a few keystrokes, you've ended up passing an `index` where you should be passing a `radix`.
+BOOM! In your rush to save a few keystrokes, you've ended up passing an `index` where you should be passing a `radix`, with disastrous results.
 
 While any JavaScript developer worth their salt knows to act cautious around `parseInt()`, the potential for this mistake can crop up all-too-easily in normal-looking code:
 
@@ -64,7 +64,7 @@ function getMirroredPoint(point, scale) {
 }
 ```
 
-Now you're asking for trouble. Plus technically this is _your_ screw-up, seeing as all along you've been calling the function incorrectly.
+Now you're asking for trouble. Plus technically this is _your_ screw-up, seeing as all along you've been invoking the function incorrectly by passing too many arguments.
 
 So what's the moral of the story? Always make sure to wrap any `map()` callbacks in an intermediate function:
 
