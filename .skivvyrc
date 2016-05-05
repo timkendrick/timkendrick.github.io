@@ -6,10 +6,10 @@
   "tasks": {
     "markdown-html": {
       "targets": {
-        "default": "resume",
-        "resume": {
-          "source": "_includes/resume.md",
-          "destination": "resources/resume/resume.html",
+        "default": "cv",
+        "cv": {
+          "source": "_includes/cv.md",
+          "destination": "resources/cv/cv.html",
           "options": {
             "markdown": {
               "highlight": true
@@ -18,7 +18,7 @@
               "title": "Tim Kendrick: Resumé",
               "stylesheets": [
                 "../../css/github-markdown.css",
-                "resume.css"
+                "cv.css"
               ],
               "bodyClass": "markdown-body"
             }

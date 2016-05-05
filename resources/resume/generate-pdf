@@ -1,4 +1,0 @@
-#!/bin/sh
-cd $(dirname $0)
-
-skivvy run markdown-html --cwd ../.. && wkhtmltopdf -s Letter --margin-top 15mm resume.html ../../downloads/Tim\ Kendrick\ -\ Resumé.pdf

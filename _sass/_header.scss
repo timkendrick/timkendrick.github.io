@@ -277,8 +277,8 @@ body:not(.-home) {
 		@extend %image-header-articles;
 	}
 
-	&.-resume:before {
-		@extend %image-header-resume;
+	&.-cv:before {
+		@extend %image-header-cv;
 	}
 
 }

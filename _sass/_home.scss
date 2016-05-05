@@ -22,14 +22,14 @@ body:not(.-articles) {
 	}
 }
 
-body.-resume {
-	.container:not(.-resume) {
+body.-cv {
+	.container:not(.-cv) {
 		display: none;
 	}
 }
 
-body:not(.-resume) {
-	.container.-resume {
+body:not(.-cv) {
+	.container.-cv {
 		display: none;
 	}
 }
@@ -93,13 +93,13 @@ body:not(.-resume) {
 
 .home-articles-subscribe {}
 
-.home-resume-header {
+.home-cv-header {
 	@extend .page-header;
 	padding-bottom: 0.3em;
 	border-bottom: 1px solid #eee;
 }
 
-.home-resume-download {
+.home-cv-download {
 	display: inline-block;
 	float: right;
 	margin-top: 5px;
@@ -127,16 +127,16 @@ body:not(.-resume) {
 	}
 }
 
-.home-resume-download-icon {
+.home-cv-download-icon {
 	vertical-align: top;
 	margin-left: 5px;
 }
 
-.home-resume-title {
+.home-cv-title {
 	@extend .page-title;
 }
 
-.home-resume-content {
+.home-cv-content {
 	min-width: 200px;
 	max-width: 770px;
 	font-weight: normal;
@@ -152,7 +152,7 @@ body:not(.-resume) {
 	.home-articles-title {
 		letter-spacing: $articles-title-letter-spacing !important;
 	}
-	.home-resume-content {
+	.home-cv-content {
 		padding: 55px 50px 50px;
 		margin: 0 -10px;
 		border: 1px solid #d4d4d4;
@@ -164,7 +164,7 @@ body:not(.-resume) {
 		}
 	}
 
-	.home-resume-download {
+	.home-cv-download {
 		margin-top: 8px;
 
 		&:before {
@@ -174,13 +174,13 @@ body:not(.-resume) {
 }
 
 @include media-query-min($breakpoint-desktop) {
-	.home-resume-download-icon {
+	.home-cv-download-icon {
 		#arrow {
 			transform: translateY(0);
 			transition: transform 100ms ease;
 		}
 
-		.home-resume-download:hover & {
+		.home-cv-download:hover & {
 			#arrow {
 				transform: translateY(2px);
 			}
