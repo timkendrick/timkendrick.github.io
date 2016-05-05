@@ -153,7 +153,6 @@ body:not(.-home) {
 
 .header-banner {
 	display: none;
-	background-color: $header-background-color;
 	padding-top: 2 * $spacing-unit;
 
 	body.-home & {
@@ -175,7 +174,6 @@ body:not(.-home) {
 }
 
 .header-splash {
-	background-color: $header-background-color;
 	min-height: 0;
 	max-height: 380px;
 	overflow: hidden;

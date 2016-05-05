@@ -11,7 +11,7 @@ $text-color: #333;
 $subtitle-color: #828282;
 $link-color: #2A7AE2;
 $divider-color: lighten($subtitle-color, 40%);
-$header-background-color: #50E6C0;
+$header-background-color: #57DBBA;
 $content-background-color: white;
 $footer-background-color: #FEFEFE;
 
@@ -60,7 +60,7 @@ $header-nav-text-color: white;
 $header-nav-text-color-rollover: white;
 
 $splash-font-family: $title-font-family;
-$splash-text-color: #485350;
+$splash-text-color: rgba(#4A4A4A, 0.9);
 
 $splash-intro-font-family: $splash-font-family;
 $splash-intro-font-weight: 300;
