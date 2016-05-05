@@ -22,6 +22,7 @@ body {
 	color: $base-text-color;
 	background-color: $footer-background-color;
 	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
 	overflow-y: scroll;
 }
 
@@ -164,5 +165,19 @@ pre {
 		margin: 0;
 		tab-size: 2;
 		-webkit-text-size-adjust: none
+	}
+}
+
+.hidden-xs {
+	display: none !important;
+}
+
+@include media-query-min($breakpoint-tablet) {
+	.hidden-xs {
+		display: block !important;
+	}
+
+	br.hidden-xs {
+		display: inline !important;
 	}
 }

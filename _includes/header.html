@@ -15,12 +15,19 @@
 			<a class="header-nav-link -npm" href="https://www.npmjs.com/~timkendrick" target="_blank" title="npm"></a>
 		</div>
 	</nav>
-	<section class="wrapper header-splash">
-		<div class="header-splash-title">
-			<h1 class="header-splash-title-heading">{{ site.title }}</h1>
-			<h2 class="header-splash-title-subheading">{{ site.subtitle }}</h2>
-			<p class="header-splash-title-intro">Creator of <a href="https://www.filecanvas.com/" target="_blank">Filecanvas</a>, <a href="http://accelerator.fathomlondon.com/" target="_blank">UI component libraries</a> and <a href="https://preview.timkendrick.co.uk/burberry-eyewear" target="_blank">award-winning interactive campaigns</a></p>
-		</div>
+	<div class="header-banner">
+		<a class="header-banner-link" href="{{ site.baseurl }}/"
+			data-transition="-home"
+			data-transition-title="{{ site.title }} | {{ site.subtitle }}"
+			data-tracking="/"
+			alt="{{ site.title }}"
+		>
+			<span class="header-banner-link-logo"></a>
+			<span class="header-banner-link-logo-small"></a>
+		</a>
+	</div>
+	<div class="header-splash wrapper">
+		<p class="header-splash-intro hidden-xs">Creator of <a href="https://www.filecanvas.com/" target="_blank">Filecanvas</a>, award-winning <a href="https://preview.timkendrick.co.uk/burberry-eyewear" target="_blank">interactive campaigns</a>,<br class="hidden-xs"/> and high-performance <a href="http://accelerator.fathomlondon.com/" target="_blank">UI component libraries</a>.</p>
 		<ul class="header-splash-link-items">
 			<li class="header-splash-link-item">
 				<a class="header-splash-link -github" href="https://github.com/timkendrick" target="_blank">Github</a>
@@ -36,5 +43,5 @@
 				<a class="header-splash-link -npm" href="https://www.npmjs.com/~timkendrick" target="_blank">npm</a>
 			</li>
 		</ul>
-	</section>
+	</div>
 </header>

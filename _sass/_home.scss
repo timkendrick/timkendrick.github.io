@@ -44,6 +44,9 @@ body:not(.-resume) {
 
 .home-articles-title {
 	@extend .page-title;
+	letter-spacing: $articles-title-letter-spacing-mobile !important;
+	text-align: $articles-title-text-align !important;
+	text-transform: uppercase;
 }
 
 .home-articles-content {
@@ -59,7 +62,10 @@ body:not(.-resume) {
 	margin-bottom: $spacing-unit;
 }
 
-.home-articles-article-title {}
+.home-articles-article-title {
+	font-family: $article-list-title-font-family;
+	font-weight: $article-list-title-font-weight;
+}
 
 .home-articles-article-subtitle {
 	font-family: $subtitle-font-family;
@@ -143,6 +149,9 @@ body:not(.-resume) {
 }
 
 @include media-query-min($breakpoint-tablet) {
+	.home-articles-title {
+		letter-spacing: $articles-title-letter-spacing !important;
+	}
 	.home-resume-content {
 		padding: 55px 50px 50px;
 		margin: 0 -10px;
