@@ -152,30 +152,26 @@ body:not(.-home) {
 }
 
 .header-banner {
+	display: none;
 	background-color: $header-background-color;
 	padding-top: 2 * $spacing-unit;
-}
 
-.header-banner-link {
 	body.-home & {
-		cursor: default;
+		display: block;
 	}
 }
 
-.header-banner-link-logo-small {
-	@extend %image-title-small;
+.header-banner-logo {
+	@extend %image-title;
 	display: block;
 	height: 125px;
 	background-position: center 0;
 	background-repeat: no-repeat;
-}
 
-.header-banner-link-logo {
-	@extend %image-title;
-	height: 130px;
-	background-size: contain;
-	background-repeat: no-repeat;
-	display: none;
+	body.-home & {
+		cursor: default;
+		pointer-events: none;
+	}
 }
 
 .header-splash {
@@ -318,12 +314,9 @@ body:not(.-home) {
 		}
 	}
 
-	.header-banner-link-logo-small {
-		display: none;
-	}
-
-	.header-banner-link-logo {
-		display: block;
+	.header-banner-logo {
+		height: 130px;
+		background-size: contain;
 	}
 
 	.header-splash-intro {
