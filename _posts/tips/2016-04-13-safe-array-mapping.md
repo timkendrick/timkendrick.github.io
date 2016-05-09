@@ -1,6 +1,6 @@
 ---
 title: Safe array mapping
-summary: Always wrap it up before you map it up
+summary: "Remember: always wrap before you map!"
 author: Tim Kendrick
 layout: article
 type: tip
