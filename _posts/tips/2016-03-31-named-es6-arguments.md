@@ -6,7 +6,7 @@ layout: article
 type: tip
 ---
 
-> **TL;DR:** Approximate named arguments by sticking ES6 destructuring assignments in your function's arguments list
+> **TL;DR:** Simulate named arguments by sticking ES6 destructuring assignments in your function's arguments list
 
 OK, so the title's a bit misleading – these aren't *true* named arguments – but you can achieve a pretty good approximation with ES6 destructuring assignments and default function arguments.
 
