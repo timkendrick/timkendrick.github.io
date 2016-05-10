@@ -8,14 +8,14 @@
 
 ## Overview
 
-Bright, enthusiastic hard‑worker with experience spanning multiple industries, working as part of a team and supervising others. Frequent open source contributor with high standards of documentation and testing. Excellent problem‑solving skills, fast learner, great eye for detail, and a very strong team member.
+Bright, enthusiastic hard‑worker with ten years’ experience across multiple industries, working as part of a team and supervising others. Frequent open source contributor with high standards of documentation and testing. Excellent problem‑solving skills, fast learner, great eye for detail, and a very strong team member who knows how to ship quality code.
 
 
 ## Frameworks / Technologies
 
 - **JavaScript**: ES6, React, Redux, Node.js, AngularJS, RxJS, Underscore.js/lodash, Mocha/Chai/Jasmine, Webpack/Browserify/Require.js, Gulp/Grunt, Electron/NW.js, JSDoc, jQuery
 - **Back‑end**: Express, Docker, MongoDB, Redis, nginx, AWS, Heroku, Bash scripting
-- **CSS**: SASS, Stylus, BEM, SUIT CSS
+- **CSS**: SASS, Stylus, CSS Modules, BEM, SUIT CSS
 
 
 ## Work History
