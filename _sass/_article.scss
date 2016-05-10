@@ -6,6 +6,7 @@
 
 .article-title {
 	@extend .page-title;
+	margin-top: 0.5 * $spacing-unit;
 }
 
 .article-subtitle {
