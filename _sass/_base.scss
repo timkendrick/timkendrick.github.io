@@ -168,6 +168,10 @@ pre {
 	}
 }
 
+.markdown-body {
+	-webkit-font-smoothing: auto;
+}
+
 .hidden-xs {
 	display: none !important;
 }
