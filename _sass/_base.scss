@@ -23,6 +23,7 @@ body {
 	background-color: $footer-background-color;
 	-webkit-text-size-adjust: 100%;
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	overflow-y: scroll;
 }
 
@@ -170,6 +171,7 @@ pre {
 
 .markdown-body {
 	-webkit-font-smoothing: auto;
+	-moz-osx-font-smoothing: auto;
 }
 
 .hidden-xs {
