@@ -16,7 +16,7 @@ For many years, tuples have been used in languages like Python to return multipl
 from math import pi
 
 def get_pizza_dimensions(diameter):
-	# Return a 2-item tuple containing dough area and crust circumference
+	"Return a 2-item tuple containing dough area and crust circumference"
 	radius = diameter / 2
 	area = pi * radius * radius
 	circumference = pi * diameter
@@ -25,7 +25,7 @@ def get_pizza_dimensions(diameter):
 # Assign the returned tuple items to named variables
 dough_area, crust_circumference = get_pizza_dimensions(20)
 
-print('A 20-inch pizza has more than %i feet of crust' % (crust_circumference / 12))
+print("A 20-inch pizza has more than %i feet of crust" % (crust_circumference / 12))
 # Output: "A 20-inch pizza has more than 5 feet of crust"
 ```
 
