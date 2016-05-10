@@ -142,13 +142,13 @@ function renderVisibleColumns(columns, viewportWidth) {
 ```javascript
 function renderVisibleColumns(columns, viewportWidth) {
 	columns
-		.map((column, index, array) => [column, getColumnOffset(array, index)])
+		.map((column, index, array) => { column: column, offsetX: getColumnOffset(array, index) })
 		.filter((columnData) => (columnData.offsetX < viewportWidth))
 		.map((columnData) => createColumnElement(columnData.column, columnData.offsetX))
 		.forEach((columnElement) => document.body.appendChild(columnElement));
 }
 ```
 
-These versions are harder to reason about than the original, seeing as we've had to introduce an intermediate `columnData` object that contains both the item (the column) and its metadata (its X offset). Unlike the destructuring version, it's not immediately clear to somebody reading the code what this wrapper object actually contains – plus these kinds of wrapper objects are generally very tricky to name well (and we all know how hard naming things can be!)
+As well as introducing additional clutter, these versions are harder to reason about than the original, seeing as we've had to introduce an intermediate `columnData` object that contains both the item (the column) and its metadata (its X offset). Unlike the destructuring version, it might not be immediately clear to somebody reading the code what this object actually contains, or what its purpose is – plus these kinds of wrapper objects are generally very tricky to name well (and we all know how hard naming things can be!)
 
 So in short, next time you find yourself stuffing function return values inside container objects just so you can stitch some values together into a weird data Frankenstein, try returning a "fake tuple" array and using a destructuring assignment to clear away the mess!
