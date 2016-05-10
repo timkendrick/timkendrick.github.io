@@ -37,7 +37,10 @@
 
 .article-links {}
 
-.article-link {}
+.article-link {
+	display: block;
+	margin-bottom: 1/3 * $spacing-unit;
+}
 
 @include media-query-min($breakpoint-tablet) {
 
