@@ -28,7 +28,7 @@ We can solve this in ES6 by defining a function with a destructuring assignment 
 
 ```javascript
 function createUser({ id, name, age, admin=false }) {
-	// "id", "name", "age", and "isAdmin
+	// "id", "name", "age", and "admin"
 	// are all directly available here
 }
 
