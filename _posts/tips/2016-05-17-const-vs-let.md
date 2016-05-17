@@ -35,6 +35,7 @@ console.log(artist); // Object {name: "TAFKAP", birthName: "Prince Rogers Nelson
 ```javascript
 const artist = { name: 'Prince', birthName: 'Prince Rogers Nelson' };
 const updatedArtist = Object.assign({}, artist, { name: 'TAFKAP' });
+console.log(artist); // Object {name: "Prince", birthName: "Prince Rogers Nelson"}
 console.log(updatedArtist); // Object {name: "TAFKAP", birthName: "Prince Rogers Nelson"}
 ```
 
@@ -43,6 +44,7 @@ console.log(updatedArtist); // Object {name: "TAFKAP", birthName: "Prince Rogers
 ```javascript
 const artist = { name: 'Prince', birthName: 'Prince Rogers Nelson' };
 const updatedArtist = { ...artist, name: 'TAFKAP' };
+console.log(artist); // Object {name: "Prince", birthName: "Prince Rogers Nelson"}
 console.log(updatedArtist); // Object {name: "TAFKAP", birthName: "Prince Rogers Nelson"}
 ```
 
