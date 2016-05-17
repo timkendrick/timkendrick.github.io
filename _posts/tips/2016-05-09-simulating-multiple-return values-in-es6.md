@@ -8,32 +8,13 @@ type: tip
 
 > **TL;DR:** We've seen how ES6 destructuring assignment can be used to [simulate named arguments](/articles/2016/03/31/named-es6-arguments.html), so now let's take a look at how it can also be used to simulate Python's tuple assignment feature and reduce boilerplate for chained array methods.
 
-First up, what's a tuple? Without getting too far into type theory, essentially a tuple is just an immutable array – i.e. a static list of items in a certain order.
-
-For many years, tuples have been used in languages like Python to return multiple values from a function and assign them to individual variables:
-
-```python
-from math import pi
-
-def get_pizza_dimensions(diameter):
-	"Return a 2-item tuple containing dough area and crust circumference"
-	radius = diameter / 2
-	area = pi * radius * radius
-	circumference = pi * diameter
-	return (area, circumference)
-
-# Assign the returned tuple items to named variables
-dough_area, crust_circumference = get_pizza_dimensions(20)
-
-print("A 20-inch pizza has more than %i feet of crust" % (crust_circumference / 12))
-# Output: "A 20-inch pizza has more than 5 feet of crust"
-```
+First up, what's a tuple? Without getting too far into type theory, essentially a tuple is just an immutable array – i.e. a static list of items in a certain order. For many years, tuples have been used in languages like Python to return multiple values from a function and assign them to individual variables.
 
 Ever since ES6 came along, this has also been possible in JavaScript with plain ol' arrays, using destructuring assignments:
 
 ```javascript
 function getPizzaDimensions(diameter) {
-	// Return a 2-item array containing dough area and crust circumference
+	// Return a 2-item "tuple" containing dough area and crust circumference
 	const radius = diameter / 2;
 	const area = Math.PI * radius * radius;
 	const circumference = Math.PI * diameter;
@@ -41,7 +22,7 @@ function getPizzaDimensions(diameter) {
 }
 
 // Assign the returned array items to named variables
-[doughArea, crustCircumference] = getPizzaDimensions(20);
+const [doughArea, crustCircumference] = getPizzaDimensions(20);
 
 console.log('A 20-inch pizza has more than %d feet of crust', crustCircumference / 12);
 // Output: "A 20-inch pizza has more than 5 feet of crust"
@@ -51,7 +32,7 @@ If used sparingly, this can be a great way of cutting down on boilerplate when y
 
 This might seem like a fairly niche use case, but it can prove really useful when you're using chained ES5 array methods to write nice, clean, functional code.
 
-Take the following example that filters and maps an array of items based on a computed property (or just skip past the example if you don't care about the context):
+Take the following example that filters and maps an array of items based on a computed property (or just skip past the example if you don't care about the context, we'll go over the important bit in more detail afterwards):
 
 ```javascript
 const columns = [
@@ -117,9 +98,9 @@ const columnElements = columns
 	.map(([column, offsetX]) => createColumnElement(column, offsetX));
 ```
 
-1. The first `map()` creates an array of "tuples", each containing the item (the column) bundled along with a derived property (its absolute X offset). Let's assume that computing a column's X offset is an expensive operation, so we only want to perform these calculations once.
-2. The `filter()` filters this array of "tuples" based on the precalculated X offsets, leaving us with the tuples that refer to columns within the current viewport.
-3. The second `map()` returns an array of DOM elements corresponding to each of these columns, generated using the precalculated X offsets.
+1. The first `map()` creates an array of "tuples", each containing the item (the column) bundled along with a derived property (its absolute X offset)
+2. The `filter()` filters this array of "tuples" based on the precalculated X offsets, leaving us with the tuples that refer to columns within the current viewport
+3. The second `map()` returns an array of DOM elements corresponding to each of these columns, generated using the precalculated X offsets
 
 In this case, the advantage in returning these tuple-like arrays is that we're able to send metadata values down the chain alongside their corresponding items, effectively performing our chained array operations on pairs of values at a time. This example only had two steps that relied on both of the paired items, but in practice there could easily have been multiple steps that needed to refer to both values. There's also no reason to limit it to pairs of values – the tuples could just as easily be triplets of values, or any other sized tuple.
 
