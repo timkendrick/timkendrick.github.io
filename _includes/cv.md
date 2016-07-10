@@ -13,14 +13,15 @@ Bright, enthusiastic hard‑worker with ten years’ experience across multiple 
 
 ## Frameworks / Technologies
 
-- **JavaScript**: ES6, React, Redux, Node.js, AngularJS, RxJS, Underscore.js/lodash, Mocha/Chai/Jasmine, Webpack/Browserify/Require.js, Gulp/Grunt, Electron/NW.js, JSDoc, jQuery
+- **JavaScript**: ES6, React, Redux, Node.js, AngularJS, Polymer, RxJS, Underscore/lodash, Mocha/Chai/Jasmine, Webpack/Browserify/Require.js, Gulp/Grunt, Electron/NW.js, JSDoc, jQuery
 - **Back‑end**: Express, Docker, MongoDB, Redis, nginx, AWS, Heroku, Bash scripting
 - **CSS**: SASS, Stylus, CSS Modules, BEM, SUIT CSS
 
 
 ## Work History
 
-- **September 2015 - present**: [Filecanvas](https://www.filecanvas.com/), Founder
+- **May 2016 - present**: [Toaster](http://www.toaster.co/), Senior Front-End Developer (freelance)
+- **September 2015 - April 2016**: [Filecanvas](https://www.filecanvas.com/), Founder
 - **July 2015 - August 2015**: [Kayako](http://www.kayako.com/), Senior Front-End Developer (freelance)
 - **September 2013 - April 2015**: [Fathom](http://fathomlondon.com/), Lead Developer
 - **February 2013 - August 2013**: [R/GA London](http://rga.com/offices/london), Senior Front‑End Developer (freelance)
@@ -34,7 +35,6 @@ Bright, enthusiastic hard‑worker with ten years’ experience across multiple 
 - [Factory](https://github.com/timkendrick/factory) (2015) – Quick and easy template scaffolding for Node
 - [Angular Charts](https://github.com/timkendrick/angular-charts) (2013) – Semantic HTML5 charts for AngularJS
 - [T‑Bone](https://github.com/timkendrick/t-bone) (2013) – Backbone.js view/binding component framework
-- [Doppelganger](https://github.com/timkendrick/doppelganger) (2013) – Toolkit for isomorphic Backbone.js apps
 - Many more at [github.com/timkendrick](https://github.com/timkendrick) and [npmjs.com/~timkendrick](https://www.npmjs.com/~timkendrick)
 
 
@@ -43,7 +43,7 @@ Bright, enthusiastic hard‑worker with ten years’ experience across multiple 
 
 ## Selected Job Roles and Responsibilities
 
-#### Filecanvas (September 2015 - present)
+#### Filecanvas (September 2015 - April 2016)
 
 Singlehandedly planned, prototyped, designed, built, and shipped a fully-featured SaaS product ([filecanvas.com](https://www.filecanvas.com/)) over the course of six months, in order to better understand the process of creating a product all the way from ideas generation to launch. Sole founder/programmer status meant roles included everything from planning, to coding, to devops, to user testing, to logo design and copywriting.
 
