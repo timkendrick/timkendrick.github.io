@@ -13,7 +13,7 @@ Drag these badboys into your bookmarks bar and they should help diagnose problem
 > Usage instructions:
 >
 > 1. Launch your app and run the bookmarklet script
-> 2. [`$destroy()`](https://docs.angularjs.org/api/ng/type/$rootScope.Scope#$destroy) the scope that you suspect is ruining everything
+> 2. [`$destroy()`](https://docs.angularjs.org/api/ng/type/$rootScope.Scope#$destroy) the scope that you suspect is making everything grind to a halt
 > 3. Re-run the bookmarklet script to see if your hunch was correct
 
 ### Bookmarklet 1: Count the number of active scopes
