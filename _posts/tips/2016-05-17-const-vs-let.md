@@ -20,7 +20,7 @@ immutableArtistName = 'TAFKAP'; // TypeError: Assignment to constant variable
 
 Most people, when moving to ES6, seem to replace all their `var` statements with `let` statements. While this enforces the much-needed block-scoping, I'd argue that almost all the time you should go one step further and replace them with `const`.
 
-Why? I find that the immutability provided by un-reassignable variables generally makes code that little bit easier to reason about, and it fits much better within the functional style of JavaScript that has become more popular due to libraries such as [React](https://facebook.github.io/react/) and [Redux](http://redux.js.org/).
+Why? I find that the immutability provided by un-reassignable variables generally makes debugging much simpler, produces code that is easier to reason about, and fits much better within the functional style of JavaScript that has become more popular due to libraries such as [React](https://facebook.github.io/react/) and [Redux](http://redux.js.org/).
 
 The main gotcha to keep in mind while using `const` is that while the variable itself cannot be reassigned, the contents of its value is still mutable and can therefore be modified:
 
@@ -49,5 +49,7 @@ console.log(updatedArtist); // Object {name: "TAFKAP", birthName: "Prince Rogers
 ```
 
 …or alternatively use a library such as [Immutable.js](https://facebook.github.io/immutable-js/) to ensure that your data objects remain unmodified.
+
+The advantage of returning a clone of the object, rather than just modifying the original, is that you can ensure that your object never changes during the lifecycle of your program. This makes debugging much easier, and also allows you to verify much more efficiently whether an update will lead to changes in the application state (e.g. by using a single strict equality check in a React-style diff algorithm, rather than recursively iterating through all the object properties to determine whether something has updated).
 
 In short, if you find that your code relies on reassigning variables declared with `let` or `var`, I'd suggest refactoring it such that it can be expressed purely with `const` assignments, so whoever reads your code will always know exactly what value each variable refers to.
