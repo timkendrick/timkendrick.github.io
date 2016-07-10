@@ -16,11 +16,8 @@ var stringIds = ["6", "8", "10", "12", "14"];
 // Convert strings to integers
 var ids = stringIds.map(parseInt);
 
-console.log(ids);
+console.log(ids); // [ 6, NaN, 2, 5, 1 ] ...WHAT?!
 ```
-
-If you guessed `[ 6, NaN, 2, 5, 1 ]` then you nailed it!
-
 
 If this revelation has left you reeling, have a think about how the `map()` method calls its callback:
 
@@ -42,7 +39,7 @@ While any JavaScript developer worth their salt knows to act cautious around `pa
 
 ```javascript
 var points = [{ x: 0, y: 0 }, { x: 1, y: 1 }, { x: 2, y: 2 }];
-var mirroredPoints = points.map(getMirroredPoint);
+var mirroredPoints = points.map(getMirroredPoint); // This is fine… FOR NOW!
 
 function getMirroredPoint(point) {
 	return {
@@ -52,9 +49,12 @@ function getMirroredPoint(point) {
 }
 ```
 
-...as it is, this code is innocuous enough. But what happens when a coworker keeps things DRY by embellishing your function with an optional argument for reuse elsewhere?
+...as it is, this code is innocuous enough. But what happens when a coworker keeps things DRY by embellishing your function with an optional `scale` argument for reuse elsewhere?
 
 ```javascript
+var points = [{ x: 0, y: 0 }, { x: 1, y: 1 }, { x: 2, y: 2 }];
+var mirroredPoints = points.map(getMirroredPoint); // Uh-oh.
+
 function getMirroredPoint(point, scale) {
 	var scale = scale || 1;
 	return {
@@ -64,7 +64,7 @@ function getMirroredPoint(point, scale) {
 }
 ```
 
-Now you're asking for trouble. Plus technically this is _your_ screw-up, seeing as all along you've been invoking the function incorrectly by passing too many arguments.
+Now you're asking for trouble, seeing as your `map()` call will now be passing an `index` into the `scale` argument. Plus technically this is _your_ screw-up, seeing as all along you've been invoking the function incorrectly by passing too many arguments.
 
 So what's the moral of the story? Always make sure to wrap any `map()` callbacks in an intermediate function:
 
