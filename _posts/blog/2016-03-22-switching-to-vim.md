@@ -5,18 +5,18 @@ author: Tim Kendrick
 layout: article
 ---
 
-> **Author's note:** I actually wrote this post a few months ago, when I was just getting into Vim. I've since become much more accustomed to it, so this is probably a more negative writeup than I would give nowadays. I think this highlights an important point: time's a healer, and most of the Vim-pushers have probably forgotten about what a struggle it was getting over that initial hump. So without further ado, let me present *[drum-roll...]* **The World's First Completely Unbiased Vim Overview™**.
+> **Author's note:** I wrote this post a few months ago, when I was just getting into Vim. I've since become much more accustomed to it, so this is probably a more negative writeup than I would give nowadays. I think this highlights an important point: time's a healer, and most of the Vim-pushers have probably forgotten about what a struggle it was getting over that initial hump. I've also found that Atom's [vim-mode-plus](https://atom.io/packages/vim-mode-plus) package, while not a totally-accurate emulation of Vim, addresses all of my complaints against pure Vim, so is well worth checking out for the non-purists!
 
-**TL;DR:** I'm a JavaScript engineer who's recently gone through the process of switching from Sublime Text to Vim. If you want to know what I think of it, [skip to the end](#whats-it-like) (spoiler: I now use Vim for everything). If you want to know why I did it, or just fancy spending the next few minutes reading some words, then read on.
+**TL;DR:** I'm a JavaScript engineer who's recently gone through the process of switching from Sublime Text to Vim. If you want to know what I think of it, [skip to the end](#whats-it-like) (spoiler: I now use <strike>Vim</strike> [vim-mode-plus](https://atom.io/packages/vim-mode-plus) for everything). If you want to know why I did it, or just fancy spending the next few minutes reading some words, then read on.
 
 
 ## The List
 
 You know that long-term career-development list that every ambitious front-end developer has? You know, the one that starts, `1. Get round to learning Vim`?
 
-I've had that old chestnut on my list for the last few years, and aside from the odd bout of `vimtutor` every now and then I wasn't doing much about it. Whenever I talked to coworkers who used Vim as their editor of choice, the consensus seemed to be that once you've invested a couple of weeks and figured out how it works, you'll never look back. The trouble is, I never reached a point where I could justify slowing my pace of development almost to a standstill for a fortnight, just so that I could become proficient in the dark arts of some ancient text-editing tool.
+I've had that old chestnut on my list for the last few years, and aside from the odd bout of `vimtutor` every now and then I wasn't doing much about it. Whenever I talked to coworkers who used Vim as their editor of choice, the consensus seemed to be that once you've invested a couple of weeks and figured out how it works, you'll never look back. The trouble is, I never reached a point where I could justify slowing my pace of development almost to a standstill for a fortnight, just so that I could become proficient in the dark arts of some prehistoric text-editing tool.
 
-I was torn, because these Vim-zealots were people whose views I respected. But how about [all](javascript:;) [those](javascript:;) [articles](javascript:;) you read from people who used Vim for a bit but decided to go back to Sublime Text? Well, don't bother clicking those links because those articles don't exist. Just like you never hear about anyone switching back to Windows after going Mac, all of the evidence suggests the path to Vim is a one-way ticket to code-editing bliss. Or potentially suicide, depending on how you interpret your evidence.
+I was torn, because these Vim-zealots were people whose views I respected. But how about [all](javascript:;) [those](javascript:;) [articles](javascript:;) you read from people who used Vim for a bit but decided to go back to Sublime Text? Well, don't bother clicking those links because those articles don't exist. Just like you never hear about anyone switching back to Windows after going Mac, all of the evidence suggests the path to Vim is a one-way ticket to code-editing bliss. Or potentially suicide, depending on how you interpret an absence of evidence.
 
 What always throws me is the lack of balance in any opinions I've heard about Vim: there doesn't seem to be much middle ground between one side claiming it's [the best computer program ever written](https://en.wikipedia.org/wiki/Time_Crisis_II) and the other side claiming it's the work of some maniacal sadist. The Vim-lovers claim the Vim-haters just don't understand how to use it, while the Vim-haters claim the Vim-lovers are obsessives with no sense of user aesthetics. The praise seemed so gushing that I always attributed it to an unhealthy emotional attachment formed by by years of tinkering with configuration files, combined with ignorance of Sublime Text's more advanced features due to Vim lock-in. All the same, I couldn't shake the constant nagging feeling that there might just be something in all this Vim talk, and so for me Vim remained shrouded behind a veil of mystery.
 
@@ -40,7 +40,7 @@ After pondering my fate for a while (which presumably is the fate of all those o
 
 The way I saw it, if Vim can make two-handed programmers significantly more productive, it must be even more effective for lesser-limbed coders. Even just cutting out the arrow keys would be a huge plus for me. I had finally found my motivation for learning Vim.
 
-The trouble is, learning Vim is *hard*. Not in the sense that any one aspect of it is particularly complicated, it's just that it does everything so differently to other tools. And there's a hell of a lot of it to learn. It's got hundreds of commands, a huge set of very-much-non-standard keyboard shortcuts (which behave differently in each of the several modes), its own proprietary programming language – it's even gone to the trouble of inventing its own vocabulary (seriously, words vs `WORDS`? `yank` vs `copy`? C'mon, Bram Moolenaar...). It's particularly frustrating if you consider yourself pretty nifty with OS X's keyboard shortcuts and all the ins and outs of its UI/windowing/text-editing behavior, seeing as it's all completely different in Vim.
+The trouble is, learning Vim is *hard*. Not in the sense that any one aspect of it is particularly complicated, it's just that it does everything so differently to other tools. And there's a hell of a lot of it to learn. It's got hundreds of commands, a huge set of very-much-non-standard keyboard shortcuts (which behave differently in each of the several modes), its own proprietary programming language – it's even gone to the trouble of inventing its own vocabulary (seriously, words vs `WORDS`? `yank` vs `copy`?). It's particularly frustrating if you consider yourself pretty nifty with OS X's keyboard shortcuts and all the ins and outs of its UI/windowing/text-editing behavior, seeing as it's all completely different in Vim.
 
 In short, I found learning Vim to be a bit like painstakingly deciphering the operating instructions for some complex piece of disused Soviet military apparatus which, once mastered, you can then use to repeatedly punch yourself in the face at a far quicker rate than you would usually be able to manage.
 
@@ -51,7 +51,7 @@ Now that I'm past the initial hump, and have regained rudimentary arm movement, 
 
 ## What's it like?
 
-Although it pains me to say it – and I hope this isn't just Stockholm Syndrome setting in – I've got to admit that Vim is very, very good for editing text.
+Although it pains me to say it – and I hope this isn't just Stockholm Syndrome setting in – I've got to admit that Vim is a very, very good text editor.
 
 Once you use Vim for a while, it becomes apparent that it's all been very cleverly thought-out. As soon as you get used to the mode-switching it becomes second nature, and those myriad keyboard shortcuts all come in handy once you've gone to the trouble of committing them to muscle memory ([ShortcutFoo](https://www.shortcutfoo.com/) helped a lot in my case). Many of the small details which seemed at the beginning to be unnecessary complications ultimately turn out to be vital components in a highly coherent system.
 
@@ -62,7 +62,7 @@ But that's not to say that it's perfect, by any means. While the core text-editi
 - Mouse-free operation speeds things up no end
 - Super-fast editing / text manipulation shortcuts. Now that I'm used to working with motions and text objects, I'm amazed they're not more common across the board.
 - Keyboard-controlled windowing support really helps when diving into a large codebase
-- Macros are a powerful (if sometimes fragile) way to speed up repeated actions
+- Macros are a powerful (if sometimes unforgiving) way to speed up repeated actions
 - Fully integrated with the Unix ecosystem, allowing you to use your OS to its best advantage
 - Tiny memory footprint, if that kind of thing appeals to you
 - Whatever you want to do, there's a plugin for it
@@ -79,7 +79,7 @@ But that's not to say that it's perfect, by any means. While the core text-editi
 - Lack of common standards across plugins (e.g. for key mappings) can prove disorientating
 - No universally-accepted package manager for plugins
 - Scripting-wise, let's just say vimscript isn't going to be winning any beauty pageants any time soon
-- Relies on the user being able to touch-type confidently (although if you're a programmer who can't touch-type, you should probably [sort that out](https://www.typing.com/) first – it really doesn't take long)
+- Relies on the user being able to touch-type accurately (although if you're a programmer who can't touch-type, you should probably [sort that out](https://www.typing.com/) first – it really doesn't take long)
 
 ## The ugly
 
@@ -88,9 +88,11 @@ But that's not to say that it's perfect, by any means. While the core text-editi
 
 ## So, should I bother learning Vim?
 
-I know this is a bit of a cop-out, but... it's up to you. If you actively want to learn Vim then you should definitely go for it – I'm sure you'll enjoy it. If you think Vim doesn't sound like your kind of thing, then don't bother learning it. It'll only infuriate you.
+ If you actively want to learn Vim then you should definitely go for it – I'm sure you'll enjoy it. If you think Vim doesn't sound like your kind of thing, then don't bother learning it. It'll only infuriate you.
 
-If you find yourself in the position I was in, vaguely intending to investigate Vim when you find the time, that suggests to me that you'd benefit from biting the bullet and throwing yourself into it at some point. It won't necessarily revolutionize your life, but it could well become your favorite code editor. I'd approach it a bit like learning a new programming language, and save it for a rainy day(/week) when you don't have any deadlines looming. For reference, it took me a week or two of bashing my head against the wall with Vim to reach approximately the same level of productivity as with Sublime Text – maybe a better inroad would be something like Sublime's [Vintage Mode](https://www.sublimetext.com/docs/3/vintage.html), or Atom's [vim-mode](https://atom.io/packages/vim-mode-plus), which I haven't tried but could potentially be a great middle-ground for getting accustomed to motions and modal editing (and would perhaps offer a better all-round experience than pure Vim). If that rainy day never seems to arrive, I'd recommend a 3-part fracture to your proximal humerus to speed the decision.
+If you find yourself in the position I was in, vaguely intending to investigate Vim when you find the time, that suggests to me that you'd benefit from biting the bullet and throwing yourself into it at some point. It won't necessarily revolutionize your life, but it could well become your favorite code editor. I'd approach it a bit like learning a new programming language, and save it for a rainy day(/week) when you don't have any deadlines looming. For reference, it took me a week or two of bashing my head against the wall with Vim to reach approximately the same level of productivity as with Sublime Text. If that rainy day never seems to arrive, I'd recommend a 3-part fracture to your proximal humerus to speed the decision.
+
+> Update: I'd now strongly recommend starting with Atom's [vim-mode](https://atom.io/packages/vim-mode-plus) or Sublime's [Vintage Mode](https://www.sublimetext.com/docs/3/vintage.html), as these offer an fairly accurate simulation of Vim's core editing experience without any of the shortcomings highlighted above.
 
 
 ## Epilogue
