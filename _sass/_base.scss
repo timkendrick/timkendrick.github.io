@@ -176,14 +176,46 @@ pre {
 
 .hidden-xs {
 	display: none !important;
+
+	@include media-query-min($breakpoint-tablet) {
+		& {
+			display: block !important;
+		}
+	}
 }
 
-@include media-query-min($breakpoint-tablet) {
-	.hidden-xs {
-		display: block !important;
+.hidden-sm {
+	@include media-query-min($breakpoint-tablet) {
+		& {
+			display: none !important;
+		}
 	}
 
-	br.hidden-xs {
-		display: inline !important;
+	@include media-query-min($breakpoint-laptop) {
+		& {
+			display: block !important;
+		}
+	}
+}
+
+.hidden-md {
+	@include media-query-min($breakpoint-laptop) {
+		& {
+			display: none !important;
+		}
+	}
+
+	@include media-query-min($breakpoint-desktop) {
+		& {
+			display: block !important;
+		}
+	}
+}
+
+.hidden-lg {
+	@include media-query-min($breakpoint-desktop) {
+		& {
+			display: none !important;
+		}
 	}
 }
