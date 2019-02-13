@@ -35,9 +35,9 @@ I particulary enjoy functional coding, reactive/stream programming, and anything
 
 #### Popular utility libraries
 
-- [recursive-copy](https://github.com/timkendrick/recursive-copy) ![](https://img.shields.io/npm/dm/recursive-copy.svg) – Simple, flexible file copy utility
-- [memoize-weak](https://github.com/timkendrick/memoize-weak) ![](https://img.shields.io/npm/dm/memoize-weak.svg) – Garbage-collected memoizer for variadic functions
-- [memoize-bind](https://github.com/timkendrick/memoize-bind) ![](https://img.shields.io/npm/dm/memoize-bind.svg) – Memoized function binding
+- [recursive-copy](https://www.npmjs.com/package/recursive-copy) ![](https://img.shields.io/npm/dm/recursive-copy.svg) – Simple, flexible file copy utility
+- [memoize-weak](https://www.npmjs.com/package/memoize-weak) ![](https://img.shields.io/npm/dm/memoize-weak.svg) – Garbage-collected memoizer for variadic functions
+- [memoize-bind](https://www.npmjs.com/package/memoize-bind) ![](https://img.shields.io/npm/dm/memoize-bind.svg) – Memoized function binding
 - Many more at [github.com/timkendrick](https://github.com/timkendrick) and [npmjs.com/~timkendrick](https://www.npmjs.com/~timkendrick)
 
 #### Larger standalone projects
