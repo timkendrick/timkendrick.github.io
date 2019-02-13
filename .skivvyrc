@@ -15,7 +15,7 @@
               "highlight": true
             },
             "html": {
-              "title": "Tim Kendrick: Resumé",
+              "title": "Tim Kendrick: CV",
               "stylesheets": [
                 "../../css/github-markdown.css",
                 "cv.css"
