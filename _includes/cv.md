@@ -52,7 +52,7 @@ I particulary enjoy functional coding, reactive/stream programming, and anything
 
 Singlehandledly built a large-scale IDE for rapid development of React applications ([canvascomposer.com](https://www.canvascomposer.com), currently in alpha). Intuitive UI builder allows toggling between visual drag-and-drop workspace and source code editor. Component library plugins and integrated zero-config build tools and allow rapid application prototyping within a graphical interface. Extensive static JSX source analysis of existing code allows prototypes to be seamlessly integrated within a real codebase.
 
-Currently packaged as an Electron app written in React/Redux/Node.js, hovever client/server model and highly modular plugin-based architecture allow for easy repurposing to hosted web service.
+Currently packaged as an Electron app written in React/Redux/Node.js, easily repurposable to be a hosted web service due to client/server application architecture and modular plugin system.
 
 #### Deutsche Bank / DWS (August 2016 - August 2018)
 
