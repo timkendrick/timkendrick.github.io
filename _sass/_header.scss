@@ -126,7 +126,7 @@ body:not(.-home) {
 	}
 
 	&:not(:first-child) {
-		margin-left: 6px;
+		margin-left: 8px;
 	}
 
 	&.-github {
@@ -135,6 +135,15 @@ body:not(.-home) {
 
 	&.-npm {
 		@extend %image-header-npm;
+	}
+
+	&.-cv {
+		@extend %image-header-cv;
+
+		body.-cv &,
+		body.-cv &:hover {
+			opacity: 1;
+		}
 	}
 
 	&.-articles {
@@ -190,7 +199,7 @@ body:not(.-home) {
 	color: $splash-intro-text-color;
 	text-align: $splash-intro-text-align;
 	margin-top: $spacing-unit;
-	margin-bottom: 2 * $spacing-unit;
+	margin-bottom: $spacing-unit;
 
 	a,
 	a:link,
@@ -212,7 +221,7 @@ body:not(.-home) {
 .header-splash-link-items {
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 2 * $spacing-unit;
+	margin-top: $spacing-unit;
 	margin-bottom: 2 * $spacing-unit;
 	list-style: none;
 	display: -webkit-flex;
@@ -272,15 +281,9 @@ body:not(.-home) {
 	&.-npm:before {
 		@extend %image-header-npm;
 	}
-
-	&.-articles:before {
-		@extend %image-header-articles;
-	}
-
 	&.-cv:before {
 		@extend %image-header-cv;
 	}
-
 }
 
 @include media-query-max($breakpoint-tablet - 1px) {
