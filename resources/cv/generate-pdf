@@ -1,4 +1,10 @@
 #!/bin/sh
+set -euo pipefail
 cd $(dirname $0)
 
-skivvy run markdown-html --cwd ../.. && wkhtmltopdf -s Letter --margin-top 15mm cv.html ../../downloads/Tim\ Kendrick\ -\ CV.pdf
+skivvy run markdown-html --cwd ../..
+
+wkhtmltopdf --enable-local-file-access \
+  -s Letter --margin-top 15mm \
+  cv.html \
+  ../../downloads/Tim\ Kendrick\ -\ CV.pdf

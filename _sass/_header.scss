@@ -308,7 +308,7 @@ body:not(.-home) {
 		margin: auto;
 		max-width: 100%;
 		padding-top: $spacing-unit;
-		padding-bottom: 2 * $spacing-unit;
+		padding-bottom: $spacing-unit;
 
 		body.-home & {
 			padding-top: $spacing-unit + $header-height;
