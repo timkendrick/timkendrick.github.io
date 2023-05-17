@@ -7,8 +7,8 @@
 .wrapper {
 	@include clearfix;
 	max-width: calc(#{$content-width} - (#{$spacing-unit}));
-	padding-right: $spacing-unit / 2;
-	padding-left: $spacing-unit / 2;
+	padding-right: $spacing-unit * 0.5;
+	padding-left: $spacing-unit * 0.5;
 	margin-right: auto;
 	margin-left: auto;
 }

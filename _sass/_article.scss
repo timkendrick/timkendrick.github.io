@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .article {}
 
 .article-header {
@@ -40,7 +42,7 @@
 
 .article-link {
 	display: block;
-	margin-bottom: 1/3 * $spacing-unit;
+	margin-bottom: math.div(1, 3) * $spacing-unit;
 }
 
 @include media-query-min($breakpoint-tablet) {
