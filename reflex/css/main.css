@@ -1,0 +1,67 @@
+.skewed-full .ml-for-radius {
+  margin-left: 0
+}
+.skewed-full .mr-for-radius {
+  margin-right: 0
+}
+.skewed-top-left.skewed-full .radius-for-skewed {
+  border-top-left-radius: 0
+}
+.skewed-top-right.skewed-full .radius-for-skewed {
+  border-top-right-radius: 0
+}
+.skewed-bottom-left.skewed-full .radius-for-skewed {
+  border-bottom-left-radius: 0
+}
+.skewed-bottom-right.skewed-full .radius-for-skewed {
+  border-bottom-right-radius: 0
+}
+
+code > .highlighted {
+  padding: 1rem;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: auto;
+  font-size: calc(1.82292vw);
+  font-family: inherit;
+  -webkit-font-smoothing: auto;
+  user-select: text
+}
+code > .highlighted > div {
+  white-space: pre;
+}
+code > .highlighted > div:empty::before {
+  content: "\a "
+}
+@media (min-width:768px) {
+  code > .highlighted {
+    font-size: 75%
+  }
+  @media (min-width:1024px) {
+    code > .highlighted {
+      font-size: inherit
+    }
+  }
+}
+
+.ast {
+  cursor: pointer;
+}
+.ast:hover .ast-node {
+  background-color: rgba(255, 255, 0, 0.2);
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.6);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  text-decoration-style: dotted;
+}
+.ast:hover .ast-node.ast-node-stateful {
+  text-decoration-color: orange;
+}
+.ast:hover span:not(.ast-node) {
+  opacity: 0.5;
+}
+.ast:hover .ast-node span {
+  opacity: 1;
+}
+

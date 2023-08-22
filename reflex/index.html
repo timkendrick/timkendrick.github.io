@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Reflex | Reactive programming made easy</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Introducing the powerful new reactive language designed around live‑updating values. All the power of streams, without all the callbacks.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:100,200,300,400,500,600,700,800|DM+Mono:400&amp;subset=latin">
+    <link rel="stylesheet" href="css/tailwind/tailwind.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/bitstream-vera-sans-mono">
+    <style>
+        .highlighted { font-family: monospace; font-size: 14px; }.highlighted .mtk1 { color: #ABB2BF; }.highlighted .mtk2 { color: #FFFFFF; }.highlighted .mtk3 { color: #828997; }.highlighted .mtk4 { color: #E5C07B; }.highlighted .mtk5 { color: #E06C75; }.highlighted .mtk6 { color: #D19A66; }.highlighted .mtk7 { color: #ABB2BF; }.highlighted .mtk8 { color: #5C6370; }.highlighted .mtk9 { color: #56B6C2; }.highlighted .mtk10 { color: #61AFEF; }.highlighted .mtk11 { color: #98C379; }.highlighted .mtk12 { color: #523D14; }.highlighted .mtk13 { color: #E0C285; }.highlighted .mtk14 { color: #E05252; }.highlighted .mtk15 { color: #C678DD; }.highlighted .mtk16 { color: #BE5046; }.highlighted .mtki { font-style: italic; }.highlighted .mtkb { font-weight: bold; }.highlighted .mtku { text-decoration: underline; }
+    </style>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", (event) => {
+  const timestampExamples = document.querySelectorAll('[data-example="timestamp"]');
+  for (const element of timestampExamples) {
+    initTimestampExample(element);
+  }
+  function initTimestampExample(element) {
+    const timestampElement = element.querySelector('[data-timestamp]');
+    if (!timestampElement) return;
+    let currentTimestamp = Math.floor(Date.now() / 1000);
+    updateTimestampExample(timestampElement, currentTimestamp);
+    requestAnimationFrame(function tick() {
+      const timestamp = Math.floor(Date.now() / 1000);
+      if (timestamp !== currentTimestamp) {
+        updateTimestampExample(timestampElement, currentTimestamp = timestamp);
+      }
+      requestAnimationFrame(tick);
+    });
+  }
+  function updateTimestampExample(timestampElement, timestamp) {
+    timestampElement.textContent = `${timestamp}`;
+  }
+});
+    </script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+
+      <section class="skewed-bottom-right"><div class="bg-gray-900 pt-20">
+        <div class="container mx-auto px-4">
+          <div class="w-full flex flex-col items-center">
+            <div class="max-w-md mx-auto">
+              <h2 class="mb-3 text-4xl lg:text-5xl text-white font-bold">Reflex</h2>
+            </div>
+            <div class="max-w-sm mx-auto mb-12 text-center">
+              <div class="text-gray-400 leading-loose text-sm md:text-base">
+                <p class="mb-3">Introducing the powerful new reactive language<br class="hidden md:inline"> designed around live‑updating values.</p>
+                <p class="mb-3">All the power of streams, without all the callbacks.</p>
+              </div>
+              <div>
+                <a class="inline-block mb-3 lg:mb-0 lg:mr-3 w-full lg:w-auto py-2 px-6 leading-loose bg-purple-600 hover:bg-purple-700 text-white font-semibold transition duration-200 rounded-xl" href="https://github.com/MarshallWace/reflex">Try it on Github</a><a class="inline-block w-full lg:w-auto py-2 px-6 leading-loose text-white font-semibold bg-gray-900 border-2 border-gray-700 hover:border-gray-600 transition duration-200 rounded-xl" href="https://github.com/MarshallWace/reflex/tree/main/reflex-server/examples" target="_blank">Code examples</a>
+              </div>
+            </div>
+            <div class="w-full lg:w-2/3 md:px-4">
+              <code class="block w-full bg-gray-800 text-gray-400 text-sm rounded shadow-2xl">
+                <div class="highlighted">
+                  <div><span class="mtk15">import</span><span class="mtk1"> </span><span class="mtk7">{</span><span class="mtk1"> </span><span class="mtk5">now</span><span class="mtk1"> </span><span class="mtk7">}</span><span class="mtk1"> </span><span class="mtk15">from</span><span class="mtk1"> </span><span class="mtk11">'reflex::time'</span><span class="mtk7">;</span></div>
+                  <div><br></div>
+                  <div><span class="mtk8 mkti">// Current datetime (sampled every 1000 milliseconds)</span></div>
+                  <div><span class="mtk15">const</span><span class="mtk1"> </span><span class="mtk6">timestamp</span><span class="mtk1"> </span><span class="mtk9">=</span><span class="mtk1"> </span><span class="mtk10">now</span><span class="mtk7">({</span><span class="mtk1"> </span><span class="mtk5">interval</span><span class="mtk9">:</span><span class="mtk1"> </span><span class="mtk6">1000</span><span class="mtk1"> </span><span class="mtk7">});</span></div>
+                  <div><br></div>
+                  <div><span class="mtk15">const</span><span class="mtk1"> </span><span class="mtk6">millis</span><span class="mtk1"> </span><span class="mtk9">=</span><span class="mtk1"> </span><span class="mtk7">timestamp.</span><span class="mtk10">getTime</span><span class="mtk7">();</span><span class="mtk1"> </span><span class="mtk8 mkti">// Live-updating value</span></div>
+                  <div><br></div>
+                  <div><span class="mtk8 mkti">// Output will change automatically once per second</span></div>
+                  <div><span class="mtk15">export</span><span class="mtk1"> </span><span class="mtk5">default</span><span class="mtk1"> </span><span class="mtk11">`Current UNIX time: </span><span class="mtk16">${</span><span class="mtk7">Math</span><span class="mtk11">.</span><span class="mtk10">floor</span><span class="mtk7">(</span><span class="mtk5">millis</span><span class="mtk11"> </span><span class="mtk9">/</span><span class="mtk11"> </span><span class="mtk6">1000</span><span class="mtk7">)</span><span class="mtk16">}</span><span class="mtk11">`</span><span class="mtk7">;</span></div>
+                </div>
+              </code>
+            </div>
+            <div class="w-full py-2 text-center md:px-4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="h-8 w-8 inline-block text-gray-600"><path stroke-linecap="round" stroke-linejoin="round" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"></path></svg></div>
+            <div class="w-full md:px-4 lg:w-2/3">
+              <output class="block w-full p-4 bg-gray-800 text-gray-400 font-mono rounded shadow-2xl" data-example="timestamp">Current UNIX time: <span data-timestamp=""></span></output></div>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <section><div class="skew skew-top mr-for-radius">
+        <svg class="h-8 md:h-12 lg:h-20 w-full text-gray-900" viewbox="0 0 10 10" preserveaspectratio="none"><polygon fill="currentColor" points="0 0 10 10 0 10"></polygon></svg></div>
+        <div class="skew skew-top ml-for-radius">
+          <svg class="h-8 md:h-12 lg:h-20 w-full text-gray-900" viewbox="0 0 10 10" preserveaspectratio="none"><polygon fill="currentColor" points="0 10 10 0 10 10"></polygon></svg></div>
+        <div class="bg-gray-900 radius-for-skewed pb-20 py-20">
+          <div class="container mx-auto px-4">
+
+            <div class="flex flex-wrap -mx-4 justify-center">
+              <div class="w-full px-4 mb-8 md:w-1/3 md:mb-0">
+                <div class="h-full py-12 px-6 bg-gray-800 rounded shadow-md text-center md:px-4 lg:px-6">
+                  <span class="mb-6 inline-block p-2 rounded-lg bg-yellow-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-10 h-10 text-yellow-500" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z"></path></svg></span>
+                  <h3 class="mb-4 text-2xl font-bold font-heading text-white md:text-lg lg:text-2xl">Fully reactive</h3>
+                  <p class="text-gray-500 md:text-sm lg:text-base">All values are change‑tracked and update automatically, with no need for manual diffing or memoization</p>
+                </div>
+              </div>
+              <div class="w-full px-4 mb-8 md:w-1/3 md:mb-0">
+                <div class="h-full py-12 px-6 bg-gray-800 rounded shadow-md text-center md:px-4 lg:px-6">
+                  <span class="mb-6 inline-block p-2 rounded-lg bg-purple-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="w-10 h-10 text-purple-500"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg></span>
+                  <h3 class="mb-4 text-2xl font-bold font-heading text-white md:text-lg lg:text-2xl">Familiar syntax</h3>
+                  <p class="text-gray-500 md:text-sm lg:text-base">Write complex real‑time applications using straightforward synchronous JavaScript source code</p>
+                </div>
+              </div>
+              <div class="w-full px-4 md:w-1/3">
+                <div class="h-full py-12 px-6 bg-gray-800 rounded shadow-md text-center md:px-4 lg:px-6">
+                  <span class="mb-6 inline-block p-2 rounded bg-pink-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-10 h-10 text-pink-500" viewbox="0 0 16 16"><path d="M9.585 2.568a.5.5 0 0 1 .226.58L8.677 6.832h1.99a.5.5 0 0 1 .364.843l-5.334 5.667a.5.5 0 0 1-.842-.49L5.99 9.167H4a.5.5 0 0 1-.364-.843l5.333-5.667a.5.5 0 0 1 .616-.09z"></path><path d="M2 4h4.332l-.94 1H2a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h2.38l-.308 1H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"></path><path d="M2 6h2.45L2.908 7.639A1.5 1.5 0 0 0 3.313 10H2V6zm8.595-2-.308 1H12a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H9.276l-.942 1H12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.405z"></path><path d="M12 10h-1.783l1.542-1.639c.097-.103.178-.218.241-.34V10zm0-3.354V6h-.646a1.5 1.5 0 0 1 .646.646zM16 8a1.5 1.5 0 0 1-1.5 1.5v-3A1.5 1.5 0 0 1 16 8z"></path></svg></span>
+                  <h3 class="mb-4 text-2xl font-bold font-heading text-white md:text-lg lg:text-2xl">Batteries included</h3>
+                  <p class="text-gray-500 md:text-sm lg:text-base">Fully loaded with library helpers for serving subscription APIs and integrating streaming data sources</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skew skew-bottom mr-for-radius">
+          <svg class="h-8 md:h-12 lg:h-20 w-full text-gray-900" viewbox="0 0 10 10" preserveaspectratio="none"><polygon fill="currentColor" points="0 0 10 0 0 10"></polygon></svg></div>
+        <div class="skew skew-bottom ml-for-radius">
+          <svg class="h-8 md:h-12 lg:h-20 w-full text-gray-900" viewbox="0 0 10 10" preserveaspectratio="none"><polygon fill="currentColor" points="0 0 10 0 10 10"></polygon></svg></div>
+      </section>
+
+
+
+
+      <section class="skewed-top-left skewed-bottom-right bg-gray-900"><div class="skew skew-top mr-for-radius">
+      	  <svg class="h-8 md:h-12 lg:h-20 w-full text-gray-50" viewbox="0 0 10 10" preserveaspectratio="none"><polygon fill="currentColor" points="0 0 10 10 0 10"></polygon></svg></div>
+        <div class="skew skew-top ml-for-radius">
+          <svg class="h-8 md:h-12 lg:h-20 w-full text-gray-50" viewbox="0 0 10 10" preserveaspectratio="none"><polygon fill="currentColor" points="0 10 10 0 10 10"></polygon></svg></div>
+        <div class="py-20 bg-gray-50 radius-for-skewed">
+          <div class="container mx-auto px-4">
+            <div class="flex flex-wrap">
+              <div class="w-full mb-12 lg:w-1/2 lg:mb-0">
+                <div class="max-w-md">
+                  <span class="font-bold text-blue-500">How it works</span>
+                  <h2 class="mb-2 font-bold font-heading text-3xl lg:text-4xl">Reactivity made simple</h2>
+                  <div class="max-w-xs mb-4">
+                    <p class="text-gray-500 leading-loose">Reflex's update mechanism is divided into four phases, which combine to provide full reactivity at no cost to the developer</p>
+                  </div>
+                  <div class="hidden md:block">
+                    <code class="block w-full bg-gray-800 text-gray-400 text-sm rounded shadow-2xl">
+                      <div class="highlighted ast">
+                        <div><span class="mtk15">import</span><span class="mtk1"> </span><span class="mtk7">{</span><span class="mtk1"> </span><span class="mtk5">now</span><span class="mtk1"> </span><span class="mtk7">}</span><span class="mtk1"> </span><span class="mtk15">from</span><span class="mtk1"> </span><span class="mtk11">'reflex::time'</span><span class="mtk7">;</span></div>
+                        <div><br></div>
+                        <div><span class="mtk15">const</span><span class="mtk1"> </span><span class="ast-node"><span class="mtk6">timestamp</span></span><span class="mtk1"> </span><span class="mtk9">=</span><span class="mtk1"> </span><span class="ast-node ast-node-stateful"><span class="mtk10">now</span><span class="mtk7">({</span><span class="mtk1"> </span><span class="mtk5">interval</span><span class="mtk9">:</span><span class="mtk1"> </span><span class="mtk6">1000</span><span class="mtk1"> </span><span class="mtk7">})</span></span><span class="mtk7">;</span></div>
+                        <div><br></div>
+                        <div><span class="mtk15">const</span><span class="mtk1"> </span><span class="ast-node"><span class="mtk6">millis</span></span><span class="mtk1"> </span><span class="mtk9">=</span><span class="mtk1"> </span><span class="ast-node"><span class="mtk7">timestamp</span></span><span class="mtk7">.</span><span class="mtk10">getTime</span><span class="mtk7">();</span></div>
+                        <div><br></div>
+                        <div><span class="mtk15">const</span><span class="mtk1"> </span><span class="ast-node"><span class="mtk6">seconds</span></span><span class="mtk1"> </span><span class="mtk9">=</span><span class="mtk1"> </span><span class="mtk7">Math.</span><span class="mtk10">floor</span><span class="mtk7">(</span><span class="ast-node"><span class="mtk7">millis</span></span><span class="mtk1"> </span><span class="mtk9">/</span><span class="mtk1"> </span><span class="mtk6">1000</span><span class="mtk7">);</span></div>
+                        <div><br></div>
+                        <div><span class="mtk15">export</span><span class="mtk1"> </span><span class="mtk5">default</span><span class="mtk1"> </span><span class="mtk11">`Current UNIX time: </span><span class="mtk16">${</span><span class="ast-node"><span class="mtk5">seconds</span></span><span class="mtk16">}</span><span class="mtk11">`</span><span class="mtk7">;</span></div>
+                      </div>
+                    </code>
+                    <aside class="m-2 text-xs text-gray-500 italic">Hover over the diagram to highlight sub-expressions that change over time</aside></div>
+                </div>
+              </div>
+              <div class="w-full lg:w-1/2 lg:mt-8">
+                <div class="mb-12 lg:mb-8 flex flex-wrap items-start">
+                  <span class="mb-4 lg:mb-0 lg:mr-6 inline-flex items-center justify-center w-16 h-16 bg-pink-100 rounded text-pink-600 text-2xl font-bold -mt-3">1</span>
+                  <div class="w-full lg:w-3/4">
+                    <h3 class="mb-4 text-2xl font-bold font-heading">Static analysis</h3>
+                    <p class="text-gray-500 leading-loose">The Reflex compiler parses source code into a tree of sub-expressions, determining which nodes are stateful</p>
+                  </div>
+                </div>
+                <div class="mb-12 lg:mb-8 flex flex-wrap items-start">
+                  <span class="mb-4 lg:mb-0 lg:mr-6 inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded text-purple-600 text-2xl font-bold -mt-3">2</span>
+                  <div class="w-full lg:w-3/4">
+                    <h3 class="mb-4 text-2xl font-bold font-heading">Dependency tracking</h3>
+                    <p class="text-gray-500 leading-loose">The Reflex runtime tracks each sub‑expression's state dependencies, building up an overall dependency tree</p>
+                  </div>
+                </div>
+                <div class="mb-12 lg:mb-8 flex flex-wrap items-start">
+                  <span class="mb-4 lg:mb-0 lg:mr-6 inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded text-blue-600 text-2xl font-bold -mt-3">3</span>
+                  <div class="w-full lg:w-3/4">
+                    <h3 class="mb-4 text-2xl font-bold font-heading">Targeted recomputation</h3>
+                    <p class="text-gray-500 leading-loose">Whenever external state changes, the Reflex runtime immediately recomputes any affected values</p>
+                  </div>
+                </div>
+                <div class="flex flex-wrap items-start">
+                  <span class="mb-4 lg:mb-0 lg:mr-6 inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded text-green-600 text-2xl font-bold -mt-3">4</span>
+                  <div class="w-full lg:w-3/4">
+                    <h3 class="mb-4 text-2xl font-bold font-heading">Live result syncing</h3>
+                    <p class="text-gray-500 leading-loose">Existing results are patched with a minimal delta containing just the recomputed values</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skew skew-bottom mr-for-radius">
+          <svg class="h-8 md:h-12 lg:h-20 w-full text-gray-50" viewbox="0 0 10 10" preserveaspectratio="none"><polygon fill="currentColor" points="0 0 10 0 0 10"></polygon></svg></div>
+        <div class="skew skew-bottom ml-for-radius">
+          <svg class="h-8 md:h-12 lg:h-20 w-full text-gray-50" viewbox="0 0 10 10" preserveaspectratio="none"><polygon fill="currentColor" points="0 0 10 0 10 10"></polygon></svg></div>
+      </section>
+
+      <section class="skewed-bottom-left bg-gray-800 skewed-full"><div class="skew skew-top mr-for-radius">
+        <svg class="h-8 md:h-12 lg:h-20 w-full text-gray-900" viewbox="0 0 10 10" preserveaspectratio="none"><polygon fill="currentColor" points="0 0 10 10 0 10"></polygon></svg></div>
+        <div class="skew skew-top ml-for-radius">
+          <svg class="h-8 md:h-12 lg:h-20 w-full text-gray-900" viewbox="0 0 10 10" preserveaspectratio="none"><polygon fill="currentColor" points="0 10 10 0 10 10"></polygon></svg></div>
+        <div class="py-20 bg-gray-900 radius-for-skewed">
+          <div class="container mx-auto px-4">
+            <div class="flex flex-wrap -mx-4">
+              <div class="w-full px-4 lg:w-1/2">
+                <div class="max-w-md">
+                  <span class="font-bold text-yellow-600">Developer experience</span>
+                  <h2 class="font-bold font-heading text-white text-2xl lg:text-3xl mb-8">Write reactive apps using a language you already know</h2>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap -mx-4">
+              <div class="w-full px-4 mb-12 md:w-1/3 md:mb-0">
+                <ul><li class="flex mb-4">
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="mr-3 w-8 h-8 -mt-1 text-gray-400"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
+                  <div class="max-w-xs">
+                    <h3 class="font-bold font-heading text-white">Simple JavaScript syntax</h3>
+                    <p class="text-gray-500 leading-loose">Reflex's JS dialect is a strict subset of 'the good parts' of ECMAScript, with no proprietary syntax to learn. Any syntax not supported by Reflex will be flagged by the Reflex ESLint rules as you type</p>            </div>
+                  </li>
+                  <li class="flex mb-4">
+                    <div>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="mr-3 w-8 h-8 -mt-1 text-gray-400"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
+                    <div class="max-w-xs">
+                      <h3 class="font-bold font-heading text-white">Synchronously asynchronous</h3>
+                      <p class="text-gray-500 leading-loose">No need for async/await or promises – write your code as if everything is synchronous, and Reflex will figure out the optimal non‑blocking parallel execution strategy, even with streams</p>
+                    </div>
+                  </li>
+                  <li class="flex">
+                    <div>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="mr-3 w-8 h-8 -mt-1 text-gray-400"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
+                    <div class="max-w-xs">
+                      <h3 class="font-bold font-heading text-white">Keep your existing IDE and tooling</h3>
+                      <p class="text-gray-500 leading-loose">Use your favourite JS/TS build tools alongside the Reflex TypeScript definitions for the full experience</p>
+                    </div>
+                  </li>
+                </ul></div>
+              <div class="w-full px-4 md:w-2/3 md:-mt-4">
+                <code class="block w-full bg-gray-800 text-gray-400 text-sm rounded shadow-2xl">
+                  <div class="highlighted">
+                    <div><span class="mtk15">import</span><span class="mtk1"> </span><span class="mtk7">{</span><span class="mtk1"> </span><span class="mtk5">hash</span><span class="mtk1"> </span><span class="mtk7">}</span><span class="mtk1"> </span><span class="mtk15">from</span><span class="mtk1"> </span><span class="mtk11">'reflex::core'</span><span class="mtk7">;</span></div>
+                    <div><span class="mtk15">import</span><span class="mtk1"> </span><span class="mtk7">{</span><span class="mtk1"> </span><span class="mtk5">fetch</span><span class="mtk7">,</span><span class="mtk1"> </span><span class="mtk5">Request</span><span class="mtk1"> </span><span class="mtk7">}</span><span class="mtk1"> </span><span class="mtk15">from</span><span class="mtk1"> </span><span class="mtk11">'reflex::http'</span><span class="mtk7">;</span></div>
+                    <div><span class="mtk15">import</span><span class="mtk1"> </span><span class="mtk7">{</span><span class="mtk1"> </span><span class="mtk5">now</span><span class="mtk1"> </span><span class="mtk7">}</span><span class="mtk1"> </span><span class="mtk15">from</span><span class="mtk1"> </span><span class="mtk11">'reflex::time'</span><span class="mtk7">;</span></div>
+                    <div><br></div>
+                    <div><span class="mtk15">const</span><span class="mtk1"> </span><span class="mtk6">response</span><span class="mtk1"> </span><span class="mtk9">=</span><span class="mtk1"> </span><span class="mtk10">fetch</span><span class="mtk7">(</span><span class="mtk15">new</span><span class="mtk1"> </span><span class="mtk10">Request</span><span class="mtk7">({</span></div>
+                    <div><span class="mtk1">  </span><span class="mtk5">method</span><span class="mtk9">:</span><span class="mtk1"> </span><span class="mtk11">'GET'</span><span class="mtk7">,</span></div>
+                    <div><span class="mtk1">  </span><span class="mtk5">url</span><span class="mtk9">:</span><span class="mtk1"> </span><span class="mtk11">'https://worldtimeapi.org/api/timezone/Etc/UTC'</span><span class="mtk7">,</span></div>
+                    <div><span class="mtk1">  </span><span class="mtk5">headers</span><span class="mtk9">:</span><span class="mtk1"> </span><span class="mtk7">{},</span></div>
+                    <div><span class="mtk1">  </span><span class="mtk5">body</span><span class="mtk9">:</span><span class="mtk1"> </span><span class="mtk6">null</span><span class="mtk7">,</span></div>
+                    <div><span class="mtk1">  </span><span class="mtk8 mkti">// Automatically re-fetches every 1000ms when the token changes</span></div>
+                    <div><span class="mtk1">  </span><span class="mtk5">token</span><span class="mtk9">:</span><span class="mtk1"> </span><span class="mtk10">hash</span><span class="mtk7">(</span><span class="mtk10">now</span><span class="mtk7">({</span><span class="mtk1"> </span><span class="mtk5">interval</span><span class="mtk9">:</span><span class="mtk1"> </span><span class="mtk6">1000</span><span class="mtk1"> </span><span class="mtk7">})),</span></div>
+                    <div><span class="mtk7">}));</span></div>
+                    <div><br></div>
+                    <div><span class="mtk8 mkti">// Output will change whenever the fetch returns a different payload</span></div>
+                    <div><span class="mtk15">export</span><span class="mtk1"> </span><span class="mtk5">default</span><span class="mtk1"> </span><span class="mtk11">`Current UNIX time: </span><span class="mtk16">${</span><span class="mtk7">response</span><span class="mtk11">.</span><span class="mtk10">json</span><span class="mtk7">()</span><span class="mtk11">.</span><span class="mtk5">unixtime</span><span class="mtk16">}</span><span class="mtk11">`</span><span class="mtk7">;</span></div>
+                  </div>
+                </code>
+                <div class="w-full py-2 text-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="h-8 w-8 inline-block text-gray-600"><path stroke-linecap="round" stroke-linejoin="round" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"></path></svg></div>
+                <div class="w-full">
+                  <output class="block w-full p-4 bg-gray-800 text-gray-400 font-mono rounded shadow-2xl" data-example="timestamp">Current UNIX time: <span data-timestamp=""></span></output></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skew skew-bottom mr-for-radius">
+          <svg class="h-8 md:h-12 lg:h-20 w-full text-gray-900" viewbox="0 0 10 10" preserveaspectratio="none"><polygon fill="currentColor" points="0 0 10 0 0 10"></polygon></svg></div>
+        <div class="skew skew-bottom ml-for-radius">
+          <svg class="h-8 md:h-12 lg:h-20 w-full text-gray-900" viewbox="0 0 10 10" preserveaspectratio="none"><polygon fill="currentColor" points="0 0 10 0 10 10"></polygon></svg></div>
+      </section>
+
+      <section class="skewed-full"><div class="skew skew-top mr-for-radius">
+        <svg class="h-8 md:h-12 lg:h-20 w-full text-gray-900" viewbox="0 0 10 10" preserveaspectratio="none"><polygon fill="currentColor" points="0 0 10 10 0 10"></polygon></svg></div>
+        <div class="skew skew-top ml-for-radius">
+          <svg class="h-8 md:h-12 lg:h-20 w-full text-gray-900" viewbox="0 0 10 10" preserveaspectratio="none"><polygon fill="currentColor" points="0 10 10 0 10 10"></polygon></svg></div>
+        <div class="py-20 radius-for-skewed bg-gray-800">
+          <div class="container mx-auto px-4">
+            <div class="flex flex-wrap -mx-4">
+              <div class="w-full lg:w-1/2 px-4">
+                <div class="max-w-md md:ml-6">
+                  <span class="font-bold text-yellow-600">Data transformation</span>
+                  <h2 class="font-bold font-heading text-white text-2xl lg:text-3xl mb-8">Seamless integration with all your data sources</h2>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap -mx-4">
+              <div class="w-full mb-12 px-4 md:w-2/3 md:mb-0 md:-mt-4">
+                <code class="block w-full bg-gray-900 text-gray-400 text-sm rounded shadow-2xl">
+                  <div class="highlighted">
+                    <div><span class="mtk15">import</span><span class="mtk1"> </span><span class="mtk5">CurrencyService</span><span class="mtk1"> </span><span class="mtk15">from</span><span class="mtk1"> </span><span class="mtk11">'./services/graphql/currency.graphql'</span><span class="mtk7">;</span></div>
+                    <div><span class="mtk15">import</span><span class="mtk1"> </span><span class="mtk7">{</span><span class="mtk1"> </span><span class="mtk5">StocksService</span><span class="mtk1"> </span><span class="mtk7">}</span><span class="mtk1"> </span><span class="mtk15">from</span><span class="mtk1"> </span><span class="mtk11">'./services/grpc/stocks.proto.bin'</span><span class="mtk7">;</span></div>
+                    <div><br></div>
+                    <div><span class="mtk15">const</span><span class="mtk1"> </span><span class="mtk6">currencyApi</span><span class="mtk1"> </span><span class="mtk9">=</span><span class="mtk1"> </span><span class="mtk15">new</span><span class="mtk1"> </span><span class="mtk10">CurrencyService</span><span class="mtk7">({</span></div>
+                    <div><span class="mtk1">  </span><span class="mtk5">url</span><span class="mtk9">:</span><span class="mtk1"> </span><span class="mtk7">process.</span><span class="mtk5">env</span><span class="mtk7">.</span><span class="mtk6">CURRENCY_API_URL</span></div>
+                    <div><span class="mtk7">});</span></div>
+                    <div><br></div>
+                    <div><span class="mtk15">const</span><span class="mtk1"> </span><span class="mtk6">stocksApi</span><span class="mtk1"> </span><span class="mtk9">=</span><span class="mtk1"> </span><span class="mtk15">new</span><span class="mtk1"> </span><span class="mtk10">StocksService</span><span class="mtk7">({</span></div>
+                    <div><span class="mtk1">  </span><span class="mtk5">url</span><span class="mtk9">:</span><span class="mtk1"> </span><span class="mtk7">process.</span><span class="mtk5">env</span><span class="mtk7">.</span><span class="mtk6">STOCKS_API_URL</span></div>
+                    <div><span class="mtk7">});</span></div>
+                    <div><br></div>
+                    <div><span class="mtk15">const</span><span class="mtk1"> </span><span class="mtk10">getLiveStockPrice</span><span class="mtk1"> </span><span class="mtk9">=</span><span class="mtk1"> </span><span class="mtk7">(ticker)</span><span class="mtk1"> </span><span class="mtk15">=&gt;</span><span class="mtk1"> </span><span class="mtk7">{</span></div>
+                    <div><span class="mtk1">  </span><span class="mtk15">const</span><span class="mtk1"> { </span><span class="mtk6">price</span><span class="mtk1"> } </span><span class="mtk9">=</span><span class="mtk1"> </span><span class="mtk7">stocksApi.</span><span class="mtk10">StreamLiveStockPrice</span><span class="mtk7">(</span></div>
+                    <div><span class="mtk1">    </span><span class="mtk7">{</span><span class="mtk1"> </span><span class="mtk7">ticker</span><span class="mtk1"> </span><span class="mtk7">},</span><span class="mtk1"> </span><span class="mtk7">{</span><span class="mtk1"> </span><span class="mtk5">token</span><span class="mtk9">:</span><span class="mtk1"> </span><span class="mtk6">null</span><span class="mtk1"> </span><span class="mtk7">}</span></div>
+                    <div><span class="mtk1">  </span><span class="mtk7">);</span></div>
+                    <div><span class="mtk1">  </span><span class="mtk15">return</span><span class="mtk1"> </span><span class="mtk7">price;</span></div>
+                    <div><span class="mtk7">};</span></div>
+                    <div><br></div>
+                    <div><span class="mtk15">const</span><span class="mtk1"> </span><span class="mtk10">getLiveExchangeRate</span><span class="mtk1"> </span><span class="mtk9">=</span><span class="mtk1"> </span><span class="mtk7">(from,</span><span class="mtk1"> </span><span class="mtk7">to)</span><span class="mtk1"> </span><span class="mtk15">=&gt;</span><span class="mtk1"> </span><span class="mtk7">{</span></div>
+                    <div><span class="mtk1">  </span><span class="mtk15">const</span><span class="mtk1"> { </span><span class="mtk6">exchangeRate</span><span class="mtk1"> } </span><span class="mtk9">=</span><span class="mtk1"> </span><span class="mtk7">currencyApi.</span><span class="mtk10">execute</span><span class="mtk7">({</span></div>
+                    <div><span class="mtk1">    </span><span class="mtk5">query</span><span class="mtk9">:</span><span class="mtk1"> </span><span class="mtk11">`</span></div>
+                    <div><span class="mtk11">      subscription LiveExchangeRate($from: ID!, $to: ID!) {</span></div>
+                    <div><span class="mtk11">        exchangeRate(from: $from, to: $to)</span></div>
+                    <div><span class="mtk11">      }</span></div>
+                    <div><span class="mtk11">    `</span><span class="mtk7">,</span></div>
+                    <div><span class="mtk1">    </span><span class="mtk5">variables</span><span class="mtk9">:</span><span class="mtk1"> </span><span class="mtk7">{</span><span class="mtk1"> </span><span class="mtk7">from,</span><span class="mtk1"> </span><span class="mtk7">to</span><span class="mtk1"> </span><span class="mtk7">},</span></div>
+                    <div><span class="mtk1">    </span><span class="mtk5">token</span><span class="mtk9">:</span><span class="mtk1"> </span><span class="mtk6">null</span><span class="mtk7">,</span></div>
+                    <div><span class="mtk1">  </span><span class="mtk7">});</span></div>
+                    <div><span class="mtk1">  </span><span class="mtk15">return</span><span class="mtk1"> </span><span class="mtk7">exchangeRate;</span></div>
+                    <div><span class="mtk7">};</span></div>
+                    <div><br></div>
+                    <div><span class="mtk15">const</span><span class="mtk1"> </span><span class="mtk10">getLocaleStockPrice</span><span class="mtk1"> </span><span class="mtk9">=</span><span class="mtk1"> </span><span class="mtk7">(ticker,</span><span class="mtk1"> </span><span class="mtk7">currency)</span><span class="mtk1"> </span><span class="mtk15">=&gt;</span><span class="mtk1"> </span><span class="mtk7">{</span></div>
+                    <div><span class="mtk1">  </span><span class="mtk15">const</span><span class="mtk1"> </span><span class="mtk6">price</span><span class="mtk1"> </span><span class="mtk9">=</span><span class="mtk1"> </span><span class="mtk10">getLiveStockPrice</span><span class="mtk7">(ticker);</span></div>
+                    <div><span class="mtk1">  </span><span class="mtk15">const</span><span class="mtk1"> </span><span class="mtk6">exchangeRate</span><span class="mtk1"> </span><span class="mtk9">=</span><span class="mtk1"> </span><span class="mtk10">getLiveExchangeRate</span><span class="mtk7">(</span><span class="mtk11">'USD'</span><span class="mtk7">,</span><span class="mtk1"> </span><span class="mtk7">currency);</span></div>
+                    <div><span class="mtk1">  </span><span class="mtk8 mkti">// Perform computations on live-updating values using plain JS</span></div>
+                    <div><span class="mtk1">  </span><span class="mtk15">return</span><span class="mtk1"> </span><span class="mtk7">price</span><span class="mtk1"> </span><span class="mtk9">*</span><span class="mtk1"> </span><span class="mtk7">exchangeRate;</span></div>
+                    <div><span class="mtk7">};</span></div>
+                    <div><br></div>
+                    <div><span class="mtk8 mkti">// Output will change whenever the price or exchange rate changes</span></div>
+                    <div><span class="mtk15">export</span><span class="mtk1"> </span><span class="mtk5">default</span><span class="mtk1"> </span><span class="mtk11">`Price in GBP: </span><span class="mtk16">${</span><span class="mtk10">getLocaleStockPrice</span><span class="mtk7">(</span><span class="mtk11">'ACME'</span><span class="mtk7">,</span><span class="mtk11"> </span><span class="mtk11">'GBP'</span><span class="mtk7">)</span><span class="mtk16">}</span><span class="mtk11">`</span><span class="mtk7">;</span></div>
+                  </div>
+                </code>
+              </div>
+              <div class="w-full px-4 md:w-1/3">
+                <ul><li class="flex mb-4">
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="mr-3 w-8 h-8 -mt-1 text-gray-400"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
+                  <div class="max-w-xs">
+                    <h3 class="font-bold font-heading text-white">External API integration</h3>
+                    <p class="text-gray-500 leading-loose">Data adapters for HTTP, GraphQL and gRPC services, with first‑class support for streaming endpoints and built‑in helpers for polling and retrying</p>
+                  </div>
+                  </li>
+                  <li class="flex mb-4">
+                    <div>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="mr-3 w-8 h-8 -mt-1 text-gray-400"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
+                    <div class="max-w-xs">
+                      <h3 class="font-bold font-heading text-white">Stream-native data transformation</h3>
+                      <p class="text-gray-500 leading-loose">Write simple JavaScript code to perform complex dynamic streaming joins on deeply nested relational data</p>
+                    </div>
+                  </li>
+                  <li class="flex">
+                    <div>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="mr-3 w-8 h-8 -mt-1 text-gray-400"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
+                    <div class="max-w-xs">
+                      <h3 class="font-bold font-heading text-white">Optimal batch loading</h3>
+                      <p class="text-gray-500 leading-loose">Avoid the n+1 problem by using the Reflex DataLoader helper to batch entities into the minimal number of external requests</p>
+                    </div>
+                  </li>
+                </ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="skew skew-bottom mr-for-radius">
+          <svg class="h-8 md:h-12 lg:h-20 w-full text-gray-900" viewbox="0 0 10 10" preserveaspectratio="none"><polygon fill="currentColor" points="0 0 10 0 0 10"></polygon></svg></div>
+        <div class="skew skew-bottom ml-for-radius">
+          <svg class="h-8 md:h-12 lg:h-20 w-full text-gray-900" viewbox="0 0 10 10" preserveaspectratio="none"><polygon fill="currentColor" points="0 0 10 0 10 10"></polygon></svg></div>
+      </section>
+
+      <section class="bg-gray-800 skewed-full skewed-top-left"><div class="skew skew-top mr-for-radius">
+        <svg class="h-8 md:h-12 lg:h-20 w-full text-gray-900" viewbox="0 0 10 10" preserveaspectratio="none"><polygon fill="currentColor" points="0 0 10 10 0 10"></polygon></svg></div>
+        <div class="skew skew-top ml-for-radius">
+          <svg class="h-8 md:h-12 lg:h-20 w-full text-gray-900" viewbox="0 0 10 10" preserveaspectratio="none"><polygon fill="currentColor" points="0 10 10 0 10 10"></polygon></svg></div>
+        <div class="py-20 bg-gray-900 radius-for-skewed">
+          <div class="container mx-auto px-4">
+            <div class="flex flex-wrap -mx-4">
+              <div class="w-full px-4 lg:w-1/2">
+                <div class="max-w-md">
+                  <span class="font-bold text-yellow-600">Going live</span>
+                  <h2 class="font-bold font-heading text-white text-2xl lg:text-3xl mb-8">Serve streaming APIs with minimal effort</h2>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap -mx-4">
+              <div class="w-full px-4 mb-12 md:w-1/3 md:mb-0">
+                <ul><li class="flex mb-4">
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="mr-3 w-8 h-8 -mt-1 text-gray-400"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
+                  <div class="max-w-xs">
+                    <h3 class="font-bold font-heading text-white">First‑class subscription server</h3>
+                    <p class="text-gray-500 leading-loose">Reflex Server exposes a Web Socket based GraphQL subscription server for transparent transport of streaming values</p>
+                  </div>
+                  </li>
+                  <li class="flex mb-4">
+                    <div>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="mr-3 w-8 h-8 -mt-1 text-gray-400"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
+                    <div class="max-w-xs">
+                      <h3 class="font-bold font-heading text-white">Live queries out‑of‑the‑box</h3>
+                      <p class="text-gray-500 leading-loose">Expose arbitrarily deeply nested GraphQL subscription graph roots that live‑update with no extra developer effort</p>
+                    </div>
+                  </li>
+                  <li class="flex">
+                    <div>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="mr-3 w-8 h-8 -mt-1 text-gray-400"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
+                    <div class="max-w-xs">
+                      <h3 class="font-bold font-heading text-white">Efficient real-time updates</h3>
+                      <p class="text-gray-500 leading-loose">Reflex Server can automatically diff results of live GraphQL subscriptions, ensuring only minimal patch payloads are sent to the consumer when values change</p>
+                    </div>
+                  </li>
+                </ul></div>
+              <div class="w-full px-4 md:w-2/3 md:-mt-4">
+                <code class="block w-full bg-gray-800 text-gray-400 text-sm rounded shadow-2xl">
+                  <div class="highlighted">
+                    <div><span class="mtk15">import</span><span class="mtk1"> </span><span class="mtk7">{</span><span class="mtk1"> </span><span class="mtk5">Resolver</span><span class="mtk1"> </span><span class="mtk7">}</span><span class="mtk1"> </span><span class="mtk15">from</span><span class="mtk1"> </span><span class="mtk11">'reflex::graphql'</span><span class="mtk7">;</span></div>
+                    <div><span class="mtk15">import</span><span class="mtk1"> </span><span class="mtk7">{</span><span class="mtk1"> </span><span class="mtk5">now</span><span class="mtk1"> </span><span class="mtk7">}</span><span class="mtk1"> </span><span class="mtk15">from</span><span class="mtk1"> </span><span class="mtk11">'reflex::time'</span><span class="mtk7">;</span></div>
+                    <div><br></div>
+                    <div><span class="mtk15">const</span><span class="mtk1"> </span><span class="mtk6">resolvers</span><span class="mtk1"> </span><span class="mtk9">=</span><span class="mtk1"> </span><span class="mtk7">{</span></div>
+                    <div><span class="mtk1">  </span><span class="mtk5">Query</span><span class="mtk9">:</span><span class="mtk1"> </span><span class="mtk7">{</span></div>
+                    <div><span class="mtk1">    </span><span class="mtk10">greet</span><span class="mtk9">:</span><span class="mtk1"> </span><span class="mtk7">(</span><span class="mtk1">{ </span><span class="mtk7">user</span><span class="mtk1"> }</span><span class="mtk7">)</span><span class="mtk1"> </span><span class="mtk15">=&gt;</span><span class="mtk1"> </span><span class="mtk11">`Hello, </span><span class="mtk16">${</span><span class="mtk7">user</span><span class="mtk11"> </span><span class="mtk9">||</span><span class="mtk11"> </span><span class="mtk11">'world'</span><span class="mtk16">}</span><span class="mtk11">`</span><span class="mtk7">,</span></div>
+                    <div><span class="mtk1">    </span><span class="mtk10">timestamp</span><span class="mtk9">:</span><span class="mtk1"> </span><span class="mtk7">()</span><span class="mtk1"> </span><span class="mtk15">=&gt;</span><span class="mtk1"> </span><span class="mtk7">{</span></div>
+                    <div><span class="mtk1">      </span><span class="mtk15">const</span><span class="mtk1"> </span><span class="mtk6">timestamp</span><span class="mtk1"> </span><span class="mtk9">=</span><span class="mtk1"> </span><span class="mtk10">now</span><span class="mtk7">({</span><span class="mtk1"> </span><span class="mtk5">interval</span><span class="mtk9">:</span><span class="mtk1"> </span><span class="mtk6">1000</span><span class="mtk1"> </span><span class="mtk7">});</span></div>
+                    <div><span class="mtk1">      </span><span class="mtk15">const</span><span class="mtk1"> </span><span class="mtk6">millis</span><span class="mtk1"> </span><span class="mtk9">=</span><span class="mtk1"> </span><span class="mtk7">timestamp.</span><span class="mtk10">getTime</span><span class="mtk7">();</span></div>
+                    <div><span class="mtk1">      </span><span class="mtk15">return</span><span class="mtk1"> </span><span class="mtk7">Math.</span><span class="mtk10">floor</span><span class="mtk7">(millis</span><span class="mtk1"> </span><span class="mtk9">/</span><span class="mtk1"> </span><span class="mtk6">1000</span><span class="mtk7">);</span></div>
+                    <div><span class="mtk1">    </span><span class="mtk7">},</span></div>
+                    <div><span class="mtk1">  </span><span class="mtk7">},</span></div>
+                    <div><span class="mtk7">};</span></div>
+                    <div><br></div>
+                    <div><span class="mtk8 mkti">// Export GraphQL server root</span></div>
+                    <div><span class="mtk15">export</span><span class="mtk1"> </span><span class="mtk5">default</span><span class="mtk1"> </span><span class="mtk15">new</span><span class="mtk1"> </span><span class="mtk10">Resolver</span><span class="mtk7">({</span></div>
+                    <div><span class="mtk1">  </span><span class="mtk5">query</span><span class="mtk9">:</span><span class="mtk1"> </span><span class="mtk7">resolvers.</span><span class="mtk5">Query</span><span class="mtk7">,</span></div>
+                    <div><span class="mtk1">  </span><span class="mtk5">mutation</span><span class="mtk9">:</span><span class="mtk1"> </span><span class="mtk6">null</span><span class="mtk7">,</span></div>
+                    <div><span class="mtk1">  </span><span class="mtk5">subscription</span><span class="mtk9">:</span><span class="mtk1"> </span><span class="mtk7">resolvers.</span><span class="mtk5">Query</span><span class="mtk7">,</span><span class="mtk1"> </span><span class="mtk8 mkti">// Serve live queries over WebSocket</span></div>
+                    <div><span class="mtk7">});</span></div>
+                  </div>
+                </code>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skew skew-bottom mr-for-radius">
+          <svg class="h-8 md:h-12 lg:h-20 w-full text-gray-900" viewbox="0 0 10 10" preserveaspectratio="none"><polygon fill="currentColor" points="0 0 10 0 0 10"></polygon></svg></div>
+        <div class="skew skew-bottom ml-for-radius">
+          <svg class="h-8 md:h-12 lg:h-20 w-full text-gray-900" viewbox="0 0 10 10" preserveaspectratio="none"><polygon fill="currentColor" points="0 0 10 0 10 10"></polygon></svg></div>
+      </section>
+
+      <section><div class="skew skew-top mr-for-radius">
+        <svg class="h-8 md:h-12 lg:h-20 w-full text-gray-900" viewbox="0 0 10 10" preserveaspectratio="none"><polygon fill="currentColor" points="0 0 10 10 0 10"></polygon></svg></div>
+        <div class="skew skew-top ml-for-radius">
+          <svg class="h-8 md:h-12 lg:h-20 w-full text-gray-900" viewbox="0 0 10 10" preserveaspectratio="none"><polygon fill="currentColor" points="0 10 10 0 10 10"></polygon></svg></div>
+        <div class="py-20 bg-gray-900 radius-for-skewed">
+          <div class="container mx-auto px-4">
+            <div class="mb-16 max-w-md mx-auto text-center">
+              <h2 class="text-4xl lg:text-5xl font-bold font-heading text-white">Technical features</h2>
+            </div>
+            <div class="flex flex-wrap -mx-3">
+              <div class="mb-6 w-full lg:w-1/2 px-3">
+                <div class="p-6 flex flex-wrap bg-gray-800 shadow-md rounded-lg">
+                  <div class="w-full">
+                    <h3 class="mb-2 text-2xl font-bold font-heading text-white">Flexible server transport</h3>
+                    <p class="text-gray-500">Reflex Server exposes its GraphQL API over both streaming Web Socket and traditional request/response HTTP protocols, allowing consumers to choose their preferred transport method</p>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-6 w-full lg:w-1/2 px-3">
+                <div class="p-6 flex flex-wrap bg-gray-800 shadow-md rounded-lg">
+                  <div class="w-full">
+                    <h3 class="mb-2 text-2xl font-bold font-heading text-white">First‑class observability</h3>
+                    <p class="text-gray-500">Reflex Server has built‑in support for OpenTelemetry tracing, Prometheus/Grafana metrics, and structured JSON logging, plus full session capture for replaying hard-to-reproduce errors</p>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-6 w-full lg:w-1/2 px-3">
+                <div class="p-6 flex flex-wrap bg-gray-800 shadow-md rounded-lg">
+                  <div class="w-full">
+                    <h3 class="mb-2 text-2xl font-bold font-heading text-white">Pure functional</h3>
+                    <p class="text-gray-500">Reflex's pure functions, immutable data structures and algebraic effects system allow for deterministic recording, replaying and mocking of side‑effects, plus bulletproof test suites</p>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-6 w-full lg:w-1/2 px-3">
+                <div class="p-6 flex flex-wrap bg-gray-800 shadow-md rounded-lg">
+                  <div class="w-full">
+                    <h3 class="mb-2 text-2xl font-bold font-heading text-white">Syntax agnostic</h3>
+                    <p class="text-gray-500">The Reflex compiler parses source code into a generic internal representation based on the lambda calculus, allowing for future seamless interop between modules written in different languages</p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="mb-6 lg:mb-0 w-full lg:w-1/2 px-3">
+                <div class="p-6 flex flex-wrap bg-gray-800 shadow-md rounded-lg">
+                  <div class="w-full">
+                    <h3 class="mb-2 text-2xl font-bold font-heading text-white">WASM compiler back‑end</h3>
+                    <p class="text-gray-500">The Reflex compiler transforms user code into optimized WASM bytecode modules for fast, portable runtime execution</p>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full lg:w-1/2 px-3">
+                <div class="p-6 flex flex-wrap bg-gray-800 shadow-md rounded-lg">
+                  <div class="w-full">
+                    <h3 class="mb-2 text-2xl font-bold font-heading text-white">Implemented in Rust</h3>
+                    <p class="text-gray-500">Reflex benefits from the Rust language ecosystem for improved robustness, reliability and runtime performance</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skew skew-bottom mr-for-radius">
+          <svg class="h-8 md:h-12 lg:h-20 w-full text-gray-900" viewbox="0 0 10 10" preserveaspectratio="none"><polygon fill="currentColor" points="0 0 10 0 0 10"></polygon></svg></div>
+        <div class="skew skew-bottom ml-for-radius">
+          <svg class="h-8 md:h-12 lg:h-20 w-full text-gray-900" viewbox="0 0 10 10" preserveaspectratio="none"><polygon fill="currentColor" points="0 0 10 0 10 10"></polygon></svg></div>
+      </section>
+
+      <section class="bg-gray-900 skewed-top-right skewed-full"><div class="skew skew-top mr-for-radius">
+        <svg class="h-8 md:h-12 lg:h-20 w-full text-gray-50" viewbox="0 0 10 10" preserveaspectratio="none"><polygon fill="currentColor" points="0 0 10 10 0 10"></polygon></svg></div>
+        <div class="skew skew-top ml-for-radius">
+          <svg class="h-8 md:h-12 lg:h-20 w-full text-gray-50" viewbox="0 0 10 10" preserveaspectratio="none"><polygon fill="currentColor" points="0 10 10 0 10 10"></polygon></svg></div>
+        <div class="py-20 bg-gray-50 radius-for-skewed">
+          <div class="container mx-auto px-4">
+            <div class="max-w-xl mx-auto text-center">
+              <h2 class="text-4xl lg:text-5xl font-bold font-heading -mb-1">Try Reflex today</h2>
+              <p class="mx-auto mb-6 text-gray-500 leading-loose max-w-lg">Experience the next evolution of programming languages</p>
+              <div>
+                <a class="inline-block mb-3 lg:mb-0 lg:mr-3 w-full lg:w-auto py-2 px-6 leading-loose bg-purple-600 hover:bg-purple-700 text-white font-semibold transition duration-200 rounded-xl" href="https://github.com/MarshallWace/reflex">Try it on Github</a>
+                <a class="inline-block w-full lg:w-auto py-2 px-6 leading-loose font-semibold border-2 border-gray-700 hover:border-gray-600 transition duration-200 rounded-xl text-gray-700 hover:bg-gray-100" href="https://github.com/MarshallWace/reflex/tree/main/reflex-server/examples" target="_blank">Code examples</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skew skew-bottom mr-for-radius">
+          <svg class="h-8 md:h-12 lg:h-20 w-full text-gray-50" viewbox="0 0 10 10" preserveaspectratio="none"><polygon fill="currentColor" points="0 0 10 0 0 10"></polygon></svg></div>
+        <div class="skew skew-bottom ml-for-radius">
+          <svg class="h-8 md:h-12 lg:h-20 w-full text-gray-50" viewbox="0 0 10 10" preserveaspectratio="none"><polygon fill="currentColor" points="0 0 10 0 10 10"></polygon></svg></div>
+      </section>
+    </div>
+</body>
+</html>
+
