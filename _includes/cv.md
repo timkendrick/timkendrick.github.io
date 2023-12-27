@@ -6,18 +6,19 @@
 
 ## Overview
 
-Bright, enthusiastic hard‑worker with over fifteen years’ experience across multiple industries. I'm highly self-motivated, a fast learner and a very strong team member with excellent problem‑solving skills and a keen eye for detail and aesthetics.
+Bright, enthusiastic hard‑worker with over fifteen years’ experience across multiple industries. I'm highly self-motivated, a fast learner and a committed team member with excellent problem‑solving skills and a keen eye for detail and aesthetics.
 
 Equally comfortable building pixel-perfect UIs, robust frameworks and libraries, or time-saving automation utilities and developer tools, I love to tackle big problems and take pride in writing clean code built around elegant user-focused APIs.
 
 ## Frameworks / Technologies
 
-Strong expertise in Rust, WASM, TypeScript, React, Node, GraphQL, gRPC, WebSockets, RxJS. I particulary enjoy building polished user interfaces, functional/reactive/stream programming, and anything involving practical applications of CS theory.
+Strong expertise in TypeScript, React, Rust, WASM, Node.js, GraphQL, gRPC, WebSockets, RxJS. I particulary enjoy building polished user interfaces, functional/reactive/stream programming, and anything involving practical applications of CS theory.
 
-Outside work I take on ambitious solo coding projects and like to learn new concepts from first principles, having written my own implementations of parsers/interpreters/compilers, macro systems, abstract regular expression matchers, actor systems, observables, virtual DOM, etc, to gain a deep understanding of how everyday tools and concepts work at a fine-grained level.
+Outside work I take on ambitious solo coding projects and like to learn new concepts from first principles: I've written my own clean-room implementations of programming languages (parsers/interpreters/compilers/macro systems), abstract regular expression engines, actor systems, observables, virtual DOM, etc, to gain a deep understanding of how everyday tools and concepts are implemented.
 
 ## Selected Work History
 
+- **October 2023 - Present**: [AG Grid](https://www.ag-grid.com/), Senior Software Engineer
 - **April 2020 - August 2023**: [Marshall Wace](https://www.mwam.com/), Lead Software Engineer
 - **April 2019 - December 2019**: [11:FS](https://www.11fs.com/), Senior Software Engineer (freelance)
 - **September 2018 - March 2019**: [Canvas Composer](https://www.canvascomposer.com/), Solo developer
@@ -31,7 +32,7 @@ Outside work I take on ambitious solo coding projects and like to learn new conc
 
 #### Popular utility libraries
 
-> _Note that my personal repositories are no longer receiving non-critical maintenance due to employers' OSS policies_
+> _Note that my personal repositories are no longer receiving non-critical maintenance_
 
 - [recursive-copy](https://www.npmjs.com/package/recursive-copy) ![](https://img.shields.io/npm/dm/recursive-copy.svg) – Simple, flexible file copy utility
 - [memoize-weak](https://www.npmjs.com/package/memoize-weak) ![](https://img.shields.io/npm/dm/memoize-weak.svg) – Garbage-collected variadic function memoizer
@@ -42,17 +43,17 @@ Outside work I take on ambitious solo coding projects and like to learn new conc
 - [Reflex](https://timkendrick.co.uk/reflex) (2023) – Reactive programming language and accompanying tools
 - [Skivvy](https://github.com/skivvyjs/skivvy) (2015) – Modular task runner for reusable build systems
 
-<br/><br/><br/>
+<br/><br/>
 
 ## Selected Job Roles and Responsibilities
 
 #### Marshall Wace (April 2020 - August 2023)
 
-Joined as a UI developer on a small, delivery-focused team building the company's flagship internal portfolio management suite. Soon promoted to lead UI developer, where my responsibilities were split between UI development, tooling, and DevOps/infra. Changes I instigated to our team hiring process improved the interview:hire ratio from roughly 10:1 to 3:1.
+Joined as a UI developer on a fast-paced delivery-focused team building the company's flagship internal portfolio management suite. Soon promoted to lead UI developer, where my responsibilities were split between UI development, tooling, and DevOps/infra. Changes I instigated to our team hiring process improved the interview:hire ratio from roughly 10:1 to 3:1.
 
-Increasing focus on GraphQL API development led to a dedicated role developing streaming technologies for distributed systems, primarily leading the design and implementation for the Reflex reactive programming language (see [promo site](https://timkendrick.co.uk/reflex) for more details). Use on a production system led to codebase size reduction from 15K LOC to 5K LOC.
+Increasing focus on GraphQL API development led to a dedicated role developing streaming technologies for distributed systems, primarily leading the design and implementation for an in-house reactive programming language (see [promo site](https://timkendrick.co.uk/reflex) for more details). Use on a production system led to codebase size reduction from 15K LOC to 5K LOC.
 
-I wrote the compiler/interpreter/runtime/devtools in Rust, opting for an async actor-based architecture for the streaming server. The Reflex toolchain is highly configurable, with compiler front-ends for multiple interoperable source languages, back-end implementations for both WASM and a proprietary VM bytecode instruction set, extensible standard library, etc.
+I wrote the compiler/interpreter/devtools in Rust, including accompanying actor-based async streaming server runtime. The language toolchain is highly configurable, with compiler front-ends for multiple interoperable source syntaxes, back-end implementations for both WASM and a proprietary VM bytecode instruction set, extensible standard library, etc.
 
 #### 11:FS (March 2019 - December 2019)
 
