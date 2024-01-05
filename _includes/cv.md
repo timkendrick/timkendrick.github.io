@@ -19,7 +19,7 @@ Outside work I take on ambitious solo coding projects and like to learn new conc
 ## Selected Work History
 
 - **October 2023 - Present**: [AG Grid](https://www.ag-grid.com/), Senior Software Engineer
-- **April 2020 - August 2023**: [Marshall Wace](https://www.mwam.com/), Lead Software Engineer
+- **April 2020 - August 2023**: [Marshall Wace](https://www.mwam.com/), Lead UI Developer / Rust Software Engineer
 - **April 2019 - December 2019**: [11:FS](https://www.11fs.com/), Senior Software Engineer (freelance)
 - **September 2018 - March 2019**: [Canvas Composer](https://www.canvascomposer.com/), Solo developer
 - **August 2016 - August 2018**: [Deutsche Bank / DWS](http://dws.com/), Lead Open-Source Developer (freelance)
@@ -49,11 +49,13 @@ Outside work I take on ambitious solo coding projects and like to learn new conc
 
 #### Marshall Wace (April 2020 - August 2023)
 
-Joined as a UI developer on a fast-paced delivery-focused team building the company's flagship internal portfolio management suite. Soon promoted to lead UI developer, where my responsibilities were split between UI development, tooling, and DevOps/infra. Changes I instigated to our team hiring process improved the interview:hire ratio from roughly 10:1 to 3:1.
+##### Rust Software Engineer (2022 onwards)
 
-Increasing focus on GraphQL API development led to a dedicated role developing streaming technologies for distributed systems, primarily leading the design and implementation for an in-house reactive programming language (see [promo site](https://timkendrick.co.uk/reflex) for more details). Use on a production system led to codebase size reduction from 15K LOC to 5K LOC.
+Led the design and implementation of an in-house reactive programming language (see [promo site](https://timkendrick.co.uk/reflex) for more details). Use on a production system led to codebase size reduction from 15K LOC to 5K LOC. I wrote the compiler/interpreter/devtools in Rust, including both proprietary VM bytecode and WebAssembly back-ends, and accompanying actor-based async streaming server runtime.
 
-I wrote the compiler/interpreter/devtools in Rust, including accompanying actor-based async streaming server runtime. The language toolchain is highly configurable, with compiler front-ends for multiple interoperable source syntaxes, back-end implementations for both WASM and a proprietary VM bytecode instruction set, extensible standard library, etc.
+##### Lead UI developer (2020 - 2022)
+
+Joined a small, delivery-focused team building the company's flagship internal portfolio management suite and associated component library. My responsibilities were split between React UI development, tooling, and DevOps/infra. Changes I instigated to our team hiring process improved the interview:hire ratio from roughly 10:1 to 3:1. Increasing focus on GraphQL API development led to a dedicated role in a team developing streaming technologies for distributed graph systems.
 
 #### 11:FS (March 2019 - December 2019)
 
