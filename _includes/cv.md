@@ -8,13 +8,13 @@
 
 Bright, enthusiastic hard‑worker with over fifteen years’ experience across multiple industries. I'm highly self-motivated, a fast learner and a committed team member with excellent problem‑solving skills and a keen eye for detail and aesthetics.
 
-Equally comfortable building pixel-perfect UIs, robust frameworks and libraries, or time-saving automation utilities and developer tools, I love to tackle big problems and take pride in writing clean code built around elegant user-focused APIs.
+Equally comfortable building pixel-perfect UIs, robust frameworks and libraries, or time-saving automation utilities and tooling, I love to tackle big problems and am passionate about developing innovative solutions to formidable technical challenges.
 
 ## Frameworks / Technologies
 
-Strong expertise in TypeScript, React, Rust, WASM, Node.js, GraphQL, gRPC, WebSockets, RxJS. I particulary enjoy building polished user interfaces, functional/reactive/stream programming, and anything involving practical applications of CS theory.
+Strong expertise in TypeScript, React, Rust, WASM, Node.js, GraphQL, gRPC, WebSockets, RxJS. I particulary enjoy building polished user interfaces, functional/stream programming, and putting CS theory into practice to solve real-world use cases.
 
-Outside work I take on ambitious solo coding projects and like to learn new concepts from first principles: I've written my own clean-room implementations of programming languages (parsers/interpreters/compilers/macro systems), abstract regular expression engines, actor systems, observables, virtual DOM, etc, to gain a deep understanding of how everyday tools and concepts are implemented.
+Outside work I take on ambitious solo coding projects and like to learn new concepts from first principles: I've written my own clean-room implementations of programming languages (parsers/interpreters/compilers/macro systems), abstract regular expression engines, actor systems, observables, virtual DOM, etc, to gain a deep understanding of how everyday tools and frameworks are implemented, so that I can make sure to pick the best tool for the job when facing design decisions at work.
 
 ## Selected Work History
 
@@ -22,7 +22,7 @@ Outside work I take on ambitious solo coding projects and like to learn new conc
 - **April 2020 - August 2023**: [Marshall Wace](https://www.mwam.com/), Lead UI Developer / Rust Software Engineer
 - **April 2019 - December 2019**: [11:FS](https://www.11fs.com/), Senior Software Engineer (freelance)
 - **September 2018 - March 2019**: [Canvas Composer](https://www.canvascomposer.com/), Solo developer
-- **August 2016 - August 2018**: [Deutsche Bank / DWS](http://dws.com/), Lead Open-Source Developer (freelance)
+- **August 2016 - August 2018**: [Deutsche Bank / DWS](http://dws.com/), Lead Developer (freelance)
 - **September 2013 - April 2015**: [Fathom](http://fathomlondon.com/), Lead Developer
 - **February 2013 - August 2013**: [R/GA London](http://rga.com/offices/london), Senior Front‑End Developer (freelance)
 - **August 2011 - January 2013**: [Burberry](http://uk.burberry.com/), Senior Front‑End Developer (freelance)
@@ -30,32 +30,33 @@ Outside work I take on ambitious solo coding projects and like to learn new conc
 
 ## Selected Open Source Projects
 
-#### Popular utility libraries
-
 > _Note that my personal repositories are no longer receiving non-critical maintenance_
 
 - [recursive-copy](https://www.npmjs.com/package/recursive-copy) ![](https://img.shields.io/npm/dm/recursive-copy.svg) – Simple, flexible file copy utility
 - [memoize-weak](https://www.npmjs.com/package/memoize-weak) ![](https://img.shields.io/npm/dm/memoize-weak.svg) – Garbage-collected variadic function memoizer
+- [Reflex](https://timkendrick.co.uk/reflex) (2023) – Reactive compile-to-WASM programming language and accompanying toolchain
+- [Skivvy](https://github.com/skivvyjs/skivvy) (2015) – Modular task runner for reusable build systems
 - Many more at [github.com/timkendrick](https://github.com/timkendrick) and [npmjs.com/~timkendrick](https://www.npmjs.com/~timkendrick)
 
-#### Larger standalone projects
-
-- [Reflex](https://timkendrick.co.uk/reflex) (2023) – Reactive programming language and accompanying tools
-- [Skivvy](https://github.com/skivvyjs/skivvy) (2015) – Modular task runner for reusable build systems
-
-<br/><br/>
+## Academic History
+- **2005 - 2008**: Trinity College, University of Cambridge (BA degree in Philosophy)
+- **2003 - 2005**: Sevenoaks School, International Baccalaureate Diploma (45 out of 45, top 0.19% of students worldwide)
 
 ## Selected Job Roles and Responsibilities
+
+#### AG Grid (October 2023 - present)
+
+Building developer tools and core features for the market-leading open source datagrid/charts library ([ag-grid.com](https://www.ag-grid.com/)).
 
 #### Marshall Wace (April 2020 - August 2023)
 
 ##### Rust Software Engineer (2022 onwards)
 
-Led the design and implementation of an in-house reactive programming language (see [promo site](https://timkendrick.co.uk/reflex) for more details). Use on a production system led to codebase size reduction from 15K LOC to 5K LOC. I wrote the compiler/interpreter/devtools in Rust, including both proprietary VM bytecode and WebAssembly back-ends, and accompanying actor-based async streaming server runtime.
+Led the design and implementation of an open source reactive programming language (see [promo site](https://timkendrick.co.uk/reflex) for more details). Use on a production system led to codebase size reduction from 15K LOC to 5K. I wrote the compiler/interpreter/devtools in Rust, including both proprietary VM bytecode and WebAssembly back-ends, and accompanying actor-based async server runtime.
 
 ##### Lead UI developer (2020 - 2022)
 
-Joined a small, delivery-focused team building the company's flagship internal portfolio management suite and associated component library. My responsibilities were split between React UI development, tooling, and DevOps/infra. Changes I instigated to our team hiring process improved the interview:hire ratio from roughly 10:1 to 3:1. Increasing focus on GraphQL API development led to a dedicated role in a team developing streaming technologies for distributed graph systems.
+Joined a small, delivery-focused team building the company's flagship internal portfolio management suite and associated component library. Promoted to lead UI dev, where reponsibilities included React UI development, tooling, and DevOps/infra, while revamping our team hiring process to improve the interview:hire ratio from roughly 10:1 to 3:1. Increasing focus on GraphQL API development led to a dedicated role in a team developing streaming technologies for distributed graph systems.
 
 #### 11:FS (March 2019 - December 2019)
 
@@ -76,7 +77,3 @@ Lead front‑end developer for a highly interactive real‑time corporate bond t
 #### Burberry (August 2011 - January 2013)
 
 UI development for all interactive experiences on burberry.com, creation of in-house JS/CSS Framework (used across all campaign sites, live streamed fashion shows, press kits and in‑house tools), development of in-house internationalization tools, automation / build process improvements, technical research, hiring and supervising new developers.
-
-## Academic History
-- **2005 - 2008**: Trinity College, University of Cambridge (BA degree in Philosophy)
-- **2003 - 2005**: Sevenoaks School (International Baccalaureate Diploma, 45 out of 45)
