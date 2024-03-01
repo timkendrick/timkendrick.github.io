@@ -32,10 +32,10 @@ Outside work I take on ambitious solo coding projects and like to learn new conc
 
 > _Note that my personal repositories are no longer receiving non-critical maintenance_
 
-- [recursive-copy](https://www.npmjs.com/package/recursive-copy) ![](https://img.shields.io/npm/dm/recursive-copy.svg) – Simple, flexible file copy utility
-- [memoize-weak](https://www.npmjs.com/package/memoize-weak) ![](https://img.shields.io/npm/dm/memoize-weak.svg) – Garbage-collected variadic function memoizer
 - [Reflex](https://timkendrick.co.uk/reflex) (2023) – Reactive compile-to-WASM programming language and accompanying toolchain
 - [Skivvy](https://github.com/skivvyjs/skivvy) (2015) – Modular task runner for reusable build systems
+- [recursive-copy](https://www.npmjs.com/package/recursive-copy) (2015) ![](https://img.shields.io/npm/dm/recursive-copy.svg) – Simple, flexible file copy utility
+- [memoize-weak](https://www.npmjs.com/package/memoize-weak) (2016) ![](https://img.shields.io/npm/dm/memoize-weak.svg) – Garbage-collected variadic function memoizer
 - Many more at [github.com/timkendrick](https://github.com/timkendrick) and [npmjs.com/~timkendrick](https://www.npmjs.com/~timkendrick)
 
 ## Academic History
