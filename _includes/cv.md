@@ -31,6 +31,7 @@ Outside work I take on ambitious personal coding projects and like to learn new 
 
 ## Selected Open Source Projects
 
+- [ReactiveKit](https://github.com/timkendrick/reactive-kit) (2025) – Lightweight reactive runtime for building deterministic full-stack apps
 - [Reflex](https://timkendrick.co.uk/reflex) (2023) – Reactive compile-to-WASM programming language and accompanying toolchain
 - [Skivvy](https://github.com/skivvyjs/skivvy) (2015) – Modular task runner for reusable build systems
 - [recursive-copy](https://www.npmjs.com/package/recursive-copy) (2015) ![](https://img.shields.io/npm/dm/recursive-copy.svg) – Simple, flexible file copy utility
@@ -40,8 +41,6 @@ Outside work I take on ambitious personal coding projects and like to learn new 
 ## Academic History
 - **2005 - 2008**: Trinity College, University of Cambridge (BA degree in Philosophy)
 - **2003 - 2005**: Sevenoaks School, International Baccalaureate Diploma (45 out of 45, top 0.19% of students worldwide)
-
-<br/>
 
 ## Selected Job Roles and Responsibilities
 
