@@ -1,24 +1,24 @@
 # Tim Kendrick
-> Rust/TypeScript/React Software Engineer
+> TypeScript/React/Rust Software Engineer
 
 **Web**&nbsp;[timkendrick.co.uk](https://timkendrick.co.uk/) / **LinkedIn**&nbsp;[timrbkendrick](https://www.linkedin.com/in/timrbkendrick) / **Github**&nbsp;[timkendrick](https://github.com/timkendrick) / **Email**&nbsp;[timkendrick@gmail.com](mailto:timkendrick@gmail.com)
 
 
 ## Overview
 
-Product-driven hard‑worker with two decades’ experience across multiple industries. I'm highly self-motivated, a fast learner and a committed team member with excellent problem‑solving skills and a keen eye for detail and aesthetics.
+Product-driven hands-on developer with two decades’ experience across multiple industries. I'm highly self-motivated, a fast learner and a committed team member with excellent problem‑solving skills and a keen eye for detail and aesthetics.
 
-Equally comfortable building pixel-perfect UIs, robust frameworks and libraries, or time-saving automation utilities and tooling, I love to tackle big problems and am passionate about developing innovative solutions to formidable technical challenges.
+Equally comfortable building pixel-perfect UIs, robust frameworks and libraries, or time-saving automation utilities and tooling, with proven experience owning ambitious projects from start to finish. I love to tackle big problems and am passionate about developing innovative solutions to formidable technical challenges.
 
 ## Frameworks / Technologies
 
-Strong expertise in TypeScript, React, Rust, WASM, Node.js, GraphQL, gRPC, WebSockets, RxJS. I particulary enjoy building polished user interfaces, functional/stream programming, and putting CS theory into practice to solve real-world use cases.
+Strong expertise in TypeScript, React, Rust, WASM, Node.js, GraphQL, gRPC, WebSockets, RxJS. I particulary enjoy building polished user interfaces, designing clean abstractions, and putting CS theory into practice to solve real-world use cases.
 
 Outside work I take on ambitious personal coding projects and like to learn new concepts from first principles. In addition to end-to-end solo product builds, I've written my own clean-room implementations of programming language interpreters and compilers, regular expression engines, actor systems, observables, virtual DOM, etc, to gain a deep understanding of how everyday tools and frameworks are implemented, which helps inform the design decisions I make at work.
 
 ## Selected Work History
 
-- **April 2024 - Present**: [Squarepoint Capital](https://www.squarepoint-capital.com/), Software Engineer
+- **April 2024 - June 2025**: [Squarepoint Capital](https://www.squarepoint-capital.com/), Software Engineer
 - **October 2023 - April 2024**: [AG Grid](https://www.ag-grid.com/), Senior Software Engineer
 - **April 2020 - August 2023**: [Marshall Wace](https://www.mwam.com/), Lead UI Developer / Rust Software Engineer
 - **April 2019 - December 2019**: [11:FS](https://www.11fs.com/), Senior Software Engineer (freelance)
@@ -31,9 +31,9 @@ Outside work I take on ambitious personal coding projects and like to learn new 
 
 ## Selected Open Source Projects
 
-- [ReactiveKit](https://github.com/timkendrick/reactive-kit) (2025) – Lightweight reactive runtime for building deterministic full-stack apps
+- [ReactiveKit](https://timkendrick.co.uk/reactive-kit) (2025) – Lightweight reactive runtime for building deterministic full-stack apps
+- [Syntax](https://github.com/timkendrick/syntax) (2025) – TypeScript parser combinator toolkit
 - [Reflex](https://timkendrick.co.uk/reflex) (2023) – Reactive compile-to-WASM programming language and accompanying toolchain
-- [Skivvy](https://github.com/skivvyjs/skivvy) (2015) – Modular task runner for reusable build systems
 - [recursive-copy](https://www.npmjs.com/package/recursive-copy) (2015) ![](https://img.shields.io/npm/dm/recursive-copy.svg) – Simple, flexible file copy utility
 - [memoize-weak](https://www.npmjs.com/package/memoize-weak) (2016) ![](https://img.shields.io/npm/dm/memoize-weak.svg) – Garbage-collected variadic function memoizer
 - Many more at [github.com/timkendrick](https://github.com/timkendrick) and [npmjs.com/~timkendrick](https://www.npmjs.com/~timkendrick)
@@ -44,13 +44,13 @@ Outside work I take on ambitious personal coding projects and like to learn new 
 
 ## Selected Job Roles and Responsibilities
 
-#### Squarepoint Capital (April 2024 - present)
+#### Squarepoint Capital (April 2024 - June 2025)
 
-Led the design and implementation of a greenfield timeseries data visualisation platform with extensible query/transformation DSL, live code editor, modular UI, and user-contributed plugin ecosystem. Primary contributor to Rust / React / GraphQL and Python tiers of the stack.
+Led the design and implementation of a greenfield timeseries data visualisation platform with extensible query/transformation DSL and async runtime, live code editor, custom remote debugging protocol, modular UI and user-contributed plugin ecosystem. Primary contributor to Rust / React / GraphQL and Python tiers of the stack.
 
 #### AG Grid (October 2023 - April 2024)
 
-Building developer tools and core features for the market-leading open source datagrid/charts library ([ag-grid.com](https://www.ag-grid.com/)). Created a codemod framework and associated AST manipulation libraries.
+Building developer tools and core features for the market-leading open source datagrid/charts library ([ag-grid.com](https://www.ag-grid.com/)). Created a codemod toolkit and associated AST manipulation libraries.
 
 #### Marshall Wace (April 2020 - August 2023)
 
